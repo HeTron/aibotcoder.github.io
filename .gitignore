@@ -1,0 +1,19 @@
+## Python
+#__pycache__/
+#*.py[cod]
+#*.pyo
+#*.pyd
+#
+## Virtual environments
+#.venv/
+#env/
+#venv/
+#
+## Editor config
+#.idea/
+#.vscode/
+#.DS_Store
+#
+## Flask-Frozen output
+#build/
+#CNAME
