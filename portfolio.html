@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio – Hassan Eid</title>
+    <title>Portfolio – AI BOT CODER</title>
+    <meta name="description" content="Real AI automations and projects built by Jason Eid — from blueprint estimators to AI agents.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
@@ -12,132 +14,201 @@
 </head>
 <body>
 
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-    <div class="container">
-        <a class="navbar-brand" href="/">Hassan Eid</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link active" href="/portfolio.html">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<!-- Portfolio Section -->
-<section class="container py-5">
-    <h1 class="text-center mb-5">My Projects</h1>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-        
-        <div class="col">
-            <div class="card h-100 shadow-sm">
-                <img src="/static/images/no-show.png"
-                    alt="Patient No-Show Prediction"
-                    class="card-img-top"
-                    style="height: 200px; width: 100%; object-fit: contain; background-color: white; border: 1px solid red;">
-
-
-
-                <div class="card-body">
-                    <h5 class="card-title">Patient No-Show Prediction</h5>
-                    <p class="card-text">Built a predictive model to identify patients likely to miss medical appointments using scikit-learn. Included EDA, class balancing, and feature importance analysis.</p>
-                    <p class="card-text"><small class="text-muted">Python, Pandas, Scikit-learn</small></p>
-                </div>
-                <div class="card-footer text-center">
-                    <a href="https://github.com/HeTron/patient-no-show-prediction" target="_blank" class="btn btn-outline-primary btn-sm">View on GitHub</a>
-                </div>
+    <nav class="navbar navbar-expand-lg shadow-sm">
+        <div class="container">
+            <a class="navbar-brand brand-logo" href="/">AI BOT CODER</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/blog-posts.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary btn-sm px-3" href="https://calendly.com/jcode2k" target="_blank">Book a Free Call</a>
+                    </li>
+                </ul>
             </div>
         </div>
-        
-        <div class="col">
-            <div class="card h-100 shadow-sm">
-                <img src="/static/images/churn_matrix.png"
-                    alt="Customer Churn Analysis"
-                    class="card-img-top"
-                    style="height: 200px; width: 100%; object-fit: contain; background-color: white; border: 1px solid red;">
+    </nav>
 
+    <!-- Hero -->
+    <section class="page-hero text-center py-5">
+        <div class="container py-3">
+            <h1 class="display-5 fw-bold">Portfolio</h1>
+            <p class="hero-subtitle mt-3">Real builds. Real businesses. Not demos.</p>
+        </div>
+    </section>
 
+    <!-- AI Automation Projects -->
+    <section class="section-dark py-5">
+        <div class="container">
+            <h2 class="mb-2">AI Automation Builds</h2>
+            <p class="text-muted-light mb-4">Production automations built with Claude AI, Python, and FastAPI.</p>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
-                <div class="card-body">
-                    <h5 class="card-title">Customer Churn Analysis</h5>
-                    <p class="card-text">Built a model to predict which telecom customers are likely to churn. Includes data cleaning, exploratory analysis, logistic regression, and feature interpretation.</p>
-                    <p class="card-text"><small class="text-muted">Python, Streamlit, Scikit-learn</small></p>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="portfolio-icon mb-3"><i class="bi bi-file-earmark-ruled"></i></div>
+                            <h5 class="card-title">Blueprint Estimator</h5>
+                            <p class="card-text">Reads uploaded construction blueprints via Claude AI and outputs a structured Excel bid sheet with material and labor line items — replacing hours of manual takeoff work.</p>
+                            <div class="mt-3">
+                                <span class="tag">Claude AI</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">openpyxl</span>
+                                <span class="tag">FastAPI</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="text-muted-light small"><i class="bi bi-building me-1"></i>Built for: South Florida General Contractor</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-footer text-center">
-                    <a href="https://github.com/HeTron/customer-churn-analysis" target="_blank" class="btn btn-outline-primary btn-sm">View on GitHub</a>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="portfolio-icon mb-3"><i class="bi bi-server"></i></div>
+                            <h5 class="card-title">Jarvis — Local AI Server</h5>
+                            <p class="card-text">Self-hosted AI assistant running on a Mac mini with Ollama, FastAPI, and a browser UI. Handles internal queries, document lookups, and custom workflows — all running locally with zero cloud cost.</p>
+                            <div class="mt-3">
+                                <span class="tag">Ollama</span>
+                                <span class="tag">FastAPI</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">launchd</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="text-muted-light small"><i class="bi bi-building me-1"></i>Built for: Internal Business Operations</span>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="portfolio-icon mb-3"><i class="bi bi-journal-check"></i></div>
+                            <h5 class="card-title">Job Cost Tracker</h5>
+                            <p class="card-text">Claude Code-powered tool that logs labor hours, material costs, and purchase orders per construction job directly into structured Excel files stored in Dropbox — replacing a manual entry process.</p>
+                            <div class="mt-3">
+                                <span class="tag">Claude Code</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Excel</span>
+                                <span class="tag">Dropbox</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="text-muted-light small"><i class="bi bi-building me-1"></i>Built for: South Florida General Contractor</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-        
-        <div class="col">
-            <div class="card h-100 shadow-sm">
-                <img src="/static/images/stock-price-predictor.png"
-                    alt="Stock Price Predictor"
-                    class="card-img-top"
-                    style="height: 200px; width: 100%; object-fit: contain; background-color: white; border: 1px solid red;">
+    </section>
 
+    <!-- Data Science Projects -->
+    <section class="section-mid py-5">
+        <div class="container">
+            <h2 class="mb-2">Data Science Projects</h2>
+            <p class="text-muted-light mb-4">Predictive modeling and analytics work from my data science training.</p>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
-
-                <div class="card-body">
-                    <h5 class="card-title">Stock Price Predictor</h5>
-                    <p class="card-text">Real-time stock price prediction tool using historical market data and machine learning.</p>
-                    <p class="card-text"><small class="text-muted">Python, Streamlit, Scikit-learn</small></p>
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/static/images/no-show.png" alt="Patient No-Show Prediction" class="card-img-top project-img">
+                        <div class="card-body">
+                            <h5 class="card-title">Patient No-Show Prediction</h5>
+                            <p class="card-text">Predictive model to identify patients likely to miss medical appointments. Includes EDA, class balancing, and feature importance analysis.</p>
+                            <p class="card-text"><small class="text-muted-light">Python &bull; Pandas &bull; Scikit-learn</small></p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="https://github.com/HeTron/patient-no-show-prediction" target="_blank" class="btn btn-outline-primary btn-sm">View on GitHub</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-footer text-center">
-                    <a href="https://github.com/HeTron/stock-price-predictor" target="_blank" class="btn btn-outline-primary btn-sm">View on GitHub</a>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/static/images/churn_matrix.png" alt="Customer Churn Analysis" class="card-img-top project-img">
+                        <div class="card-body">
+                            <h5 class="card-title">Customer Churn Analysis</h5>
+                            <p class="card-text">Model to predict which telecom customers are likely to churn. Data cleaning, exploratory analysis, logistic regression, and feature interpretation.</p>
+                            <p class="card-text"><small class="text-muted-light">Python &bull; Streamlit &bull; Scikit-learn</small></p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="https://github.com/HeTron/customer-churn-analysis" target="_blank" class="btn btn-outline-primary btn-sm">View on GitHub</a>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/static/images/stock-price-predictor.png" alt="Stock Price Predictor" class="card-img-top project-img">
+                        <div class="card-body">
+                            <h5 class="card-title">Stock Price Predictor</h5>
+                            <p class="card-text">Real-time stock price prediction tool using historical market data and machine learning.</p>
+                            <p class="card-text"><small class="text-muted-light">Python &bull; Streamlit &bull; Scikit-learn</small></p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="https://github.com/HeTron/stock-price-predictor" target="_blank" class="btn btn-outline-primary btn-sm">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/static/images/dashboard_screenshot.png" alt="Staffing KPI Dashboard" class="card-img-top project-img">
+                        <div class="card-body">
+                            <h5 class="card-title">Staffing KPI Dashboard</h5>
+                            <p class="card-text">Interactive dashboard simulating and visualizing key staffing KPIs — time to fill, offer acceptance rate, and hiring funnel metrics.</p>
+                            <p class="card-text"><small class="text-muted-light">Python &bull; Streamlit &bull; Pandas &bull; Matplotlib</small></p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="https://github.com/HeTron/staffing-kpi-dashboard" target="_blank" class="btn btn-outline-primary btn-sm">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/static/images/ai-therapist-chatbot.png" alt="AI Therapist Chatbot" class="card-img-top project-img">
+                        <div class="card-body">
+                            <h5 class="card-title">AI Therapist Chatbot</h5>
+                            <p class="card-text">Empathetic mental health chatbot named Sage, powered by OpenAI and LangChain. Supports emotional reflection using thoughtful prompt design and LLM memory.</p>
+                            <p class="card-text"><small class="text-muted-light">Python &bull; LangChain &bull; Streamlit &bull; OpenAI</small></p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="https://github.com/HeTron/ai-therapist-chatbot" target="_blank" class="btn btn-outline-primary btn-sm">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-        
-        <div class="col">
-            <div class="card h-100 shadow-sm">
-                <img src="/static/images/dashboard_screenshot.png"
-                    alt="Staffing KPI Dashboard"
-                    class="card-img-top"
-                    style="height: 200px; width: 100%; object-fit: contain; background-color: white; border: 1px solid red;">
+    </section>
 
-
-
-                <div class="card-body">
-                    <h5 class="card-title">Staffing KPI Dashboard</h5>
-                    <p class="card-text">An interactive Streamlit dashboard that simulates and visualizes key staffing KPI&#39;s such as time to fill, offer acceptance, and hiring funnel metrics.</p>
-                    <p class="card-text"><small class="text-muted">Python, Streamlit, Pandas, Matplotlib</small></p>
-                </div>
-                <div class="card-footer text-center">
-                    <a href="https://github.com/HeTron/staffing-kpi-dashboard" target="_blank" class="btn btn-outline-primary btn-sm">View on GitHub</a>
-                </div>
-            </div>
+    <!-- CTA -->
+    <section class="cta-banner py-5 text-center">
+        <div class="container">
+            <h2 class="mb-3">Want something like this built for your business?</h2>
+            <p class="text-muted-light mb-4">Book a free call and let's talk through what's possible.</p>
+            <a href="https://calendly.com/jcode2k" target="_blank" class="btn btn-primary btn-lg px-5">Book Your Free Discovery Call</a>
         </div>
-        
-        <div class="col">
-            <div class="card h-100 shadow-sm">
-                <img src="/static/images/ai-therapist-chatbot.png"
-                    alt="AI Therapist Chatbot"
-                    class="card-img-top"
-                    style="height: 200px; width: 100%; object-fit: contain; background-color: white; border: 1px solid red;">
+    </section>
 
-
-
-                <div class="card-body">
-                    <h5 class="card-title">AI Therapist Chatbot</h5>
-                    <p class="card-text">An empathetic mental health chatbot named Sage, powered by OpenAI and LangChain. It supports emotional reflection using thoughtful prompt design and LLM memory.</p>
-                    <p class="card-text"><small class="text-muted">Python, LangChain, Streamlit, OpenAI</small></p>
-                </div>
-                <div class="card-footer text-center">
-                    <a href="https://github.com/HeTron/ai-therapist-chatbot" target="_blank" class="btn btn-outline-primary btn-sm">View on GitHub</a>
-                </div>
-            </div>
+    <footer class="footer py-4 text-center">
+        <div class="container">
+            <p class="mb-1 text-muted-light">AI BOT CODER &copy; 2026 &nbsp;|&nbsp; Jason Eid &nbsp;|&nbsp; Fort Lauderdale, FL</p>
+            <p class="mb-0"><a href="mailto:jcode2k@gmail.com">jcode2k@gmail.com</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/jcode2k/" target="_blank">LinkedIn</a> &nbsp;|&nbsp; <a href="https://github.com/HeTron" target="_blank">GitHub</a></p>
         </div>
-        
-    </div>
-</section>
+    </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>
