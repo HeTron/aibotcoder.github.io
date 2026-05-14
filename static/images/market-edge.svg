@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid meet">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#ffffff"/>
+
+  <!-- Subtle grid -->
+  <g stroke="#eef0f3" stroke-width="1">
+    <line x1="100" y1="200" x2="1100" y2="200"/>
+    <line x1="100" y1="350" x2="1100" y2="350"/>
+    <line x1="100" y1="500" x2="1100" y2="500"/>
+    <line x1="100" y1="650" x2="1100" y2="650"/>
+  </g>
+
+  <!-- Historical line (gray) -->
+  <polyline
+    fill="none"
+    stroke="#0e1117"
+    stroke-width="6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    points="100,580 180,540 260,560 340,490 420,510 500,440 580,470 660,420 700,400"
+  />
+
+  <!-- Forecast confidence band -->
+  <path
+    d="M 700,400 L 800,360 L 900,310 L 1000,290 L 1100,250
+       L 1100,330 L 1000,370 L 900,390 L 800,420 L 700,440 Z"
+    fill="#00D4AA"
+    fill-opacity="0.18"
+  />
+
+  <!-- Forecast line (teal, dashed) -->
+  <polyline
+    fill="none"
+    stroke="#00D4AA"
+    stroke-width="6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-dasharray="14 10"
+    points="700,400 800,360 900,310 1000,290 1100,250"
+  />
+
+  <!-- Vertical divider at "now" -->
+  <line x1="700" y1="180" x2="700" y2="680" stroke="#9aa3ad" stroke-width="2" stroke-dasharray="4 6"/>
+  <text x="708" y="200" fill="#9aa3ad" font-family="ui-monospace, SFMono-Regular, monospace" font-size="22">forecast →</text>
+
+  <!-- Title -->
+  <text x="100" y="120" fill="#0e1117" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="64" font-weight="700">Market Edge</text>
+  <text x="100" y="160" fill="#5a6470" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="24" font-weight="400">AI stock forecasting · LightGBM · Claude API</text>
+
+  <!-- Footer -->
+  <text x="100" y="740" fill="#9aa3ad" font-family="ui-monospace, SFMono-Regular, monospace" font-size="20">market-edge.streamlit.app</text>
+</svg>
