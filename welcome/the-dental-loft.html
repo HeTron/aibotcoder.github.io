@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Welcome to AI BOT CODER — The Dental Loft</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#11151c; --paper:#faf8f4; --card:#ffffff;
+    --blue:#2f6bff; --blue-soft:#6ea8fe; --blue-deep:#1a2a40;
+    --teal:#00b894; --muted:#6c7480; --line:#ece7dd;
+    --shadow:0 1px 2px rgba(17,21,28,.04),0 8px 24px rgba(17,21,28,.06);
+    --shadow-lg:0 2px 4px rgba(17,21,28,.05),0 18px 50px rgba(26,42,64,.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Hanken Grotesk",system-ui,sans-serif;
+    color:var(--ink); background:var(--paper);
+    line-height:1.6; -webkit-font-smoothing:antialiased;
+    background-image:
+      radial-gradient(900px 500px at 85% -10%, rgba(110,168,254,.18), transparent 60%),
+      radial-gradient(700px 500px at -10% 5%, rgba(0,212,170,.10), transparent 55%);
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 22px 70px}
+  .display{font-family:"Fraunces",Georgia,serif;font-weight:600;letter-spacing:-.01em;line-height:1.05}
+
+  /* ---------- entrance animation ---------- */
+  .rise{opacity:0;transform:translateY(14px);animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+  .d1{animation-delay:.05s}.d2{animation-delay:.13s}.d3{animation-delay:.21s}
+  .d4{animation-delay:.29s}.d5{animation-delay:.37s}.d6{animation-delay:.45s}.d7{animation-delay:.53s}
+
+  /* ---------- header ---------- */
+  header{padding:46px 0 8px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.14em;
+    font-size:12px;text-transform:uppercase;color:var(--blue-deep)}
+  .node{width:22px;height:22px;border-radius:6px;background:linear-gradient(135deg,var(--blue),var(--blue-soft));
+    box-shadow:0 4px 12px rgba(47,107,255,.4);position:relative;flex:0 0 auto}
+  .node::after{content:"";position:absolute;inset:7px;border:2px solid #fff;border-radius:3px;opacity:.9}
+  .eyebrow{margin-top:30px;font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--blue)}
+  h1{font-size:clamp(34px,6vw,52px);margin:8px 0 0}
+  h1 .accent{color:var(--blue)}
+  .sub{font-size:18px;color:var(--muted);margin-top:16px;max-width:54ch}
+
+  /* ---------- reassurance pills ---------- */
+  .pills{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+  .pill{display:flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--line);
+    border-radius:100px;padding:9px 16px;box-shadow:var(--shadow);font-weight:600;font-size:14px}
+  .pill .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(0,184,148,.15)}
+
+  /* ---------- section ---------- */
+  section{margin-top:48px}
+  .label{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-soft)}
+  h2{font-size:clamp(24px,4vw,30px);margin-top:8px}
+  .lede{color:var(--muted);margin-top:8px;font-size:16px}
+
+  /* ---------- step journey ---------- */
+  .steps{margin-top:26px;display:grid;gap:14px}
+  .step{display:grid;grid-template-columns:54px 1fr;gap:18px;align-items:start;
+    background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;
+    box-shadow:var(--shadow);transition:transform .25s ease,box-shadow .25s ease}
+  .step:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+  .num{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;
+    font-family:"Fraunces",serif;font-weight:600;font-size:22px;color:#fff;
+    background:linear-gradient(140deg,var(--blue),var(--blue-deep))}
+  .step.you .num{background:linear-gradient(140deg,var(--teal),#0a8f74)}
+  .step h3{font-size:18px;font-weight:700;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .tag{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    padding:3px 9px;border-radius:100px}
+  .tag.you{background:rgba(0,184,148,.12);color:#0a8f74}
+  .tag.us{background:rgba(47,107,255,.10);color:var(--blue)}
+  .step p{color:var(--muted);font-size:15px;margin-top:3px}
+
+  /* ---------- "we have" card ---------- */
+  .have{background:linear-gradient(180deg,#fff,#fcfbf8);border:1px solid var(--line);
+    border-radius:20px;padding:26px 26px 8px;box-shadow:var(--shadow);margin-top:22px}
+  .have .row{display:flex;gap:14px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:15px}
+  .have .row:last-child{border-bottom:0}
+  .have .k{flex:0 0 130px;color:var(--muted);font-weight:600}
+  .have .v{font-weight:500}
+  .check{color:var(--teal);font-weight:700}
+
+  /* ---------- confirm cards ---------- */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
+  .c{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 18px 17px;
+    box-shadow:var(--shadow);position:relative;overflow:hidden;transition:border-color .2s,transform .2s}
+  .c:hover{transform:translateY(-2px);border-color:var(--blue-soft)}
+  .c .qn{font-size:11px;font-weight:700;color:var(--blue);letter-spacing:.04em}
+  .c h4{font-size:16px;font-weight:700;margin-top:4px}
+  .c p{font-size:13.5px;color:var(--muted);margin-top:5px;line-height:1.5}
+  .c.full{grid-column:1 / -1}
+  .opts{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .opt{font-size:12.5px;font-weight:600;border:1px solid var(--line);border-radius:9px;padding:7px 11px;background:#fcfbf8}
+  .opt b{color:var(--blue)}
+  .reassure{margin-top:14px;font-size:13.5px;color:var(--muted);font-style:italic}
+
+  /* ---------- CTAs ---------- */
+  .cta{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+  .btn{display:block;text-decoration:none;border-radius:18px;padding:22px 24px;
+    box-shadow:var(--shadow-lg);transition:transform .25s ease,box-shadow .25s ease;position:relative;overflow:hidden}
+  .btn:hover{transform:translateY(-4px)}
+  .btn .small{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
+  .btn .big{font-family:"Fraunces",serif;font-size:24px;font-weight:600;margin-top:6px;display:flex;align-items:center;gap:10px}
+  .btn .micro{font-size:13px;margin-top:8px;opacity:.85}
+  .btn.pay{background:linear-gradient(140deg,var(--blue),var(--blue-deep));color:#fff}
+  .btn.sign{background:#fff;border:1px solid var(--line);color:var(--ink)}
+  .btn.sign .small{color:var(--blue)}
+  .arrow{transition:transform .25s ease}
+  .btn:hover .arrow{transform:translateX(5px)}
+
+  /* ---------- footer ---------- */
+  footer{margin-top:50px;text-align:center;padding-top:30px;border-top:1px solid var(--line)}
+  footer .q{font-family:"Fraunces",serif;font-size:22px;font-weight:600}
+  footer .contact{margin-top:8px;color:var(--muted);font-size:15px}
+  footer .contact a{color:var(--blue);text-decoration:none;font-weight:600}
+  footer .sig{margin-top:18px;font-size:14px;color:var(--muted)}
+
+  @media(max-width:600px){
+    .grid,.cta{grid-template-columns:1fr}
+    .have .k{flex-basis:104px}
+    h1{font-size:32px}
+  }
+  @media print{
+    body{background:#fff}
+    .rise{animation:none;opacity:1;transform:none}
+    .step:hover,.c:hover,.btn:hover{transform:none}
+    .btn{box-shadow:none;border:1px solid var(--line)}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand rise d1"><span class="node"></span> AI BOT CODER</div>
+    <div class="eyebrow rise d2">YOUR AI RECEPTIONIST · WELCOME PACKET</div>
+    <h1 class="display rise d2">Welcome aboard,<br><span class="accent">The Dental Loft.</span></h1>
+    <p class="sub rise d3">Your AI receptionist answers every call 24/7, books and confirms appointments, and never sends a patient to voicemail. Getting set up is genuinely simple — here's everything, laid out plainly.</p>
+    <div class="pills rise d4">
+      <span class="pill"><span class="dot"></span> ~10 minutes of your time</span>
+      <span class="pill"><span class="dot"></span> Live in about a week</span>
+      <span class="pill"><span class="dot"></span> We handle all the tech</span>
+    </div>
+  </header>
+
+  <section>
+    <div class="label rise d1">The whole journey</div>
+    <h2 class="display rise d1">Four easy steps</h2>
+    <p class="lede rise d2">Two small things on your side. The heavy lifting is on us.</p>
+    <div class="steps">
+      <div class="step you rise d2">
+        <div class="num">1</div>
+        <div><h3>Confirm a few details <span class="tag you">2 min · you</span></h3>
+        <p>Glance at what we've pre-filled below and answer a handful of quick questions. Anything you're unsure of, just leave blank.</p></div>
+      </div>
+      <div class="step you rise d3">
+        <div class="num">2</div>
+        <div><h3>Quick payment &amp; sign <span class="tag you">5 min · you</span></h3>
+        <p>Start your first month with one secure link, and e-sign a short HIPAA form in your browser. No printing, no account to create.</p></div>
+      </div>
+      <div class="step rise d4">
+        <div class="num">3</div>
+        <div><h3>We build &amp; you test <span class="tag us">we do this</span></h3>
+        <p>We build your receptionist, then hand you a number to call and try yourself. Hear it, tweak anything, approve it.</p></div>
+      </div>
+      <div class="step rise d5">
+        <div class="num">4</div>
+        <div><h3>Go live <span class="tag us">we guide you</span></h3>
+        <p>A 10-minute call to your phone company points your line at the AI. That's it — you're live.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="label rise d1">Step 1 · Already done for you</div>
+    <h2 class="display rise d1">What we pulled from your website</h2>
+    <p class="lede rise d2">Just check this looks right — correct anything that's off.</p>
+    <div class="have rise d2">
+      <div class="row"><div class="k">Practice</div><div class="v">The Dental Loft</div></div>
+      <div class="row"><div class="k">Address</div><div class="v">4800 NE 20th Terrace, Building D, Suite 215, Fort Lauderdale, FL 33308</div></div>
+      <div class="row"><div class="k">Hours</div><div class="v">Mon, Thu, Fri · 9 AM–4 PM &nbsp;·&nbsp; Weekends by appointment</div></div>
+      <div class="row"><div class="k">Services</div><div class="v">Preventative, general &amp; cosmetic — Invisalign, veneers, whitening, implants &amp; more</div></div>
+      <div class="row"><div class="k">Insurance</div><div class="v">Guardian, Delta Dental, Cigna, Aetna, Humana &amp; more</div></div>
+      <div class="row"><div class="k">New patients</div><div class="v"><span class="check">✓</span> Accepting</div></div>
+      <div class="row"><div class="k">Greeting</div><div class="v">"Thank you for calling The Dental Loft! This is your AI receptionist — how can I help you today?"</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="label rise d1">Step 1 · A few quick answers</div>
+    <h2 class="display rise d1">Just confirm these</h2>
+    <p class="lede rise d2">Reply to our email with these — short answers are perfect.</p>
+    <div class="grid">
+      <div class="c rise d2"><div class="qn">01</div><h4>Your hours</h4><p>Closed Tue &amp; Wed? Any lunch break? On weekends, should the AI take a message or offer to book?</p></div>
+      <div class="c rise d2"><div class="qn">02</div><h4>Reaching a person</h4><p>A cell or back-line for live transfers? If you'd rather not, the AI just texts you a message instantly.</p></div>
+      <div class="c rise d3"><div class="qn">03</div><h4>Cancellations</h4><p>How much notice do you need — 24 or 48 hours? Any fee?</p></div>
+      <div class="c rise d3"><div class="qn">04</div><h4>After-hours emergencies</h4><p>When someone calls after hours with an emergency, what should the AI tell them?</p></div>
+      <div class="c full rise d4"><div class="qn">05</div><h4>Your FAQs</h4><p>Approve the greeting above, and send any other questions your front desk answers all day — parking, payment plans, the cost of a cleaning, languages spoken. We'll teach them all to the AI.</p></div>
+      <div class="c full rise d5"><div class="qn">06</div><h4>How calls reach your AI &nbsp;<span style="font-weight:600;color:var(--muted);font-size:13px">— pick one</span></h4>
+        <p>Your number and what patients dial never change. This only sets <em>when</em> a call rolls to the AI.</p>
+        <div class="opts">
+          <span class="opt">All calls go to the AI</span>
+          <span class="opt"><b>Conditional</b> — desk rings first, AI catches the rest <b>(most popular)</b></span>
+          <span class="opt">After-hours only</span>
+        </div>
+      </div>
+    </div>
+    <p class="reassure rise d6">Not sure on something? Leave it blank — we'll sort it out together on a quick call.</p>
+  </section>
+
+  <section>
+    <div class="label rise d1">Step 2 · Make it official</div>
+    <h2 class="display rise d1">Two quick things</h2>
+    <div class="cta">
+      <a class="btn pay rise d2" href="https://buy.stripe.com/eVq3cvfBl14GbeqfCp3VC00">
+        <div class="small">Start your first month</div>
+        <div class="big">$499 <span class="arrow">→</span></div>
+        <div class="micro">Secure payment via Stripe · sets up simple monthly billing · cancel anytime</div>
+      </a>
+      <div class="btn sign rise d3">
+        <div class="small">Sign your HIPAA form</div>
+        <div class="big">Check your inbox <span style="font-size:21px">✉</span></div>
+        <div class="micro">A separate 2-minute e-sign email is on its way — just open it, click, and sign. No account, no printing.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="rise d2">
+    <div class="q">Questions? We're one text away.</div>
+    <div class="contact">Just reply to our email, or text Jason at <a href="tel:19549091323">(954) 909-1323</a>.</div>
+    <div class="sig">Jason Eid · AI BOT CODER · Fort Lauderdale, FL</div>
+  </footer>
+
+</div>
+</body>
+</html>
