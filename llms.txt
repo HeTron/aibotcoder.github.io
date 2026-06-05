@@ -1,0 +1,37 @@
+# AI BOT CODER
+
+> AI BOT CODER builds custom AI automation for small and medium businesses — based in Fort Lauderdale, FL, working remotely with clients across the US. Founded by Jason Eid. The flagship product is a 24/7 AI Phone Receptionist for dental and medical offices; the company also builds custom AI agents, document processing, workflow automation, and reporting dashboards.
+
+## What AI BOT CODER does
+
+- **AI Phone Receptionist** — a 24/7 AI receptionist that answers every inbound call, books appointments, answers FAQs, and transfers to staff. Optional outbound appointment-confirmation calls. HIPAA-conscious with a signed BAA. Pricing: **$499/month inbound, $599/month with outbound confirmations, $0 setup.** Live demo line: (954) 568-8788. Built for dental and medical practices.
+- **Custom AI automation & consulting** — document processing (PDFs, invoices, contracts, blueprints), communication/follow-up automation, reporting dashboards, custom AI agents trained on a business, and workflow automation across tools like Google Workspace, Notion, and email.
+
+## Key pages
+
+- [Home](https://aibotcoder.com/): Overview of AI BOT CODER and what it automates.
+- [AI Phone Receptionist](https://aibotcoder.com/ai-phone-receptionist.html): Product page — features, pricing ($499/mo inbound, $599/mo with outbound), HIPAA/BAA, live demo, FAQ.
+- [Missed-Call Revenue Calculator](https://aibotcoder.com/missed-call-calculator.html): Free tool — estimates monthly revenue lost to missed calls and what an AI receptionist recovers.
+- [Services](https://aibotcoder.com/services.html): AI automation packages and pricing.
+- [Free Tools](https://aibotcoder.com/tools.html): Free calculators and tools.
+- [Portfolio](https://aibotcoder.com/portfolio.html): Real builds and case studies.
+- [About](https://aibotcoder.com/about.html): About founder Jason Eid.
+- [Contact](https://aibotcoder.com/contact.html): Get in touch / book a free discovery call.
+
+## Guides (blog)
+
+- [How Much Does an AI Receptionist Cost? (2026 Pricing)](https://aibotcoder.com/blog/ai-receptionist-cost.html): AI receptionists run ~$300–$900/mo vs $1,200–$2,000/mo for a human answering service.
+- [Best AI Receptionist for Dental Practices (2026 Guide)](https://aibotcoder.com/blog/best-ai-receptionist-for-dentists.html): What dental offices should look for — HIPAA/BAA, real-time booking, insurance FAQs.
+- [AI Receptionist vs. Answering Service](https://aibotcoder.com/blog/ai-receptionist-vs-answering-service.html): Side-by-side on cost, availability, and call quality.
+- [AI in Dentistry (2026)](https://aibotcoder.com/blog/ai-in-dentistry-2026-05-29.html): How AI is reshaping dental practices, front office to back office.
+- [5 Tasks to Automate First](https://aibotcoder.com/blog/automate-first.html): Where small businesses get the fastest ROI from automation.
+- [Your Small Business Doesn't Need a Big AI Budget](https://aibotcoder.com/blog/ai-budget.html): Debunking the cost misconception around AI adoption.
+- [Blueprint Estimator Case Study](https://aibotcoder.com/blog/blueprint-estimator.html): Cutting a contractor's bid time from hours to minutes with AI.
+
+## Contact
+
+- Website: https://aibotcoder.com
+- Email: jcode2k@gmail.com
+- Demo line: (954) 568-8788
+- Book a free discovery call: https://calendly.com/jcode2k
+- Service area: Fort Lauderdale, FL and remote across the US.

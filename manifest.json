@@ -1,0 +1,21 @@
+{
+  "name": "AI BOT CODER",
+  "short_name": "AI BOT CODER",
+  "description": "Custom AI automation for small businesses — Fort Lauderdale, FL.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0e0e0e",
+  "theme_color": "#0e0e0e",
+  "icons": [
+    {
+      "src": "/static/brand/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/brand/icon-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}
