@@ -18,7 +18,7 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
 body {
   font-family: var(--font-body);
   background: var(--cream);
@@ -71,14 +71,14 @@ em { font-style: italic; }
 
 /* ---------- hero ---------- */
 .hero {
-  position: relative; min-height: 100vh;
-  display: flex; flex-direction: column; justify-content: center;
-  padding: 8rem clamp(1.2rem, 6vw, 5rem) 5rem;
+  position: relative;
+  display: flex; flex-direction: column; justify-content: flex-start;
+  padding: 7rem clamp(1.2rem, 6vw, 5rem) 5rem;
   max-width: var(--maxw); margin: 0 auto;
 }
-.hero-glow {
-  position: absolute; top: 10%; right: -10%; width: 60vw; height: 60vw; max-width: 720px; max-height: 720px;
-  background: radial-gradient(circle, rgba(139,189,24,.28), rgba(139,189,24,0) 65%);
+.hero .hero-glow {
+  position: absolute; top: 2%; right: -8%; width: 50vw; height: 50vw; max-width: 620px; max-height: 620px;
+  background: radial-gradient(circle, rgba(139,189,24,.26), rgba(139,189,24,0) 65%);
   filter: blur(20px); z-index: 0;
 }
 .hero > * { position: relative; z-index: 1; }
@@ -183,7 +183,7 @@ em { font-style: italic; }
 }
 @media (max-width: 480px) {
   .hero { padding-top: 7rem; }
-  .eyebrow { letter-spacing: .12em; font-size: .72rem; }
+  .eyebrow { letter-spacing: .08em; font-size: .66rem; }
 }
 
 /* reduced motion */

@@ -1,19 +1,14 @@
-/* All Family Dental — preview interactions (Lenis smooth scroll + GSAP reveals) */
+/* All Family Dental — preview interactions (native scroll + GSAP reveals)
+   No smooth-scroll library: native scrolling is used for reliability.
+   Content is always made visible even if GSAP fails to load. */
 (function () {
   "use strict";
 
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const reveals = document.querySelectorAll(".reveal");
 
-  // --- Lenis smooth scroll ---
-  let lenis = null;
-  if (!reduce && window.Lenis) {
-    lenis = new Lenis({
-      duration: 1.1,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-    });
-    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
-    requestAnimationFrame(raf);
+  function showAll() {
+    reveals.forEach((el) => { el.style.opacity = "1"; el.style.transform = "none"; });
   }
 
   // --- header scrolled state ---
@@ -25,20 +20,14 @@
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
-  // --- anchor links through Lenis ---
-  document.querySelectorAll('a[href^="#"]').forEach((a) => {
-    a.addEventListener("click", (e) => {
-      const id = a.getAttribute("href");
-      if (id === "#" || id === "#top") return;
-      const el = document.querySelector(id);
-      if (el && lenis) { e.preventDefault(); lenis.scrollTo(el, { offset: -70 }); }
-    });
+  // Safety net: if anything goes wrong or GSAP is missing/slow, reveal everything.
+  if (reduce || !window.gsap) { showAll(); return; }
+  window.addEventListener("load", () => {
+    setTimeout(() => { if (!window.__revealed) showAll(); }, 1200);
   });
 
-  if (reduce || !window.gsap) return;
-
   gsap.registerPlugin(ScrollTrigger);
-  if (lenis) lenis.on("scroll", ScrollTrigger.update);
+  window.__revealed = true;
 
   // --- staggered reveals per section ---
   gsap.utils.toArray("section").forEach((section) => {
@@ -50,7 +39,7 @@
       duration: 0.9,
       ease: "power3.out",
       stagger: 0.1,
-      scrollTrigger: { trigger: section, start: "top 78%" },
+      scrollTrigger: { trigger: section, start: "top 80%" },
     });
   });
 
