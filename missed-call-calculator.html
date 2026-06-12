@@ -168,26 +168,8 @@
                         <div class="text-muted-light">per month &nbsp;·&nbsp; <span id="annualLossInline">$0</span>/year</div>
                     </div>
 
-                    <!-- Email gate -->
-                    <div class="gate-box mt-4" id="gateBox">
-                        <h5 class="mb-2"><i class="bi bi-unlock text-accent me-2"></i>Get your full breakdown</h5>
-                        <p class="text-muted-light mb-3">See your annual loss, how much an AI receptionist recovers, and your net ROI after the monthly cost. We'll email you a copy.</p>
-                        <div class="row g-2">
-                            <div class="col-sm">
-                                <input type="email" class="form-control" id="email" placeholder="you@business.com">
-                            </div>
-                            <div class="col-sm-auto">
-                                <button class="btn btn-primary w-100 px-4" id="revealBtn" type="button">Show my breakdown</button>
-                            </div>
-                        </div>
-                        <!-- honeypot: bots fill this, humans never see it -->
-                        <input type="text" class="honeypot" id="company_website" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true">
-                        <div class="text-danger small mt-2 hidden" id="emailErr">Enter a valid email to see your full breakdown.</div>
-                        <div class="calc-disclaimer mt-2">No spam. One email with your results. Unsubscribe anytime.</div>
-                    </div>
-
-                    <!-- Full results (revealed) -->
-                    <div class="hidden" id="resultsBox">
+                    <!-- Full results (always visible — no gate) -->
+                    <div id="resultsBox">
                         <div class="result-grid">
                             <div class="result-stat">
                                 <div class="num bad" id="rMonthly">$0</div>
@@ -218,6 +200,25 @@
                                 <a href="https://calendly.com/jcode2k" target="_blank" class="btn btn-outline-light btn-lg px-4">Book a 15-min Walkthrough</a>
                             </div>
                             <p class="calc-disclaimer mt-3">*Recovery assumes the AI answers calls your team currently misses and converts them at your stated rate. Conservative estimate — real results vary by business.</p>
+                        </div>
+
+                        <!-- Optional email follow-up (after the value, never before it) -->
+                        <div class="gate-box mt-4" id="gateBox">
+                            <h5 class="mb-2"><i class="bi bi-envelope-paper text-accent me-2"></i>Want this breakdown in your inbox?</h5>
+                            <p class="text-muted-light mb-3">I'll email you these numbers so you have them when you talk it over with your team. Optional — you've already got your answer above.</p>
+                            <div class="row g-2">
+                                <div class="col-sm">
+                                    <input type="email" class="form-control" id="email" placeholder="you@business.com">
+                                </div>
+                                <div class="col-sm-auto">
+                                    <button class="btn btn-outline-primary w-100 px-4" id="sendBtn" type="button">Email me my numbers</button>
+                                </div>
+                            </div>
+                            <!-- honeypot: bots fill this, humans never see it -->
+                            <input type="text" class="honeypot" id="company_website" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true">
+                            <div class="text-danger small mt-2 hidden" id="emailErr">That email doesn't look right — mind checking it?</div>
+                            <div class="text-success small mt-2 hidden" id="emailOk"><i class="bi bi-check-circle me-1"></i>On its way. Check your inbox shortly.</div>
+                            <div class="calc-disclaimer mt-2">No spam. One email with your results. Unsubscribe anytime.</div>
                         </div>
                     </div>
 
@@ -311,7 +312,7 @@
             var r = compute(readInputs());
             $("monthlyLoss").textContent = fmt(r.monthlyLoss);
             $("annualLossInline").textContent = fmt(r.annualLoss);
-            if (!$("resultsBox").classList.contains("hidden")) { fillResults(r); }
+            fillResults(r);
         }
 
         function fillResults(r) {
@@ -324,22 +325,22 @@
 
         function validEmail(e) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e); }
 
-        function reveal() {
+        function sendBreakdown() {
             var email = $("email").value.trim();
             if (!validEmail(email)) {
                 $("emailErr").classList.remove("hidden");
+                $("emailOk").classList.add("hidden");
                 return;
             }
             $("emailErr").classList.add("hidden");
+            $("emailOk").classList.remove("hidden");
+            $("sendBtn").disabled = true;
+            $("sendBtn").textContent = "Sent";
 
             var i = readInputs();
             var r = compute(i);
-            fillResults(r);
-            $("resultsBox").classList.remove("hidden");
-            $("gateBox").classList.add("hidden");
-            $("resultsBox").scrollIntoView({ behavior: "smooth", block: "center" });
 
-            // Fire-and-forget lead capture. Results show regardless of network outcome.
+            // Fire-and-forget lead capture. Confirmation shows regardless of network outcome.
             try {
                 fetch(WORKER_URL, {
                     method: "POST",
@@ -367,8 +368,8 @@
         ["weeklyCalls", "pctMissed", "bookRate", "avgValue"].forEach(function (id) {
             $(id).addEventListener("input", refresh);
         });
-        $("revealBtn").addEventListener("click", reveal);
-        $("email").addEventListener("keydown", function (e) { if (e.key === "Enter") reveal(); });
+        $("sendBtn").addEventListener("click", sendBreakdown);
+        $("email").addEventListener("keydown", function (e) { if (e.key === "Enter") sendBreakdown(); });
         refresh();
     })();
     </script>
