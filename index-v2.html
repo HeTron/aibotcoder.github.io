@@ -814,7 +814,7 @@ gsap.utils.toArray('.cu').forEach(el=>{
   }
   function close(){panel.classList.remove('open');launch.classList.remove('hide');}
   launch.onclick=open;closeb.onclick=close;
-  function esc(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+  function esc(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
   function bubble(html,cls){const d=document.createElement('div');d.className='msg '+cls;d.innerHTML=html;body.appendChild(d);body.scrollTop=body.scrollHeight;return d;}
   function typing(){const d=document.createElement('div');d.className='typing';d.innerHTML='<i></i><i></i><i></i>';body.appendChild(d);body.scrollTop=body.scrollHeight;return d;}
   // Client-only message (greeting) — shows typing then a bubble, not sent to the server.
@@ -826,7 +826,7 @@ gsap.utils.toArray('.cu').forEach(el=>{
   // Render a server reply (plain text): escape, then linkify URLs + the demo number.
   function fmt(t){
     let h=esc(t);
-    h=h.replace(/https?:\/\/[^\s)]+/g,u=>`<a href="${u}" target="_blank">${u}</a>`);
+    h=h.replace(/https?:\/\/[^\s)"'<>]+/g,m=>{const tm=m.match(/[.,!?;:]+$/);const u=tm?m.slice(0,-tm[0].length):m;return `<a href="${u}" target="_blank" rel="noopener">${u}</a>`+(tm?tm[0]:'');});
     h=h.replace(/\(?\b954\)?[\s.\-]?568[\s.\-]?8788\b/g,'<a href="tel:+19545688788">(954) 568-8788</a>');
     return h;
   }
