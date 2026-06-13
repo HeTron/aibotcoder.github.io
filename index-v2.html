@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI BOT CODER — Stop Doing It Manually. Let AI Run It.</title>
+<meta name="description" content="Custom AI automation for small businesses. AI phone receptionists, document processing, workflow automation. Fort Lauderdale, FL.">
+<meta name="google-site-verification" content="uoPJ2G7XvGmkXYx6xA_-hHgyLdKE6QJmGqH-ertYhyk" />
+<!-- PREVIEW ONLY — remove this single robots line when promoting to index.html -->
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://aibotcoder.com/">
+<meta property="og:title" content="AI BOT CODER – AI Automation for Small Businesses">
+<meta property="og:description" content="Custom AI automation for small businesses. Stop doing it manually — let AI run it. Fort Lauderdale, FL.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aibotcoder.com/">
+<meta property="og:image" content="https://aibotcoder.com/static/images/og/default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="AI BOT CODER">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI BOT CODER – AI Automation for Small Businesses">
+<meta name="twitter:description" content="Custom AI automation for small businesses. Stop doing it manually — let AI run it.">
+<meta name="twitter:image" content="https://aibotcoder.com/static/images/og/default.png">
+<link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#08090c">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Organization", "ProfessionalService"],
+  "name": "AI BOT CODER",
+  "alternateName": "AI Bot Coder LLC",
+  "url": "https://aibotcoder.com",
+  "logo": "https://aibotcoder.com/static/brand/icon-512.png",
+  "image": "https://aibotcoder.com/static/images/og/default.png",
+  "description": "Custom AI automation for small and medium businesses — AI phone receptionists, custom AI agents, document processing, and workflow automation. Based in Fort Lauderdale, FL.",
+  "email": "jcode2k@gmail.com",
+  "telephone": "+1-954-568-8788",
+  "founder": { "@type": "Person", "name": "Jason Eid" },
+  "areaServed": [
+    { "@type": "City", "name": "Fort Lauderdale" },
+    { "@type": "AdministrativeArea", "name": "Broward County" },
+    { "@type": "AdministrativeArea", "name": "Miami-Dade County" },
+    { "@type": "AdministrativeArea", "name": "Palm Beach County" },
+    { "@type": "Country", "name": "United States" }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Fort Lauderdale",
+    "addressRegion": "FL",
+    "addressCountry": "US"
+  },
+  "knowsAbout": ["AI automation", "AI phone receptionist", "workflow automation", "document processing", "AI agents", "small business automation"],
+  "sameAs": ["https://www.linkedin.com/in/jcode2k/", "https://github.com/HeTron"]
+}
+</script>
+
+<!-- Fonts: Bricolage Grotesque (display) · Hanken Grotesk (body) · JetBrains Mono (terminal) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#08090c; --bg2:#0c0e13; --elev:#12151d; --elev2:#171b25;
+  --blue:#6ea8fe; --blue-bright:#9cc4ff; --blue-deep:#3b6fd4;
+  --ink:#f3f6fc; --muted:#8a93a6; --faint:#5a6276;
+  --line:rgba(255,255,255,.08); --line2:rgba(255,255,255,.14);
+  --alarm:#ff5d54; --phos:#5ef2b0;
+  --display:'Bricolage Grotesque',sans-serif;
+  --body:'Hanken Grotesk',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg); color:var(--ink); font-family:var(--body);
+  font-size:18px; line-height:1.5; -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+::selection{background:var(--blue);color:#04060a}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+/* grain overlay */
+body::after{
+  content:""; position:fixed; inset:0; z-index:9998; pointer-events:none;
+  opacity:.035; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.mono{font-family:var(--mono)}
+.label{
+  font-family:var(--mono); font-size:.72rem; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--blue); font-weight:500;
+}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+
+/* ───────── NAV ───────── */
+.nav{
+  position:fixed; top:0; left:0; right:0; z-index:1000;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:18px 32px; transition:background .4s,backdrop-filter .4s,border-color .4s;
+  border-bottom:1px solid transparent;
+}
+.nav.scrolled{
+  background:rgba(8,9,12,.72); backdrop-filter:blur(18px) saturate(160%);
+  border-bottom:1px solid var(--line);
+}
+.nav .brand{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-weight:700;font-size:1rem;letter-spacing:-.01em}
+.nav .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--blue);box-shadow:0 0 14px var(--blue);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.5);opacity:.55}}
+.nav .brand b{color:var(--ink)} .nav .brand span{color:var(--blue)}
+.nav-links{display:flex;align-items:center;gap:30px;font-size:.92rem;color:var(--muted)}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{
+  display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:.82rem;font-weight:500;
+  padding:10px 16px;border:1px solid var(--line2);border-radius:100px;color:var(--ink);
+  transition:.25s; white-space:nowrap;
+}
+.nav-cta:hover{border-color:var(--blue);background:rgba(110,168,254,.1);box-shadow:0 0 24px rgba(110,168,254,.18)}
+.nav-cta .rdot{width:7px;height:7px;border-radius:50%;background:var(--phos);box-shadow:0 0 10px var(--phos);animation:pulse 1.6s infinite}
+.burger{display:none}
+
+/* ───────── HERO ───────── */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+#net{position:absolute;inset:0;z-index:1}
+.hero-glow{position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:radial-gradient(60% 55% at 70% 40%,rgba(110,168,254,.16),transparent 70%),
+             radial-gradient(50% 60% at 15% 80%,rgba(59,111,212,.12),transparent 70%);}
+.hero-grad{position:absolute;left:0;right:0;bottom:0;height:42%;z-index:3;pointer-events:none;
+  background:linear-gradient(to bottom,transparent,var(--bg))}
+.hero-inner{position:relative;z-index:5;width:100%}
+.hero-eyebrow{margin-bottom:26px;display:flex;align-items:center;gap:14px}
+.hero-eyebrow .ln{height:1px;width:54px;background:linear-gradient(90deg,var(--blue),transparent)}
+.hero h1{
+  font-family:var(--display); font-weight:800; line-height:.92; letter-spacing:-.03em;
+  font-size:clamp(2.7rem,8.6vw,7.4rem); max-width:14ch; margin-bottom:28px;
+}
+.hero h1 .gleam{
+  background:linear-gradient(110deg,var(--blue) 0%,var(--blue-bright) 40%,#fff 55%,var(--blue) 75%);
+  background-size:220% 100%; -webkit-background-clip:text; background-clip:text; color:transparent;
+  animation:sweep 6s ease-in-out infinite;
+}
+@keyframes sweep{0%,100%{background-position:0% 0}50%{background-position:120% 0}}
+.hero p.sub{font-size:clamp(1.05rem,1.6vw,1.35rem);color:var(--muted);max-width:52ch;margin-bottom:38px}
+.hero p.sub b{color:var(--ink);font-weight:600}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+
+.btn{
+  display:inline-flex;align-items:center;gap:11px;font-family:var(--mono);font-weight:500;
+  font-size:.92rem;padding:16px 26px;border-radius:100px;cursor:pointer;border:1px solid transparent;
+  transition:transform .2s,box-shadow .3s,background .25s,border-color .25s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--blue);color:#04060a;font-weight:700;box-shadow:0 0 0 rgba(110,168,254,.5)}
+.btn-primary:hover{background:var(--blue-bright);box-shadow:0 14px 44px rgba(110,168,254,.4)}
+.btn-ghost{border-color:var(--line2);color:var(--ink);background:rgba(255,255,255,.02)}
+.btn-ghost:hover{border-color:var(--blue);background:rgba(110,168,254,.08)}
+.btn svg{width:17px;height:17px}
+
+.hero-phone{margin-top:30px;display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:.85rem;color:var(--muted)}
+.hero-phone a{color:var(--blue);font-weight:700;border-bottom:1px solid transparent;transition:.2s}
+.hero-phone a:hover{border-color:var(--blue)}
+
+/* live terminal */
+.terminal{
+  position:absolute;right:32px;bottom:48px;z-index:6;width:340px;max-width:42vw;
+  background:rgba(10,12,17,.78);backdrop-filter:blur(14px);border:1px solid var(--line2);
+  border-radius:14px;overflow:hidden;font-family:var(--mono);font-size:.74rem;
+  box-shadow:0 30px 70px rgba(0,0,0,.5);
+}
+.terminal .bar{display:flex;align-items:center;gap:7px;padding:11px 14px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.02)}
+.terminal .bar i{width:10px;height:10px;border-radius:50%;display:block}
+.terminal .bar i:nth-child(1){background:#ff5f57}.terminal .bar i:nth-child(2){background:#febc2e}.terminal .bar i:nth-child(3){background:#28c840}
+.terminal .bar span{margin-left:8px;color:var(--faint);font-size:.68rem}
+.terminal .body{padding:14px;min-height:148px;line-height:1.85}
+.terminal .ln{white-space:pre-wrap}
+.terminal .pr{color:var(--blue)}
+.terminal .ok{color:var(--phos)}
+.terminal .dim{color:var(--faint)}
+.terminal .cur{display:inline-block;width:8px;height:14px;background:var(--phos);vertical-align:-2px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+
+.scrollcue{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:6;
+  font-family:var(--mono);font-size:.65rem;letter-spacing:.2em;color:var(--faint);text-transform:uppercase;
+  display:flex;flex-direction:column;align-items:center;gap:8px}
+.scrollcue .m{width:1px;height:34px;background:linear-gradient(var(--blue),transparent);animation:drop 2s ease-in-out infinite}
+@keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}50.1%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ───────── MARQUEE ───────── */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0;overflow:hidden;white-space:nowrap;background:var(--bg2)}
+.marquee .track{display:inline-block;will-change:transform}
+.marquee span{font-family:var(--display);font-weight:700;font-size:clamp(2.2rem,5.4vw,4.6rem);letter-spacing:-.02em;text-transform:uppercase;color:transparent;-webkit-text-stroke:1px var(--faint)}
+.marquee span.fill{color:var(--blue);-webkit-text-stroke:0}
+.marquee b{color:var(--faint);margin:0 .5em;font-weight:400}
+
+/* ───────── SECTIONS ───────── */
+section{position:relative}
+.sec-head{margin-bottom:60px}
+.sec-head h2{font-family:var(--display);font-weight:700;letter-spacing:-.025em;line-height:1;
+  font-size:clamp(2.1rem,4.6vw,3.7rem);margin-top:16px;max-width:18ch}
+.sec-head p.lead{color:var(--muted);font-size:1.12rem;max-width:54ch;margin-top:18px}
+
+/* CALCULATOR */
+.calc{padding:130px 0;background:linear-gradient(to bottom,var(--bg),#0a0d14 60%,var(--bg))}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.calc-panel{background:linear-gradient(160deg,var(--elev),var(--bg2));border:1px solid var(--line);
+  border-radius:22px;padding:42px;box-shadow:0 40px 90px rgba(0,0,0,.45);position:relative;overflow:hidden}
+.calc-panel::before{content:"";position:absolute;top:-1px;left:24px;right:24px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--blue),transparent)}
+.calc-q{font-family:var(--mono);font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px}
+.calc-bignum{font-family:var(--display);font-weight:800;line-height:1;letter-spacing:-.03em;
+  font-size:clamp(3rem,7vw,5.4rem);color:var(--alarm);text-shadow:0 0 50px rgba(255,93,84,.32);font-variant-numeric:tabular-nums}
+.calc-bignum .pm{font-size:.32em;color:var(--muted);font-family:var(--mono);font-weight:500;margin-left:8px;letter-spacing:0}
+.calc-recover{margin-top:18px;font-size:1.05rem;color:var(--muted)}
+.calc-recover b{color:var(--blue);font-weight:700;font-variant-numeric:tabular-nums;font-size:1.5rem;font-family:var(--display)}
+.slider-row{margin:36px 0 8px}
+.slider-row .top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px;font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+.slider-row .top b{color:var(--ink);font-size:1.3rem}
+input[type=range]{-webkit-appearance:none;width:100%;height:5px;border-radius:6px;
+  background:linear-gradient(90deg,var(--blue) var(--fill,30%),rgba(255,255,255,.1) var(--fill,30%));outline:none;cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;
+  background:var(--ink);border:3px solid var(--blue);box-shadow:0 0 18px rgba(110,168,254,.7);cursor:grab;transition:transform .15s}
+input[type=range]::-webkit-slider-thumb:active{transform:scale(1.18);cursor:grabbing}
+.calc-assume{font-family:var(--mono);font-size:.7rem;color:var(--faint);margin-top:22px;line-height:1.7}
+.calc-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+
+/* AUTOMATE scroll-pin */
+.automate{background:#06070a;padding:120px 0 130px;border-top:1px solid var(--line)}
+.cap-list{display:flex;flex-direction:column}
+.cap{display:grid;grid-template-columns:90px 1fr auto;gap:30px;align-items:start;
+  padding:40px 0;border-top:1px solid var(--line);opacity:.46;transition:opacity .5s}
+.cap.active{opacity:1}
+.cap .idx{font-family:var(--mono);font-size:.85rem;color:var(--blue);padding-top:8px}
+.cap h3{font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,3.4vw,2.5rem);letter-spacing:-.02em;line-height:1.04}
+.cap p{color:var(--muted);margin-top:12px;max-width:60ch;font-size:1.02rem}
+.cap .ico{font-family:var(--mono);font-size:1.7rem;color:var(--faint);transition:color .4s}
+.cap.active .ico{color:var(--blue)}
+
+/* HEAR IT */
+.hear{padding:130px 0;background:radial-gradient(120% 80% at 50% 0%,#0c1322,var(--bg) 70%);text-align:center;border-top:1px solid var(--line)}
+.hear h2{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,5.6vw,4.4rem);letter-spacing:-.03em;line-height:1;margin:18px auto 14px;max-width:16ch}
+.hear p.sub{color:var(--muted);max-width:48ch;margin:0 auto 44px;font-size:1.1rem}
+.player{max-width:660px;margin:0 auto;background:linear-gradient(160deg,var(--elev),var(--bg2));
+  border:1px solid var(--line2);border-radius:20px;padding:30px 34px;box-shadow:0 40px 90px rgba(0,0,0,.5)}
+.player-top{display:flex;align-items:center;gap:20px;text-align:left}
+.playbtn{flex:none;width:64px;height:64px;border-radius:50%;border:none;cursor:pointer;
+  background:var(--blue);color:#04060a;display:grid;place-items:center;box-shadow:0 0 0 0 rgba(110,168,254,.5);transition:.25s}
+.playbtn:hover{background:var(--blue-bright);box-shadow:0 12px 40px rgba(110,168,254,.45)}
+.playbtn svg{width:24px;height:24px}
+.player-meta .t{font-family:var(--mono);font-size:.74rem;color:var(--blue);letter-spacing:.1em;text-transform:uppercase}
+.player-meta .d{color:var(--ink);font-weight:600;margin-top:3px}
+.wave{flex:1;height:54px;display:flex;align-items:center;gap:3px}
+.wave i{flex:1;background:linear-gradient(var(--blue),var(--blue-deep));border-radius:2px;height:14%;transition:height .08s linear;opacity:.55}
+.player-time{font-family:var(--mono);font-size:.72rem;color:var(--faint);margin-top:16px;display:flex;justify-content:space-between}
+.call-live{margin-top:50px}
+.call-live .or{font-family:var(--mono);font-size:.78rem;color:var(--faint);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
+.bignumber{display:inline-flex;align-items:center;gap:16px;font-family:var(--display);font-weight:800;
+  font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.02em;color:var(--ink);
+  padding:14px 30px;border:1px solid var(--line2);border-radius:100px;position:relative;transition:.3s}
+.bignumber:hover{border-color:var(--phos);box-shadow:0 0 40px rgba(94,242,176,.2)}
+.bignumber .ring{width:14px;height:14px;border-radius:50%;background:var(--phos);box-shadow:0 0 0 0 rgba(94,242,176,.7);animation:ring 1.8s infinite}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(94,242,176,.6)}70%{box-shadow:0 0 0 16px rgba(94,242,176,0)}100%{box-shadow:0 0 0 0 rgba(94,242,176,0)}}
+
+/* STATS */
+.stats{padding:110px 0;border-top:1px solid var(--line);background:var(--bg2)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+.stat .n{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,5vw,4rem);letter-spacing:-.03em;
+  line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+.stat .n .u{color:var(--blue);font-size:.5em;margin-left:2px}
+.stat .lbl{font-family:var(--mono);font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:14px;line-height:1.5}
+
+/* WHY */
+.why{padding:120px 0;border-top:1px solid var(--line)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:50px}
+.why-card{border:1px solid var(--line);border-radius:18px;padding:34px;background:linear-gradient(160deg,var(--elev),transparent);transition:.3s}
+.why-card:hover{border-color:var(--line2);transform:translateY(-4px);background:linear-gradient(160deg,var(--elev2),transparent)}
+.why-card .ic{font-family:var(--mono);color:var(--blue);font-size:.8rem;letter-spacing:.1em;margin-bottom:18px}
+.why-card h4{font-family:var(--display);font-weight:700;font-size:1.4rem;letter-spacing:-.01em;margin-bottom:12px}
+.why-card p{color:var(--muted);font-size:1rem}
+
+/* FINAL CTA */
+.final{padding:150px 0;text-align:center;position:relative;overflow:hidden;border-top:1px solid var(--line);
+  background:radial-gradient(80% 120% at 50% 120%,rgba(110,168,254,.16),var(--bg) 70%)}
+.final h2{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,7vw,6rem);letter-spacing:-.035em;line-height:.95;margin-bottom:24px}
+.final p{color:var(--muted);max-width:50ch;margin:0 auto 42px;font-size:1.18rem}
+.final .btn-primary{font-size:1.05rem;padding:20px 40px}
+
+/* FOOTER */
+footer{padding:60px 0 50px;border-top:1px solid var(--line);background:var(--bg2)}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;color:var(--muted);font-size:.88rem}
+.foot .brand{font-family:var(--mono);font-weight:700;color:var(--ink)}
+.foot a:hover{color:var(--blue)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(34px)}
+
+/* ───────── CHAT WIDGET ───────── */
+.chat-launch{position:fixed;right:24px;bottom:24px;z-index:1200;display:flex;align-items:center;gap:11px;cursor:pointer;
+  background:var(--blue);color:#04060a;font-family:var(--mono);font-weight:700;font-size:.84rem;
+  padding:14px 20px 14px 17px;border:none;border-radius:100px;box-shadow:0 14px 40px rgba(110,168,254,.4);
+  transition:transform .25s,box-shadow .3s,opacity .25s}
+.chat-launch:hover{transform:translateY(-3px);box-shadow:0 20px 54px rgba(110,168,254,.58)}
+.chat-launch svg{width:21px;height:21px}
+.chat-launch .pp{position:absolute;top:-2px;right:-2px;width:14px;height:14px;border-radius:50%;background:var(--phos);border:2px solid var(--bg);box-shadow:0 0 10px var(--phos);animation:pulse 1.8s infinite}
+.chat-launch.hide{transform:scale(.3);opacity:0;pointer-events:none}
+.chat-panel{position:fixed;right:24px;bottom:24px;z-index:1201;width:382px;max-width:calc(100vw - 32px);
+  height:564px;max-height:calc(100vh - 48px);background:var(--bg2);border:1px solid var(--line2);border-radius:20px;
+  overflow:hidden;display:flex;flex-direction:column;box-shadow:0 40px 100px rgba(0,0,0,.62);
+  transform:translateY(24px) scale(.96);opacity:0;pointer-events:none;transform-origin:bottom right;
+  transition:transform .32s cubic-bezier(.2,.85,.25,1),opacity .25s}
+.chat-panel.open{transform:none;opacity:1;pointer-events:auto}
+.chat-head{display:flex;align-items:center;gap:12px;padding:16px 16px;border-bottom:1px solid var(--line);background:linear-gradient(160deg,var(--elev),var(--bg2))}
+.chat-head .av{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--blue-deep));display:grid;place-items:center;color:#04060a;font-family:var(--mono);font-weight:700;font-size:.85rem}
+.chat-head .ttl{flex:1}
+.chat-head .ttl b{display:block;font-family:var(--display);font-weight:700;font-size:1.02rem;letter-spacing:-.01em}
+.chat-head .ttl span{font-family:var(--mono);font-size:.68rem;color:var(--phos);display:flex;align-items:center;gap:6px;margin-top:2px}
+.chat-head .ttl span i{width:7px;height:7px;border-radius:50%;background:var(--phos);box-shadow:0 0 8px var(--phos)}
+.chat-head .x{background:none;border:none;color:var(--muted);cursor:pointer;font-size:1.5rem;line-height:1;padding:2px 6px}
+.chat-head .x:hover{color:var(--ink)}
+.chat-body{flex:1;overflow-y:auto;padding:18px 16px;display:flex;flex-direction:column;gap:11px}
+.chat-body::-webkit-scrollbar{width:6px}.chat-body::-webkit-scrollbar-thumb{background:var(--line2);border-radius:6px}
+.msg{max-width:82%;padding:11px 15px;border-radius:16px;font-size:.91rem;line-height:1.5;animation:msgin .32s ease;word-wrap:break-word}
+@keyframes msgin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.msg.ai{align-self:flex-start;background:var(--elev2);border:1px solid var(--line);border-bottom-left-radius:5px;color:var(--ink)}
+.msg.me{align-self:flex-end;background:var(--blue);color:#04060a;font-weight:500;border-bottom-right-radius:5px}
+.msg a{color:var(--blue);text-decoration:underline;font-weight:600}
+.msg.me a{color:#04060a}
+.typing{align-self:flex-start;display:flex;gap:5px;padding:14px 16px;background:var(--elev2);border:1px solid var(--line);border-radius:16px;border-bottom-left-radius:5px}
+.typing i{width:7px;height:7px;border-radius:50%;background:var(--muted);animation:td 1.2s infinite}
+.typing i:nth-child(2){animation-delay:.18s}.typing i:nth-child(3){animation-delay:.36s}
+@keyframes td{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-5px)}}
+.chat-quick{display:flex;flex-wrap:wrap;gap:7px;padding:2px 16px 10px}
+.chat-quick button{font-family:var(--mono);font-size:.72rem;color:var(--blue);background:rgba(110,168,254,.08);border:1px solid var(--line2);border-radius:100px;padding:7px 12px;cursor:pointer;transition:.2s}
+.chat-quick button:hover{background:rgba(110,168,254,.16);border-color:var(--blue)}
+.chat-input{display:flex;gap:9px;padding:13px 14px;border-top:1px solid var(--line);background:var(--bg2)}
+.chat-input input{flex:1;background:var(--elev);border:1px solid var(--line2);border-radius:100px;padding:12px 16px;color:var(--ink);font-family:var(--body);font-size:.92rem;outline:none}
+.chat-input input:focus{border-color:var(--blue)}
+.chat-input .sendb{flex:none;width:44px;height:44px;border-radius:50%;background:var(--blue);border:none;color:#04060a;cursor:pointer;display:grid;place-items:center;transition:.2s}
+.chat-input .sendb:hover{background:var(--blue-bright)}
+.chat-input .sendb svg{width:19px;height:19px}
+.chat-foot{text-align:center;font-family:var(--mono);font-size:.6rem;color:var(--faint);padding:0 0 9px;letter-spacing:.04em}
+@media(max-width:560px){
+  .chat-panel{height:calc(100vh - 20px);bottom:10px;right:10px;left:10px;width:auto;max-width:none;border-radius:16px}
+  .chat-launch{right:16px;bottom:16px}
+}
+
+/* ───────── RESPONSIVE ───────── */
+@media(max-width:900px){
+  .nav-links{display:none}
+  .calc-grid{grid-template-columns:1fr;gap:40px}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:40px 24px}
+  .why-grid{grid-template-columns:1fr}
+  .terminal{display:none}
+  .cap{grid-template-columns:50px 1fr;gap:18px}
+  .cap .ico{display:none}
+}
+@media(max-width:560px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  .nav{padding:13px 16px}
+  .nav .brand{font-size:.9rem}
+  .cta-lbl{display:none}
+  .nav-cta{font-size:.76rem;padding:9px 13px}
+  .hero-ctas{flex-direction:column;align-items:stretch}
+  .hero-ctas .btn{justify-content:center}
+  .calc-panel{padding:28px}
+  .player-top{flex-direction:column;align-items:stretch;gap:16px}
+  .wave{width:100%}
+  .marquee span{font-size:13vw}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a class="brand" href="#top"><span class="dot"></span><b>aibot</b><span>coder</span></a>
+  <div class="nav-links">
+    <a href="#automate">What I Automate</a>
+    <a href="#calc">Calculator</a>
+    <a href="/services.html">Services</a>
+    <a href="/portfolio.html">Portfolio</a>
+    <a href="/tools.html">Tools</a>
+  </div>
+  <a class="nav-cta" href="tel:+19545688788"><span class="rdot"></span><span class="cta-lbl">Call the AI · </span>(954)&nbsp;568-8788</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <canvas id="net"></canvas>
+  <div class="hero-glow"></div>
+  <div class="hero-grad"></div>
+  <div class="hero-inner">
+    <div class="wrap">
+      <div class="hero-eyebrow"><span class="ln"></span><span class="label">AI Automation · Fort Lauderdale, FL</span></div>
+      <h1>Stop doing it <span class="gleam">manually.</span><br>Let AI run it.</h1>
+      <p class="sub">I build custom AI that answers your calls, books your appointments, and handles the busywork — <b>so you can focus on running the business.</b> Not templates. Real agents, in production.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#hear" id="cta-hear">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          Hear the AI answer a call
+        </a>
+        <a class="btn btn-ghost" href="#calc">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h8M8 14h3"/></svg>
+          What are missed calls costing you?
+        </a>
+      </div>
+      <div class="hero-phone">
+        <span>Or just talk to it right now:</span>
+        <a href="tel:+19545688788">(954)&nbsp;568-8788</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- live terminal -->
+  <div class="terminal" id="term">
+    <div class="bar"><i></i><i></i><i></i><span>aibotcoder — live agent</span></div>
+    <div class="body"><div class="ln" id="termln"></div></div>
+  </div>
+
+  <div class="scrollcue"><span>Scroll</span><span class="m"></span></div>
+</header>
+
+<!-- MARQUEE -->
+<div class="marquee"><div class="track" id="mq">
+  <span class="fill">Answer every call</span><b>/</b><span>Book appointments</span><b>/</b><span class="fill">Eliminate busywork</span><b>/</b><span>Never miss a lead</span><b>/</b><span class="fill">Work 24/7</span><b>/</b>
+  <span class="fill">Answer every call</span><b>/</b><span>Book appointments</span><b>/</b><span class="fill">Eliminate busywork</span><b>/</b><span>Never miss a lead</span><b>/</b><span class="fill">Work 24/7</span><b>/</b>
+</div></div>
+
+<!-- CALCULATOR -->
+<section class="calc" id="calc">
+  <div class="wrap">
+    <div class="calc-grid">
+      <div class="sec-head reveal" style="margin-bottom:0">
+        <span class="label">// The Math Nobody Runs</span>
+        <h2>Every missed call is a customer who called someone else.</h2>
+        <p class="lead">Most owners never add it up. Drag the slider — see what walks out the door each month, and what a 24/7 AI receptionist would put back.</p>
+      </div>
+
+      <div class="calc-panel reveal">
+        <div class="calc-q">Estimated revenue lost / month</div>
+        <div class="calc-bignum"><span id="lostNum">$0</span><span class="pm">/mo</span></div>
+        <div class="calc-recover">AI recovers an estimated <b id="recoverNum">$0</b>/mo of it.</div>
+
+        <div class="slider-row">
+          <div class="top"><span>Missed calls per day</span><b id="callsVal">8</b></div>
+          <input type="range" id="calls" min="1" max="30" value="8">
+        </div>
+
+        <div class="calc-assume">
+          // assumes ~$<span id="avgVal">250</span> avg customer value · 35% would book if answered · 22 working days/mo<br>
+          // your real numbers run live in the full calculator
+        </div>
+
+        <div class="calc-cta">
+          <a class="btn btn-primary" href="https://aibotcoder.com/missed-call-calculator.html">Run my real number →</a>
+          <a class="btn btn-ghost" href="tel:+19545688788">Or call the AI live</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTOMATE -->
+<section class="automate" id="automate">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">// 001 — What I Automate</span>
+      <h2>Real automations. Built with Claude AI, Python &amp; n8n — not off-the-shelf tools.</h2>
+    </div>
+    <div class="cap-list" id="caps">
+      <div class="cap"><div class="idx">01</div><div><h3>AI Phone Receptionist</h3><p>Answers every call 24/7, sounds human, books and reschedules appointments, and texts you the details. Never send a customer to voicemail again.</p></div><div class="ico">[call]</div></div>
+      <div class="cap"><div class="idx">02</div><div><h3>Document Processing</h3><p>Pull data from PDFs, invoices, contracts and blueprints — straight into your spreadsheet, database or CRM. Zero manual entry.</p></div><div class="ico">[doc]</div></div>
+      <div class="cap"><div class="idx">03</div><div><h3>Communication &amp; Follow-Up</h3><p>Auto-respond to leads, run follow-up sequences, triage the inbox and draft replies — handled by AI, approved by you.</p></div><div class="ico">[mail]</div></div>
+      <div class="cap"><div class="idx">04</div><div><h3>Custom AI Agents</h3><p>Assistants trained on your business — answer customer questions, look up job status, walk your team through a process.</p></div><div class="ico">[bot]</div></div>
+      <div class="cap"><div class="idx">05</div><div><h3>Workflow Automation</h3><p>Connect Google Workspace, Notion, email and Slack so information flows automatically instead of being copy-pasted by hand.</p></div><div class="ico">[flow]</div></div>
+      <div class="cap"><div class="idx">06</div><div><h3>Estimating &amp; Job Costing</h3><p>Upload blueprints, get a structured bid sheet back. Track labor and materials per job in real time. Built for trades.</p></div><div class="ico">[bid]</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HEAR IT -->
+<section class="hear" id="hear">
+  <div class="wrap">
+    <span class="label">// Don't Take My Word For It</span>
+    <h2>Hear the AI answer a real call.</h2>
+    <p class="sub">This is an actual call to the demo line — answered, handled, booked. 73 seconds.</p>
+
+    <div class="player reveal">
+      <div class="player-top">
+        <button class="playbtn" id="playbtn" aria-label="Play demo call">
+          <svg id="playicon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <div class="wave" id="wave"></div>
+        <div class="player-meta">
+          <div class="t">Live demo call</div>
+          <div class="d">AI Receptionist</div>
+        </div>
+      </div>
+      <div class="player-time"><span id="curTime">0:00</span><span id="durTime">1:13</span></div>
+      <audio id="audio" preload="none" src="https://aibotcoder.com/static/audio/ai-receptionist-demo-call.mp3"></audio>
+    </div>
+
+    <div class="call-live">
+      <div class="or">— or talk to it yourself, right now —</div>
+      <a class="bignumber" href="tel:+19545688788"><span class="ring"></span>(954) 568-8788</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat reveal"><div class="n"><span class="cu" data-to="24">0</span><span class="u">/7</span></div><div class="lbl">Always answering<br>nights · weekends · holidays</div></div>
+      <div class="stat reveal"><div class="n"><span class="cu" data-to="0">0</span><span class="u">s</span></div><div class="lbl">Hold time<br>picks up on ring one</div></div>
+      <div class="stat reveal"><div class="n">$<span class="cu" data-to="0">0</span></div><div class="lbl">Setup cost<br>$499/mo · cancel anytime</div></div>
+      <div class="stat reveal"><div class="n"><span class="cu" data-to="10">0</span><span class="u">+ hrs</span></div><div class="lbl">Bought back / week<br>per typical client</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">// Why AI BOT CODER</span>
+      <h2>Most developers know code. I know business first — then I build the code.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="ic">// 10+ YEARS OPS</div><h4>Operator, not just a coder</h4><p>I ran teams and operated businesses before I touched AI. I understand the problem before I build the solution.</p></div>
+      <div class="why-card reveal"><div class="ic">// CLAUDE CODE</div><h4>Built on the best AI</h4><p>Anthropic's Claude — the most capable models available. Not ChatGPT wrappers. Real agents that do real work.</p></div>
+      <div class="why-card reveal"><div class="ic">// IN PRODUCTION</div><h4>Already proven in the field</h4><p>A live AI receptionist taking real calls, a blueprint estimator for a GC, workflow automations running daily. Not demos.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final">
+  <div class="wrap">
+    <span class="label">// Let's Build It</span>
+    <h2>Ready to automate<br>your business?</h2>
+    <p>Book a free 30-minute discovery call. We'll map exactly what can be automated — and what it'd take to build it.</p>
+    <a class="btn btn-primary" href="https://calendly.com/jcode2k" target="_blank">Book your free call →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span class="brand">aibotcoder<span style="color:var(--blue)">.com</span></span>
+    <span class="foot-links">
+      <a href="/services.html">Services</a> · <a href="/portfolio.html">Portfolio</a> · <a href="/tools.html">Tools</a> · <a href="/blog-posts.html">Blog</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a>
+    </span>
+    <span><a href="tel:+19545688788">(954) 568-8788</a> · <a href="mailto:jcode2k@gmail.com">jcode2k@gmail.com</a> · <a href="https://www.linkedin.com/in/jcode2k/" target="_blank">LinkedIn</a> · <a href="https://github.com/HeTron" target="_blank">GitHub</a></span>
+  </div>
+  <div class="wrap" style="margin-top:20px;color:var(--faint);font-size:.82rem;">© 2026 AI BOT CODER · Fort Lauderdale, FL</div>
+</footer>
+
+<!-- CHAT WIDGET -->
+<button class="chat-launch" id="chatLaunch" aria-label="Open chat">
+  <span class="pp"></span>
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.48 3 2 6.79 2 11.5c0 2.39 1.16 4.55 3.04 6.09L4 22l4.9-1.66c.98.3 2.02.46 3.1.46 5.52 0 10-3.79 10-8.5S17.52 3 12 3z"/></svg>
+  Chat with us
+</button>
+<div class="chat-panel" id="chatPanel" role="dialog" aria-label="Chat with AI Bot Coder">
+  <div class="chat-head">
+    <div class="av">AI</div>
+    <div class="ttl"><b>AI Bot Coder</b><span><i></i>Online · replies instantly</span></div>
+    <button class="x" id="chatClose" aria-label="Close chat">&times;</button>
+  </div>
+  <div class="chat-body" id="chatBody"></div>
+  <div class="chat-quick" id="chatQuick">
+    <button data-q="pricing">How much is it?</button>
+    <button data-q="how">How does it work?</button>
+    <button data-q="human">Talk to a human</button>
+  </div>
+  <div class="chat-input">
+    <input id="chatText" placeholder="Type a message…" autocomplete="off">
+    <button class="sendb" id="chatSend" aria-label="Send"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 11l18-8-8 18-2-7-8-3z"/></svg></button>
+  </div>
+  <div class="chat-foot">⚡ AI assistant · connects you to our team for real leads</div>
+</div>
+
+<!-- ───────── SCRIPTS ───────── -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+<!-- THREE.js node network -->
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+<script type="module">
+import * as THREE from 'three';
+const cv = document.getElementById('net');
+const renderer = new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+const scene = new THREE.Scene();
+const cam = new THREE.PerspectiveCamera(60,1,0.1,100);
+cam.position.z = 26;
+
+const N = 88, R = 23;
+const pts = [];
+for(let i=0;i<N;i++){
+  pts.push(new THREE.Vector3(
+    (Math.random()-.5)*R*2,
+    (Math.random()-.5)*R*1.3,
+    (Math.random()-.5)*R*1.1
+  ));
+  pts[i].vel = new THREE.Vector3((Math.random()-.5)*.01,(Math.random()-.5)*.01,(Math.random()-.5)*.01);
+}
+// node points
+const nodeGeo = new THREE.BufferGeometry().setFromPoints(pts);
+const nodeMat = new THREE.PointsMaterial({color:0xbcd6ff,size:.6,transparent:true,opacity:1,
+  blending:THREE.AdditiveBlending,depthWrite:false});
+const nodes = new THREE.Points(nodeGeo,nodeMat);
+scene.add(nodes);
+
+// edges
+const LINK = 7.2;
+const lineGeo = new THREE.BufferGeometry();
+const lineMat = new THREE.LineBasicMaterial({color:0x6ea8fe,transparent:true,opacity:.3,blending:THREE.AdditiveBlending,depthWrite:false});
+const lines = new THREE.LineSegments(lineGeo,lineMat);
+scene.add(lines);
+
+// data pulses traveling along edges
+const PULSES = 18;
+const pulseData = [];
+const pulseGeo = new THREE.BufferGeometry();
+const pulsePos = new Float32Array(PULSES*3);
+pulseGeo.setAttribute('position',new THREE.BufferAttribute(pulsePos,3));
+const pulseMat = new THREE.PointsMaterial({color:0xffffff,size:.55,transparent:true,opacity:.9,blending:THREE.AdditiveBlending,depthWrite:false});
+const pulses = new THREE.Points(pulseGeo,pulses_mat());
+function pulses_mat(){return pulseMat}
+scene.add(pulses);
+function seedPulse(p){p.a=(Math.random()*N)|0;p.b=(Math.random()*N)|0;p.t=Math.random();p.spd=.004+Math.random()*.01;}
+for(let i=0;i<PULSES;i++){const p={};seedPulse(p);pulseData.push(p);}
+
+let mx=0,my=0;
+addEventListener('mousemove',e=>{mx=(e.clientX/innerWidth-.5);my=(e.clientY/innerHeight-.5);});
+
+function rebuildLines(){
+  const seg=[];
+  for(let i=0;i<N;i++)for(let j=i+1;j<N;j++){
+    if(pts[i].distanceTo(pts[j])<LINK){seg.push(pts[i].x,pts[i].y,pts[i].z,pts[j].x,pts[j].y,pts[j].z);}
+  }
+  lineGeo.setAttribute('position',new THREE.Float32BufferAttribute(seg,3));
+}
+function resize(){
+  const w=cv.clientWidth,h=cv.clientHeight;
+  renderer.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();
+}
+addEventListener('resize',resize);resize();
+
+let frame=0;
+function tick(){
+  frame++;
+  for(let i=0;i<N;i++){
+    pts[i].add(pts[i].vel);
+    ['x','y','z'].forEach((ax,k)=>{const lim=[R,R*.65,R*.55][k];if(pts[i][ax]>lim||pts[i][ax]<-lim)pts[i].vel[ax]*=-1;});
+  }
+  nodeGeo.setFromPoints(pts);
+  if(frame%3===0)rebuildLines();
+  // pulses
+  for(let i=0;i<PULSES;i++){
+    const p=pulseData[i];p.t+=p.spd;
+    if(p.t>=1)seedPulse(p);
+    const a=pts[p.a],b=pts[p.b];
+    pulsePos[i*3]=a.x+(b.x-a.x)*p.t;
+    pulsePos[i*3+1]=a.y+(b.y-a.y)*p.t;
+    pulsePos[i*3+2]=a.z+(b.z-a.z)*p.t;
+  }
+  pulseGeo.attributes.position.needsUpdate=true;
+  nodes.rotation.y=lines.rotation.y=pulses.rotation.y=frame*.0006;
+  cam.position.x+=(mx*7-cam.position.x)*.04;
+  cam.position.y+=(-my*5-cam.position.y)*.04;
+  cam.lookAt(0,0,0);
+  renderer.render(scene,cam);
+  requestAnimationFrame(tick);
+}
+tick();
+window.__net={ready:true};
+</script>
+
+<!-- UI / GSAP logic -->
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+/* nav scrolled */
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+
+/* terminal typing */
+(function(){
+  const el=document.getElementById('termln');
+  const seq=[
+    {t:'pr',s:'> incoming call (954) 555-0148\n'},
+    {t:'dim',s:'  routing to AI receptionist…\n'},
+    {t:'',s:'  "Thanks for calling — how can I help?"\n'},
+    {t:'dim',s:'  intent: book appointment\n'},
+    {t:'dim',s:'  checking calendar…\n'},
+    {t:'ok',s:'  ✓ booked Tue 2:30 PM\n'},
+    {t:'ok',s:'  ✓ confirmation text sent\n'},
+    {t:'pr',s:'> call ended · 0 missed\n'},
+  ];
+  let li=0,ci=0,buf='';
+  function type(){
+    if(li>=seq.length){setTimeout(()=>{el.innerHTML='';buf='';li=0;ci=0;type();},2600);return;}
+    const cur=seq[li];
+    if(ci<cur.s.length){
+      ci++;
+      const done=buf, partial=`<span class="${cur.t}">${cur.s.slice(0,ci)}</span>`;
+      el.innerHTML=done+partial+'<span class="cur"></span>';
+      setTimeout(type,cur.s[ci-1]==='\n'?180:24);
+    } else { buf+=`<span class="${cur.t}">${cur.s}</span>`; li++;ci=0; setTimeout(type,120); }
+  }
+  type();
+})();
+
+/* marquee infinite */
+gsap.to('#mq',{xPercent:-50,repeat:-1,duration:26,ease:'none'});
+
+/* reveals */
+gsap.utils.toArray('.reveal').forEach(el=>{
+  gsap.to(el,{opacity:1,y:0,duration:.9,ease:'power3.out',
+    scrollTrigger:{trigger:el,start:'top 86%'}});
+});
+
+/* automate active-on-scroll */
+gsap.utils.toArray('.cap').forEach(cap=>{
+  ScrollTrigger.create({trigger:cap,start:'top 70%',end:'bottom 40%',
+    onToggle:self=>cap.classList.toggle('active',self.isActive)});
+});
+
+/* CALCULATOR */
+const calls=document.getElementById('calls'),callsVal=document.getElementById('callsVal');
+const lostNum=document.getElementById('lostNum'),recoverNum=document.getElementById('recoverNum');
+const AVG=250,BOOK=.35,DAYS=22,RECOVER=.8;
+let shownLost=0,shownRec=0,targetLost=0,targetRec=0;
+function calc(){
+  const c=+calls.value;callsVal.textContent=c;
+  callsVal.parentElement.nextElementSibling;
+  calls.style.setProperty('--fill',((c-1)/29*100)+'%');
+  targetLost=Math.round(c*DAYS*BOOK*AVG);
+  targetRec=Math.round(targetLost*RECOVER);
+}
+function animNums(){
+  shownLost+=(targetLost-shownLost)*.12;
+  shownRec+=(targetRec-shownRec)*.12;
+  lostNum.textContent='$'+Math.round(shownLost).toLocaleString();
+  recoverNum.textContent='$'+Math.round(shownRec).toLocaleString();
+  requestAnimationFrame(animNums);
+}
+calls.addEventListener('input',calc);calc();animNums();
+ScrollTrigger.create({trigger:'#calc',start:'top 60%',once:true,onEnter:()=>{
+  // little kick so the number visibly counts up on first view
+  shownLost=0;shownRec=0;
+}});
+
+/* STATS count-up */
+gsap.utils.toArray('.cu').forEach(el=>{
+  const to=+el.dataset.to;
+  ScrollTrigger.create({trigger:el,start:'top 88%',once:true,onEnter:()=>{
+    gsap.fromTo(el,{innerText:0},{innerText:to,duration:1.4,ease:'power2.out',snap:{innerText:1},
+      onUpdate:function(){el.innerText=Math.round(this.targets()[0].innerText);}});
+  }});
+});
+
+/* AUDIO + waveform */
+(function(){
+  const audio=document.getElementById('audio'),btn=document.getElementById('playbtn'),
+        icon=document.getElementById('playicon'),wave=document.getElementById('wave'),
+        cur=document.getElementById('curTime'),dur=document.getElementById('durTime');
+  const BARS=48,bars=[];
+  for(let i=0;i<BARS;i++){const b=document.createElement('i');wave.appendChild(b);bars.push(b);}
+  let playing=false,raf;
+  function fmt(s){s=Math.floor(s||0);return Math.floor(s/60)+':'+String(s%60).padStart(2,'0');}
+  function animate(){
+    const t=performance.now()/240;
+    bars.forEach((b,i)=>{
+      const base=playing?(Math.sin(t+i*.5)*.5+.5)*(Math.sin(t*.7+i)*.5+.5):0;
+      const h=playing?(12+base*84+Math.random()*14):(10+Math.sin(i*.6)*4);
+      b.style.height=h+'%';b.style.opacity=playing?.95:.4;
+    });
+    raf=requestAnimationFrame(animate);
+  }
+  animate();
+  const play=()=>{audio.play().then(()=>{}).catch(()=>{});};
+  btn.addEventListener('click',()=>{audio.paused?play():audio.pause();});
+  audio.addEventListener('play',()=>{playing=true;icon.innerHTML='<rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/>';});
+  audio.addEventListener('pause',()=>{playing=false;icon.innerHTML='<path d="M8 5v14l11-7z"/>';});
+  audio.addEventListener('ended',()=>{playing=false;icon.innerHTML='<path d="M8 5v14l11-7z"/>';});
+  audio.addEventListener('loadedmetadata',()=>{if(isFinite(audio.duration))dur.textContent=fmt(audio.duration);});
+  audio.addEventListener('timeupdate',()=>{cur.textContent=fmt(audio.currentTime);});
+  // hero CTA also starts it
+  document.getElementById('cta-hear').addEventListener('click',()=>setTimeout(play,650));
+  window.__demo={play,pause:()=>audio.pause()};
+})();
+</script>
+<!-- CHAT (prototype: simulated AI — production wires to /chat on the Worker → Claude) -->
+<script>
+(function(){
+  const launch=document.getElementById('chatLaunch'),panel=document.getElementById('chatPanel'),
+        closeb=document.getElementById('chatClose'),body=document.getElementById('chatBody'),
+        text=document.getElementById('chatText'),send=document.getElementById('chatSend'),
+        quick=document.getElementById('chatQuick');
+  let greeted=false;
+  function open(){
+    panel.classList.add('open');launch.classList.add('hide');
+    if(!greeted){greeted=true;setTimeout(()=>aiSay("Hey 👋 I'm the AI Bot Coder assistant — I answer instantly, day or night. What are you trying to automate? Phones, follow-ups, paperwork…"),420);}
+    setTimeout(()=>text.focus(),300);
+  }
+  function close(){panel.classList.remove('open');launch.classList.remove('hide');}
+  launch.onclick=open;closeb.onclick=close;
+  function esc(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+  function bubble(html,cls){const d=document.createElement('div');d.className='msg '+cls;d.innerHTML=html;body.appendChild(d);body.scrollTop=body.scrollHeight;return d;}
+  function typing(){const d=document.createElement('div');d.className='typing';d.innerHTML='<i></i><i></i><i></i>';body.appendChild(d);body.scrollTop=body.scrollHeight;return d;}
+  // Client-only message (greeting) — shows typing then a bubble, not sent to the server.
+  function aiSay(html){const tp=typing();setTimeout(()=>{tp.remove();bubble(html,'ai');},700);}
+
+  const ENDPOINT='https://aibc-webhooks.jcode2k.workers.dev/chat';
+  const convo=[]; // {role,content} — real conversation sent to the Worker (greeting is client-only)
+
+  // Render a server reply (plain text): escape, then linkify URLs + the demo number.
+  function fmt(t){
+    let h=esc(t);
+    h=h.replace(/https?:\/\/[^\s)]+/g,u=>`<a href="${u}" target="_blank">${u}</a>`);
+    h=h.replace(/\(?\b954\)?[\s.\-]?568[\s.\-]?8788\b/g,'<a href="tel:+19545688788">(954) 568-8788</a>');
+    return h;
+  }
+  // Offline/last-resort reply if the endpoint can't be reached.
+  function fallbackReply(q){
+    const s=(q||'').toLowerCase();
+    if(/(price|cost|how much|\$|month)/.test(s)) return "The AI phone receptionist is <b>$499/mo</b> ($599 with outbound confirmations), <b>$0 setup</b>. <a href='https://aibotcoder.com/missed-call-calculator.html'>See what missed calls cost you</a>.";
+    return "You can reach us at <a href='tel:+19545688788'>(954) 568-8788</a> or <a href='https://calendly.com/jcode2k' target='_blank'>book a free call</a>.";
+  }
+  async function respond(){
+    const tp=typing();
+    try{
+      const r=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:convo})});
+      const data=await r.json();
+      tp.remove();
+      if(data&&data.reply){convo.push({role:'assistant',content:data.reply});bubble(fmt(data.reply),'ai');}
+      else{bubble(fallbackReply(convo[convo.length-1].content),'ai');}
+    }catch(e){
+      tp.remove();
+      bubble(fallbackReply(convo[convo.length-1].content),'ai');
+    }
+  }
+  function userSend(v){
+    v=(v||'').trim();if(!v)return;
+    bubble(esc(v),'me');text.value='';
+    convo.push({role:'user',content:v});
+    respond();
+  }
+  send.onclick=()=>userSend(text.value);
+  text.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();userSend(text.value);}});
+  quick.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;userSend(b.textContent);});
+  window.__chat={open,close,send:userSend};
+})();
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "880dd8a72db2452c816c1172be8b6db7"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
