@@ -1,165 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog – AI BOT CODER</title>
-    <meta name="description" content="Practical guides on AI automation for small businesses. Written by Jason Eid, AI BOT CODER.">
-    <link rel="canonical" href="https://aibotcoder.com/blog-posts.html">
-    <meta property="og:title" content="Blog – AI BOT CODER">
-    <meta property="og:description" content="Practical guides on AI automation for small businesses. Written by Jason Eid, AI BOT CODER.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://aibotcoder.com/blog-posts.html">
-    <meta property="og:image" content="https://aibotcoder.com/static/images/og/default.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="AI BOT CODER">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Blog – AI BOT CODER">
-    <meta name="twitter:description" content="Practical guides on AI automation for small businesses.">
-    <meta name="twitter:image" content="https://aibotcoder.com/static/images/og/default.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/static/style.css">
-    <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#0e0e0e">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog – AI BOT CODER</title>
+<meta name="description" content="Practical guides on AI automation for small businesses. Written by Jason Eid, AI BOT CODER.">
+<link rel="canonical" href="https://aibotcoder.com/blog-posts.html">
+<meta property="og:title" content="Blog – AI BOT CODER">
+<meta property="og:description" content="Practical guides on AI automation for small businesses. Written by Jason Eid, AI BOT CODER.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aibotcoder.com/blog-posts.html">
+<meta property="og:image" content="https://aibotcoder.com/static/images/og/default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="AI BOT CODER">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog – AI BOT CODER">
+<meta name="twitter:description" content="Practical guides on AI automation for small businesses.">
+<meta name="twitter:image" content="https://aibotcoder.com/static/images/og/default.png">
+<link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#08090c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/redesign.css">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+<style>
+.post-tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);font-weight:500;margin-bottom:12px;display:block}
+.post-date{font-family:var(--mono);font-size:.74rem;color:var(--faint)}
+.card.post{display:flex;flex-direction:column;gap:10px}
+.card.post h3{font-family:var(--display);font-weight:700;font-size:1.25rem;letter-spacing:-.01em;line-height:1.25;margin:0}
+.card.post h3 a{color:var(--ink);transition:color .2s}
+.card.post h3 a:hover{color:var(--blue)}
+.card.post p{color:var(--muted);font-size:.97rem;margin:0}
+.card.post .read-more{font-family:var(--mono);font-size:.78rem;color:var(--blue);letter-spacing:.06em;margin-top:6px;display:inline-flex;align-items:center;gap:5px;transition:gap .2s}
+.card.post .read-more:hover{gap:9px}
+.post-meta{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+</style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg shadow-sm">
-        <div class="container">
-            <a class="navbar-brand brand-logo" href="/" aria-label="AI BOT CODER home"><img src="/static/brand/wordmark-color.svg" alt="AI BOT CODER" height="36" style="display:block;"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/portfolio.html">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/tools.html">Tools</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="/blog-posts.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-primary btn-sm px-3" href="https://calendly.com/jcode2k" target="_blank">Book a Free Call</a>
-                    </li>
-                </ul>
-            </div>
+<nav class="nav" id="nav">
+  <a class="brand" href="/"><span class="dot"></span><b>AI&nbsp;Bot&nbsp;</b><span>Coder</span></a>
+  <div class="nav-links">
+    <a href="/#automate">What I Automate</a>
+    <a href="/services.html">Services</a>
+    <a href="/portfolio.html">Portfolio</a>
+    <a href="/tools.html">Tools</a>
+    <a href="/missed-call-calculator.html">Calculator</a>
+  </div>
+  <a class="nav-cta" href="tel:+19545688788"><span class="rdot"></span><span class="cta-lbl">Call the AI · </span>(954)&nbsp;568-8788</a>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="hero-eyebrow"><span class="ln"></span><span class="label">Blog</span></div>
+    <h1>Practical guides on AI automation.</h1>
+    <p class="lead">No hype — just what works. Real builds, real numbers, written by someone who's doing it.</p>
+  </div>
+</header>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">// Latest Posts</span>
+      <h2>What I've built, learned, and shipped.</h2>
+    </div>
+    <div class="grid grid-3">
+
+      <div class="card post reveal">
+        <div class="post-meta">
+          <span class="post-tag">Pricing</span>
+          <span class="post-date">June 2026</span>
         </div>
-    </nav>
+        <h3><a href="/blog/ai-receptionist-cost.html">How Much Does an AI Receptionist Cost?</a></h3>
+        <p>An AI phone receptionist runs about $300–$900/month for most small businesses — versus $1,200–$2,000 for a human answering service. Full 2026 pricing breakdown, what's included, and what makes it vary.</p>
+        <a class="read-more" href="/blog/ai-receptionist-cost.html">Read more →</a>
+      </div>
 
-    <!-- Hero -->
-    <section class="page-hero text-center py-5">
-        <div class="container py-3">
-            <h1 class="display-5 fw-bold">Blog</h1>
-            <p class="hero-subtitle mt-3">Practical guides on AI automation for small businesses. No hype — just what works.</p>
+      <div class="card post reveal">
+        <div class="post-meta">
+          <span class="post-tag">Comparison</span>
+          <span class="post-date">June 2026</span>
         </div>
-    </section>
+        <h3><a href="/blog/ai-receptionist-vs-answering-service.html">AI Receptionist vs. Answering Service</a></h3>
+        <p>A clear side-by-side: cost, availability, call quality, and when each one wins. An AI receptionist answers every call instantly 24/7 for a third of the price — but a human service still edges out on complex, sensitive calls.</p>
+        <a class="read-more" href="/blog/ai-receptionist-vs-answering-service.html">Read more →</a>
+      </div>
 
-    <!-- Posts -->
-    <section class="section-dark py-5">
-        <div class="container">
-            <div class="row justify-content-center g-4">
-                <div class="col-md-8">
-
-                    <article class="blog-card mb-4">
-                        <div class="blog-meta">
-                            <span class="blog-tag">Pricing</span>
-                            <span class="blog-date"><i class="bi bi-calendar3 me-1"></i>June 2026</span>
-                        </div>
-                        <h3 class="blog-title"><a href="/blog/ai-receptionist-cost.html">How Much Does an AI Receptionist Cost?</a></h3>
-                        <p class="blog-excerpt">An AI phone receptionist runs about $300–$900/month for most small businesses — versus $1,200–$2,000 for a human answering service. Full 2026 pricing breakdown, what's included, and what makes it vary.</p>
-                        <a href="/blog/ai-receptionist-cost.html" class="blog-read-more">Read more <i class="bi bi-arrow-right"></i></a>
-                    </article>
-
-                    <article class="blog-card mb-4">
-                        <div class="blog-meta">
-                            <span class="blog-tag">Comparison</span>
-                            <span class="blog-date"><i class="bi bi-calendar3 me-1"></i>June 2026</span>
-                        </div>
-                        <h3 class="blog-title"><a href="/blog/ai-receptionist-vs-answering-service.html">AI Receptionist vs. Answering Service</a></h3>
-                        <p class="blog-excerpt">A clear side-by-side: cost, availability, call quality, and when each one wins. An AI receptionist answers every call instantly 24/7 for a third of the price — but a human service still edges out on complex, sensitive calls.</p>
-                        <a href="/blog/ai-receptionist-vs-answering-service.html" class="blog-read-more">Read more <i class="bi bi-arrow-right"></i></a>
-                    </article>
-
-                    <article class="blog-card mb-4">
-                        <div class="blog-meta">
-                            <span class="blog-tag">Dental</span>
-                            <span class="blog-date"><i class="bi bi-calendar3 me-1"></i>June 2026</span>
-                        </div>
-                        <h3 class="blog-title"><a href="/blog/best-ai-receptionist-for-dentists.html">Best AI Receptionist for Dental Practices</a></h3>
-                        <p class="blog-excerpt">What dental practices should look for — HIPAA + BAA, real-time booking, insurance FAQs, front-desk transfer, after-hours coverage, and PMS integration — plus how AI BOT CODER fits at $499/mo.</p>
-                        <a href="/blog/best-ai-receptionist-for-dentists.html" class="blog-read-more">Read more <i class="bi bi-arrow-right"></i></a>
-                    </article>
-
-                    <article class="blog-card mb-4">
-                        <div class="blog-meta">
-                            <span class="blog-tag">Newsletter</span>
-                            <span class="blog-date"><i class="bi bi-calendar3 me-1"></i>May 2026</span>
-                        </div>
-                        <h3 class="blog-title"><a href="/blog/ai-in-dentistry-2026-05-29.html">AI in Dentistry</a></h3>
-                        <p class="blog-excerpt">AI is reshaping dentistry from the exam chair to the back office — improving diagnostic accuracy, enabling personalized treatment plans, and streamlining clinic operations, while human dentists remain firmly in the decision-making seat.</p>
-                        <a href="/blog/ai-in-dentistry-2026-05-29.html" class="blog-read-more">Read more <i class="bi bi-arrow-right"></i></a>
-                    </article>
-
-
-                    <article class="blog-card mb-4">
-                        <div class="blog-meta">
-                            <span class="blog-tag">Automation</span>
-                            <span class="blog-date"><i class="bi bi-calendar3 me-1"></i>May 2026</span>
-                        </div>
-                        <h3 class="blog-title"><a href="/blog/automate-first.html">5 Business Tasks You Should Automate First</a></h3>
-                        <p class="blog-excerpt">Most small business owners waste 10–15 hours a week on tasks that AI can handle in seconds. Here are the five highest-impact places to start — and what the automation actually looks like in practice.</p>
-                        <a href="/blog/automate-first.html" class="blog-read-more">Read more <i class="bi bi-arrow-right"></i></a>
-                    </article>
-
-                    <article class="blog-card mb-4">
-                        <div class="blog-meta">
-                            <span class="blog-tag">Case Study</span>
-                            <span class="blog-date"><i class="bi bi-calendar3 me-1"></i>April 2026</span>
-                        </div>
-                        <h3 class="blog-title"><a href="/blog/blueprint-estimator.html">How I Built a Blueprint Estimator Using Claude AI</a></h3>
-                        <p class="blog-excerpt">A South Florida general contractor was spending 3–4 hours per bid doing manual takeoffs from PDFs. I built an AI tool that does it in under 5 minutes. Here's exactly how it works.</p>
-                        <a href="/blog/blueprint-estimator.html" class="blog-read-more">Read more <i class="bi bi-arrow-right"></i></a>
-                    </article>
-
-                    <article class="blog-card mb-4">
-                        <div class="blog-meta">
-                            <span class="blog-tag">Strategy</span>
-                            <span class="blog-date"><i class="bi bi-calendar3 me-1"></i>April 2026</span>
-                        </div>
-                        <h3 class="blog-title"><a href="/blog/ai-budget.html">Your Small Business Doesn't Need a Big AI Budget</a></h3>
-                        <p class="blog-excerpt">The biggest misconception stopping small business owners from adopting AI is cost. The reality: most automations cost less than $50/month to run — and pay for themselves in the first week.</p>
-                        <a href="/blog/ai-budget.html" class="blog-read-more">Read more <i class="bi bi-arrow-right"></i></a>
-                    </article>
-
-                </div>
-            </div>
+      <div class="card post reveal">
+        <div class="post-meta">
+          <span class="post-tag">Dental</span>
+          <span class="post-date">June 2026</span>
         </div>
-    </section>
+        <h3><a href="/blog/best-ai-receptionist-for-dentists.html">Best AI Receptionist for Dental Practices</a></h3>
+        <p>What dental practices should look for — HIPAA + BAA, real-time booking, insurance FAQs, front-desk transfer, after-hours coverage, and PMS integration — plus how AI BOT CODER fits at $499/mo.</p>
+        <a class="read-more" href="/blog/best-ai-receptionist-for-dentists.html">Read more →</a>
+      </div>
 
-    <!-- CTA -->
-    <section class="cta-banner py-5 text-center">
-        <div class="container">
-            <h2 class="mb-3">Ready to stop doing it manually?</h2>
-            <p class="text-muted-light mb-4">Book a free call and let's figure out what to automate first in your business.</p>
-            <a href="https://calendly.com/jcode2k" target="_blank" class="btn btn-primary btn-lg px-5">Book Your Free Discovery Call</a>
+      <div class="card post reveal">
+        <div class="post-meta">
+          <span class="post-tag">Newsletter</span>
+          <span class="post-date">May 2026</span>
         </div>
-    </section>
+        <h3><a href="/blog/ai-in-dentistry-2026-05-29.html">AI in Dentistry</a></h3>
+        <p>AI is reshaping dentistry from the exam chair to the back office — improving diagnostic accuracy, enabling personalized treatment plans, and streamlining clinic operations, while human dentists remain firmly in the decision-making seat.</p>
+        <a class="read-more" href="/blog/ai-in-dentistry-2026-05-29.html">Read more →</a>
+      </div>
 
-    <footer class="footer py-4 text-center">
-        <div class="container">
-            <p class="mb-1 text-muted-light">AI BOT CODER &copy; 2026 &nbsp;|&nbsp; Jason Eid &nbsp;|&nbsp; Fort Lauderdale, FL</p>
-            <p class="mb-0"><a href="mailto:jcode2k@gmail.com">jcode2k@gmail.com</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/jcode2k/" target="_blank">LinkedIn</a> &nbsp;|&nbsp; <a href="https://github.com/HeTron" target="_blank">GitHub</a></p>
+      <div class="card post reveal">
+        <div class="post-meta">
+          <span class="post-tag">Automation</span>
+          <span class="post-date">May 2026</span>
         </div>
-    </footer>
+        <h3><a href="/blog/automate-first.html">5 Business Tasks You Should Automate First</a></h3>
+        <p>Most small business owners waste 10–15 hours a week on tasks that AI can handle in seconds. Here are the five highest-impact places to start — and what the automation actually looks like in practice.</p>
+        <a class="read-more" href="/blog/automate-first.html">Read more →</a>
+      </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
-    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "880dd8a72db2452c816c1172be8b6db7"}'></script><!-- End Cloudflare Web Analytics -->
+      <div class="card post reveal">
+        <div class="post-meta">
+          <span class="post-tag">Case Study</span>
+          <span class="post-date">April 2026</span>
+        </div>
+        <h3><a href="/blog/blueprint-estimator.html">How I Built a Blueprint Estimator Using Claude AI</a></h3>
+        <p>A South Florida general contractor was spending 3–4 hours per bid doing manual takeoffs from PDFs. I built an AI tool that does it in under 5 minutes. Here's exactly how it works.</p>
+        <a class="read-more" href="/blog/blueprint-estimator.html">Read more →</a>
+      </div>
+
+      <div class="card post reveal">
+        <div class="post-meta">
+          <span class="post-tag">Strategy</span>
+          <span class="post-date">April 2026</span>
+        </div>
+        <h3><a href="/blog/ai-budget.html">Your Small Business Doesn't Need a Big AI Budget</a></h3>
+        <p>The biggest misconception stopping small business owners from adopting AI is cost. The reality: most automations cost less than $50/month to run — and pay for themselves in the first week.</p>
+        <a class="read-more" href="/blog/ai-budget.html">Read more →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <span class="label">// Let's Build It</span>
+    <h2>Ready to stop doing it manually?</h2>
+    <p>Book a free call and let's figure out what to automate first in your business.</p>
+    <a href="https://calendly.com/jcode2k" target="_blank" class="btn btn-primary" style="font-size:1.05rem;padding:18px 38px">Book your free discovery call →</a>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <span class="brand">AI Bot Coder</span>
+      <span class="foot-links">
+        <a href="/services.html">Services</a> · <a href="/portfolio.html">Portfolio</a> · <a href="/tools.html">Tools</a> · <a href="/blog-posts.html">Blog</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a>
+      </span>
+      <span><a href="tel:+19545688788">(954) 568-8788</a> · <a href="mailto:jcode2k@gmail.com">jcode2k@gmail.com</a> · <a href="https://www.linkedin.com/in/jcode2k/" target="_blank">LinkedIn</a> · <a href="https://github.com/HeTron" target="_blank">GitHub</a></span>
+    </div>
+    <div class="foot-copy">© 2026 AI BOT CODER · Fort Lauderdale, FL</div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+const els=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  els.forEach(el=>io.observe(el));
+}else{els.forEach(el=>el.classList.add('in'));}
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "880dd8a72db2452c816c1172be8b6db7"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

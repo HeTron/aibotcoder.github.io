@@ -1,165 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact – AI BOT CODER</title>
-    <meta name="description" content="Book a free AI automation discovery call with Jason Eid. Fort Lauderdale, FL. Remote-friendly.">
-    <link rel="canonical" href="https://aibotcoder.com/contact.html">
-    <meta property="og:title" content="Contact – AI BOT CODER">
-    <meta property="og:description" content="Book a free AI automation discovery call with Jason Eid. Fort Lauderdale, FL. Remote-friendly.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://aibotcoder.com/contact.html">
-    <meta property="og:image" content="https://aibotcoder.com/static/images/og/default.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="AI BOT CODER">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contact – AI BOT CODER">
-    <meta name="twitter:description" content="Book a free AI automation discovery call with Jason Eid. Fort Lauderdale, FL. Remote-friendly.">
-    <meta name="twitter:image" content="https://aibotcoder.com/static/images/og/default.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/static/style.css">
-    <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#0e0e0e">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact – AI BOT CODER</title>
+<meta name="description" content="Book a free AI automation discovery call with Jason Eid. Fort Lauderdale, FL. Remote-friendly.">
+<link rel="canonical" href="https://aibotcoder.com/contact.html">
+<meta property="og:title" content="Contact – AI BOT CODER">
+<meta property="og:description" content="Book a free AI automation discovery call with Jason Eid. Fort Lauderdale, FL. Remote-friendly.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aibotcoder.com/contact.html">
+<meta property="og:image" content="https://aibotcoder.com/static/images/og/default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="AI BOT CODER">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact – AI BOT CODER">
+<meta name="twitter:description" content="Book a free AI automation discovery call with Jason Eid. Fort Lauderdale, FL. Remote-friendly.">
+<meta name="twitter:image" content="https://aibotcoder.com/static/images/og/default.png">
+<link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#08090c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/redesign.css">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+<style>
+/* ── Contact layout ── */
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  align-items:start;
+}
+.contact-primary{
+  background:linear-gradient(160deg,var(--elev),transparent);
+  border:1px solid rgba(110,168,254,.4);
+  border-radius:18px;
+  padding:44px 38px;
+  box-shadow:0 0 50px rgba(110,168,254,.1);
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+.contact-primary .avail{
+  font-family:var(--mono);
+  font-size:.75rem;
+  color:var(--muted);
+  margin-top:6px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.contact-primary .avail::before{
+  content:"";
+  width:7px; height:7px;
+  border-radius:50%;
+  background:var(--phos);
+  box-shadow:0 0 8px var(--phos);
+  flex:none;
+}
+.contact-secondary{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+.contact-links-card{
+  background:linear-gradient(160deg,var(--elev),transparent);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:32px;
+}
+.contact-links-card h3{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:1.25rem;
+  letter-spacing:-.01em;
+  margin-bottom:22px;
+}
+.clinks{list-style:none;display:flex;flex-direction:column;gap:18px}
+.clinks li{display:flex;align-items:flex-start;gap:14px}
+.clinks .clbl{
+  font-family:var(--mono);
+  font-size:.68rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:2px;
+}
+.clinks a,.clinks span.val{
+  font-size:.97rem;
+  color:var(--ink);
+  transition:color .2s;
+}
+.clinks a:hover{color:var(--blue)}
+.clinks .cicon{
+  font-family:var(--mono);
+  color:var(--blue);
+  font-size:.9rem;
+  line-height:1.6;
+  flex:none;
+  width:24px;
+}
+.resume-link{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-family:var(--mono);
+  font-size:.82rem;
+  color:var(--muted);
+  border:1px solid var(--line2);
+  border-radius:12px;
+  padding:12px 16px;
+  transition:.25s;
+}
+.resume-link:hover{color:var(--blue);border-color:var(--blue);background:rgba(110,168,254,.06)}
+.resume-link .ra{margin-left:auto;color:var(--blue)}
+
+/* ── Discovery steps ── */
+.disc-steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+.disc-step{
+  background:linear-gradient(160deg,var(--elev),transparent);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:30px 26px;
+}
+.disc-step .n{
+  font-family:var(--display);
+  font-weight:800;
+  font-size:2.4rem;
+  color:var(--blue);
+  line-height:1;
+  margin-bottom:14px;
+}
+.disc-step h4{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:1.1rem;
+  margin-bottom:10px;
+}
+.disc-step p{color:var(--muted);font-size:.94rem}
+
+@media(max-width:900px){
+  .contact-grid{grid-template-columns:1fr}
+  .disc-steps{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .contact-primary{padding:28px 22px}
+  .contact-links-card{padding:24px}
+}
+</style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg shadow-sm">
-        <div class="container">
-            <a class="navbar-brand brand-logo" href="/" aria-label="AI BOT CODER home"><img src="/static/brand/wordmark-color.svg" alt="AI BOT CODER" height="36" style="display:block;"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/portfolio.html">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/tools.html">Tools</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/blog-posts.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="/contact.html">Contact</a></li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-primary btn-sm px-3" href="https://calendly.com/jcode2k" target="_blank">Book a Free Call</a>
-                    </li>
-                </ul>
-            </div>
+<nav class="nav" id="nav">
+  <a class="brand" href="/"><span class="dot"></span><b>AI&nbsp;Bot&nbsp;</b><span>Coder</span></a>
+  <div class="nav-links">
+    <a href="/#automate">What I Automate</a>
+    <a href="/services.html">Services</a>
+    <a href="/portfolio.html">Portfolio</a>
+    <a href="/tools.html">Tools</a>
+    <a href="/missed-call-calculator.html">Calculator</a>
+  </div>
+  <a class="nav-cta" href="tel:+19545688788"><span class="rdot"></span><span class="cta-lbl">Call the AI · </span>(954)&nbsp;568-8788</a>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="hero-eyebrow"><span class="ln"></span><span class="label">Contact</span></div>
+    <h1>Let's&nbsp;Talk</h1>
+    <p class="lead">30 minutes. No pitch. Just a real conversation about your business and what could be automated.</p>
+  </div>
+</header>
+
+<!-- Main contact section -->
+<section class="sec">
+  <div class="wrap">
+    <div class="contact-grid">
+
+      <!-- Primary CTA: Calendly -->
+      <div class="contact-primary reveal">
+        <div>
+          <span class="label">// Fastest Way In</span>
+          <h2 style="font-family:var(--display);font-weight:700;font-size:1.9rem;letter-spacing:-.025em;margin:14px 0 10px">Book a Free Discovery Call</h2>
+          <p style="color:var(--muted);font-size:1.02rem">The best way to get started. We'll talk about your business, what's taking up your time, and what a realistic automation could look like. No obligation.</p>
+          <div class="avail">Usually available within 1–2 business days</div>
         </div>
-    </nav>
-
-    <!-- Hero -->
-    <section class="page-hero text-center py-5">
-        <div class="container py-3">
-            <h1 class="display-5 fw-bold">Let's Talk</h1>
-            <p class="hero-subtitle mt-3">30 minutes. No pitch. Just a real conversation about your business.</p>
+        <a href="https://calendly.com/jcode2k" target="_blank" rel="noopener" class="btn btn-primary" style="justify-content:center;font-size:1rem;padding:17px 28px">
+          Schedule on Calendly →
+        </a>
+        <div style="border-top:1px solid var(--line);padding-top:18px">
+          <p style="font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Or call the AI demo line</p>
+          <a href="tel:+19545688788" class="btn btn-ghost" style="justify-content:center;width:100%;font-size:.9rem">(954) 568-8788</a>
         </div>
-    </section>
+      </div>
 
-    <!-- Main Contact -->
-    <section class="section-dark py-5">
-        <div class="container">
-            <div class="row justify-content-center g-5">
-
-                <!-- Calendly CTA -->
-                <div class="col-md-6">
-                    <div class="contact-card p-4 text-center h-100">
-                        <div class="contact-icon mb-3"><i class="bi bi-calendar-check"></i></div>
-                        <h4 class="mb-3">Book a Free Discovery Call</h4>
-                        <p class="text-muted-light mb-4">The best way to get started. We'll talk about your business, what's taking up your time, and what a realistic automation could look like. No obligation.</p>
-                        <a href="https://calendly.com/jcode2k" target="_blank" class="btn btn-primary btn-lg px-4 w-100">Schedule on Calendly</a>
-                        <p class="text-muted-light small mt-3">Usually available within 1–2 business days</p>
-                    </div>
-                </div>
-
-                <!-- Direct Contact -->
-                <div class="col-md-4">
-                    <div class="contact-card p-4 h-100">
-                        <h4 class="mb-4">Or reach out directly</h4>
-                        <ul class="contact-links">
-                            <li>
-                                <i class="bi bi-envelope text-accent"></i>
-                                <div>
-                                    <div class="contact-link-label">Email</div>
-                                    <a href="mailto:jcode2k@gmail.com">jcode2k@gmail.com</a>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="bi bi-telephone text-accent"></i>
-                                <div>
-                                    <div class="contact-link-label">Phone</div>
-                                    <a href="tel:9549091323">(954) 909-1323</a>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="bi bi-linkedin text-accent"></i>
-                                <div>
-                                    <div class="contact-link-label">LinkedIn</div>
-                                    <a href="https://www.linkedin.com/in/jcode2k/" target="_blank">linkedin.com/in/jcode2k</a>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="bi bi-github text-accent"></i>
-                                <div>
-                                    <div class="contact-link-label">GitHub</div>
-                                    <a href="https://github.com/HeTron" target="_blank">github.com/HeTron</a>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="bi bi-geo-alt text-accent"></i>
-                                <div>
-                                    <div class="contact-link-label">Location</div>
-                                    <span class="text-muted-light">Fort Lauderdale, FL &mdash; Remote-friendly</span>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <div class="mt-4">
-                            <a class="btn btn-outline-primary w-100" href="/static/Hassan_Eid_Resume_2025_vert.pdf" download target="_blank" rel="noopener">
-                                <i class="bi bi-download me-2"></i>Download Resume
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+      <!-- Secondary: direct contact -->
+      <div class="contact-secondary">
+        <div class="contact-links-card reveal">
+          <h3>Or reach out directly</h3>
+          <ul class="clinks">
+            <li>
+              <span class="cicon">@</span>
+              <div>
+                <div class="clbl">Email</div>
+                <a href="mailto:jcode2k@gmail.com">jcode2k@gmail.com</a>
+              </div>
+            </li>
+            <li>
+              <span class="cicon">#</span>
+              <div>
+                <div class="clbl">Phone</div>
+                <a href="tel:9549091323">(954) 909-1323</a>
+              </div>
+            </li>
+            <li>
+              <span class="cicon">in</span>
+              <div>
+                <div class="clbl">LinkedIn</div>
+                <a href="https://www.linkedin.com/in/jcode2k/" target="_blank" rel="noopener">linkedin.com/in/jcode2k</a>
+              </div>
+            </li>
+            <li>
+              <span class="cicon">&lt;/&gt;</span>
+              <div>
+                <div class="clbl">GitHub</div>
+                <a href="https://github.com/HeTron" target="_blank" rel="noopener">github.com/HeTron</a>
+              </div>
+            </li>
+            <li>
+              <span class="cicon">▲</span>
+              <div>
+                <div class="clbl">Location</div>
+                <span class="val" style="color:var(--muted)">Fort Lauderdale, FL — Remote-friendly</span>
+              </div>
+            </li>
+          </ul>
         </div>
-    </section>
+        <a class="resume-link reveal" href="/static/Hassan_Eid_Resume_2025_vert.pdf" download target="_blank" rel="noopener">
+          <span style="font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase">↓ Download Resume</span>
+          <span class="ra">Hassan_Eid_Resume_2025_vert.pdf</span>
+        </a>
+      </div>
 
-    <!-- What to Expect -->
-    <section class="section-mid py-5">
-        <div class="container">
-            <h3 class="text-center mb-5">What happens on the discovery call?</h3>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-3 text-center">
-                    <div class="step-number">1</div>
-                    <p class="mt-3 text-muted-light small">You tell me what your business does and what's eating your time.</p>
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="step-number">2</div>
-                    <p class="mt-3 text-muted-light small">I identify 2–3 things that could be automated and what the impact would be.</p>
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="step-number">3</div>
-                    <p class="mt-3 text-muted-light small">If it's a fit, I'll send a proposal with a fixed price and timeline. No pressure.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <footer class="footer py-4 text-center">
-        <div class="container">
-            <p class="mb-1 text-muted-light">AI BOT CODER &copy; 2026 &nbsp;|&nbsp; Jason Eid &nbsp;|&nbsp; Fort Lauderdale, FL</p>
-            <p class="mb-0"><a href="mailto:jcode2k@gmail.com">jcode2k@gmail.com</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/jcode2k/" target="_blank">LinkedIn</a> &nbsp;|&nbsp; <a href="https://github.com/HeTron" target="_blank">GitHub</a></p>
-        </div>
-    </footer>
+<!-- What happens on the call -->
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="label">// Discovery Call</span>
+      <h2>What happens on the call?</h2>
+      <p class="lead">30 minutes, no prep needed, no obligation.</p>
+    </div>
+    <div class="disc-steps">
+      <div class="disc-step reveal">
+        <div class="n">1</div>
+        <h4>You tell me about your business</h4>
+        <p>What you do, how your team runs, and what's eating your time most. No agenda from me — just listening.</p>
+      </div>
+      <div class="disc-step reveal">
+        <div class="n">2</div>
+        <h4>I identify what can be automated</h4>
+        <p>I'll spot 2–3 things that could run on autopilot and give you a realistic picture of the impact and what it would cost.</p>
+      </div>
+      <div class="disc-step reveal">
+        <div class="n">3</div>
+        <h4>Proposal if it's a fit</h4>
+        <p>If it makes sense, I'll send a fixed-price proposal with a clear timeline. No pressure if it's not the right moment.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
-    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "880dd8a72db2452c816c1172be8b6db7"}'></script><!-- End Cloudflare Web Analytics -->
+<!-- CTA band -->
+<section class="cta-band">
+  <div class="wrap">
+    <span class="label">// Let's Build It</span>
+    <h2>Ready to reclaim your time?</h2>
+    <p>Book a free 30-minute call. We'll figure out exactly what to automate first.</p>
+    <a href="https://calendly.com/jcode2k" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:1.05rem;padding:18px 38px">Book your free discovery call →</a>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <span class="brand">AI Bot Coder</span>
+      <span class="foot-links">
+        <a href="/services.html">Services</a> · <a href="/portfolio.html">Portfolio</a> · <a href="/tools.html">Tools</a> · <a href="/blog-posts.html">Blog</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a>
+      </span>
+      <span><a href="tel:+19545688788">(954) 568-8788</a> · <a href="mailto:jcode2k@gmail.com">jcode2k@gmail.com</a> · <a href="https://www.linkedin.com/in/jcode2k/" target="_blank">LinkedIn</a> · <a href="https://github.com/HeTron" target="_blank">GitHub</a></span>
+    </div>
+    <div class="foot-copy">© 2026 AI BOT CODER · Fort Lauderdale, FL</div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+const els=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  els.forEach(el=>io.observe(el));
+}else{els.forEach(el=>el.classList.add('in'));}
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "880dd8a72db2452c816c1172be8b6db7"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

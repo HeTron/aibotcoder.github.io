@@ -1,244 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio – AI BOT CODER</title>
-    <meta name="description" content="Real AI automations and projects built by Jason Eid — from blueprint estimators to AI agents.">
-    <link rel="canonical" href="https://aibotcoder.com/portfolio.html">
-    <meta property="og:title" content="Portfolio – AI BOT CODER">
-    <meta property="og:description" content="Real AI automations and projects built by Jason Eid — from blueprint estimators to AI agents.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://aibotcoder.com/portfolio.html">
-    <meta property="og:image" content="https://aibotcoder.com/static/images/og/default.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="AI BOT CODER">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Portfolio – AI BOT CODER">
-    <meta name="twitter:description" content="Real AI automations and projects built by Jason Eid — from blueprint estimators to AI agents.">
-    <meta name="twitter:image" content="https://aibotcoder.com/static/images/og/default.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/static/style.css">
-    <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#0e0e0e">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio – AI BOT CODER</title>
+<meta name="description" content="Real AI automations and projects built by Jason Eid — from blueprint estimators to AI agents.">
+<link rel="canonical" href="https://aibotcoder.com/portfolio.html">
+<meta property="og:title" content="Portfolio – AI BOT CODER">
+<meta property="og:description" content="Real AI automations and projects built by Jason Eid — from blueprint estimators to AI agents.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aibotcoder.com/portfolio.html">
+<meta property="og:image" content="https://aibotcoder.com/static/images/og/default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="AI BOT CODER">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Portfolio – AI BOT CODER">
+<meta name="twitter:description" content="Real AI automations and projects built by Jason Eid — from blueprint estimators to AI agents.">
+<meta name="twitter:image" content="https://aibotcoder.com/static/images/og/default.png">
+<link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#08090c">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Portfolio – AI BOT CODER",
+  "description": "Real AI automations and projects built by Jason Eid — from blueprint estimators to AI agents.",
+  "url": "https://aibotcoder.com/portfolio.html",
+  "author": { "@type": "Person", "name": "Jason Eid", "url": "https://aibotcoder.com" },
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "name": "AI Phone Receptionist",
+      "description": "24/7 AI phone receptionist for dental and medical offices. Answers every call, books appointments, transfers to staff on demand. HIPAA-compliant, live in 7 days. From $499/mo.",
+      "url": "https://aibotcoder.com/ai-phone-receptionist.html"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Blueprint Estimator",
+      "description": "AI tool that reads uploaded blueprints and outputs a structured Excel bid sheet with material and labor line items. Bid prep dropped from ~6 hours to ~20 minutes per job."
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Job Cost Tracker + Local AI Server",
+      "description": "Tool that logs labor, materials, and POs per job into structured Excel, plus a self-hosted local AI server for internal queries and workflows."
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/redesign.css">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+<style>
+/* Flagship card: two-column layout matching services.html feat-card pattern */
+.feat-card{display:grid;grid-template-columns:1.5fr .8fr;gap:30px;align-items:center}
+.feat-card .actions{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+
+/* Case study cards: emphasize the Result line */
+.result-label{font-family:var(--mono);font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:6px;display:block}
+.result-text{color:var(--ink);font-weight:700;font-size:1.05rem}
+.case-label{font-family:var(--mono);font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:6px;display:block}
+.card-footer-cap{margin-top:24px;padding-top:18px;border-top:1px solid var(--line);color:var(--faint);font-size:.82rem;font-family:var(--mono)}
+
+/* Offer cards */
+.offer-price{font-family:var(--display);font-weight:800;font-size:2rem;letter-spacing:-.03em;color:var(--blue);margin:8px 0 12px}
+.offer-note{color:var(--faint);font-size:.85rem;margin-top:10px}
+
+/* Labs link row */
+.labs-row{padding:28px 0;border-top:1px solid var(--line);text-align:center}
+.labs-row a{color:var(--muted);font-size:.95rem;transition:color .2s}
+.labs-row a:hover{color:var(--blue)}
+
+@media(max-width:900px){
+  .feat-card{grid-template-columns:1fr}
+  .feat-card .actions{align-items:stretch}
+  .feat-card .actions .btn{justify-content:center}
+}
+</style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg shadow-sm">
-        <div class="container">
-            <a class="navbar-brand brand-logo" href="/" aria-label="AI BOT CODER home"><img src="/static/brand/wordmark-color.svg" alt="AI BOT CODER" height="36" style="display:block;"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="/portfolio.html">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/tools.html">Tools</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/blog-posts.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-primary btn-sm px-3" href="https://calendly.com/jcode2k" target="_blank">Book a Free Call</a>
-                    </li>
-                </ul>
-            </div>
+<nav class="nav" id="nav">
+  <a class="brand" href="/"><span class="dot"></span><b>AI&nbsp;Bot&nbsp;</b><span>Coder</span></a>
+  <div class="nav-links">
+    <a href="/#automate">What I Automate</a>
+    <a href="/services.html">Services</a>
+    <a href="/portfolio.html" class="active">Portfolio</a>
+    <a href="/tools.html">Tools</a>
+    <a href="/missed-call-calculator.html">Calculator</a>
+  </div>
+  <a class="nav-cta" href="tel:+19545688788"><span class="rdot"></span><span class="cta-lbl">Call the AI · </span>(954)&nbsp;568-8788</a>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="hero-eyebrow"><span class="ln"></span><span class="label">Real Builds · Real Results</span></div>
+    <h1>Real automations. Real businesses. Measured results.</h1>
+    <p class="lead">Not demos. Not prototypes. Things I built that are running in production, saving hours, and replacing costs right now.</p>
+  </div>
+</header>
+
+<!-- ── FLAGSHIP: AI Phone Receptionist ── -->
+<section class="sec">
+  <div class="wrap">
+    <div class="card reveal feat-card" style="padding:38px">
+      <div>
+        <span class="label">Live Product</span>
+        <h3 style="font-size:1.9rem;margin:12px 0 12px">AI Phone Receptionist</h3>
+        <p>Small businesses miss calls every day — during jobs, after hours, at lunch. 67% of callers won't leave a voicemail. Every missed call is a customer who called a competitor instead.</p>
+        <p style="margin-top:12px">A 24/7 AI receptionist that answers every call, books and triages appointments, and sends automated confirmations. Multi-tenant, with direct Open Dental integration for dental practices.</p>
+        <p class="res" style="margin-top:14px"><b>$499/mo inbound · $599/mo with outbound</b> &nbsp;<span style="color:var(--faint)">· $0 setup · live in 7 days</span></p>
+      </div>
+      <div class="actions">
+        <a href="/ai-phone-receptionist.html" class="btn btn-primary">See the product →</a>
+        <a href="tel:+19545688788" class="btn btn-ghost">Call the live demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CASE STUDIES ── -->
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">// Case Studies</span>
+      <h2>Real problems. Real builds. Real outcomes.</h2>
+      <p class="lead">Every project here is in production — no concept work.</p>
+    </div>
+    <div class="grid grid-3">
+
+      <!-- Dental Practice -->
+      <div class="card reveal" style="display:flex;flex-direction:column">
+        <span class="ic">First Customer · Going Live</span>
+        <h3>South Florida Dental Practice</h3>
+
+        <span class="case-label">Problem</span>
+        <p>Calls missed during patient treatment and after close meant lost new-patient revenue and no after-hours coverage.</p>
+
+        <span class="case-label" style="margin-top:18px">Built</span>
+        <p>Deployed the AI Phone Receptionist with automated appointment confirmations, integrated with their Open Dental system.</p>
+
+        <div style="margin-top:22px;padding-top:18px;border-top:1px solid var(--line)">
+          <span class="result-label">Result</span>
+          <p class="result-text">Round-the-clock call coverage — no new patient lands in voicemail. First live deployment; results growing.</p>
         </div>
-    </nav>
 
-    <!-- Hero -->
-    <section class="page-hero text-center py-5">
-        <div class="container py-3">
-            <h1 class="display-5 fw-bold">Portfolio</h1>
-            <p class="hero-subtitle mt-3">Real automations. Real businesses. Measured results.</p>
+        <div class="card-footer-cap" style="margin-top:auto">Built for: South Florida dental practice</div>
+      </div>
+
+      <!-- Blueprint Estimator -->
+      <div class="card reveal" style="display:flex;flex-direction:column">
+        <span class="ic">Internal Tool</span>
+        <h3>Blueprint Estimator</h3>
+
+        <span class="case-label">Problem</span>
+        <p>Bidding meant manually reading blueprints and building takeoffs by hand — roughly 6 hours per bid.</p>
+
+        <span class="case-label" style="margin-top:18px">Built</span>
+        <p>An AI tool that reads uploaded blueprints with Claude AI and outputs a structured Excel bid sheet with material and labor line items.</p>
+
+        <div style="margin-top:22px;padding-top:18px;border-top:1px solid var(--line)">
+          <span class="result-label">Result</span>
+          <p class="result-text">Bid prep dropped from ~6 hours to ~20 minutes per job.</p>
         </div>
-    </section>
 
-    <!-- Flagship: AI Phone Receptionist -->
-    <section class="section-dark py-5">
-        <div class="container">
-            <div class="card p-4 p-md-5">
-                <div class="card-body">
-                    <div class="mb-3">
-                        <span class="tag" style="font-size:0.8rem;">Live Product</span>
-                    </div>
-                    <div class="row align-items-center g-4">
-                        <div class="col-md-8">
-                            <div class="portfolio-icon mb-3"><i class="bi bi-telephone-plus"></i></div>
-                            <h2 class="fw-bold mb-3">AI Phone Receptionist</h2>
-                            <p class="text-muted-light mb-3">Small businesses miss calls every day — during jobs, after hours, at lunch. 67% of callers won't leave a voicemail. Every missed call is a customer who called a competitor instead.</p>
-                            <p class="mb-3">A 24/7 AI receptionist that answers every call, books and triages appointments, and sends automated confirmations. Multi-tenant, with direct Open Dental integration for dental practices.</p>
-                            <div class="d-flex flex-wrap gap-2 mb-4">
-                                <span class="tag">Answers 24/7</span>
-                                <span class="tag">Live in 7 days</span>
-                                <span class="tag">From $499/mo · $0 setup</span>
-                            </div>
-                            <div class="d-flex flex-wrap gap-3">
-                                <a href="tel:+19545688788" class="btn btn-outline-primary"><i class="bi bi-telephone me-2"></i>Call the Live Demo &nbsp;<span class="text-muted-light" style="font-weight:400;">(954) 568-8788</span></a>
-                                <a href="/ai-phone-receptionist.html" class="btn btn-primary">See the Product <i class="bi bi-arrow-right ms-1"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-md-4 text-center d-none d-md-block">
-                            <i class="bi bi-telephone-plus" style="font-size:7rem;color:#6ea8fe;opacity:0.15;"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="card-footer-cap" style="margin-top:auto">Built for: South Florida general contractor</div>
+      </div>
+
+      <!-- Job Cost Tracker -->
+      <div class="card reveal" style="display:flex;flex-direction:column">
+        <span class="ic">Internal Tool</span>
+        <h3>Job Cost Tracker + Local AI Server</h3>
+
+        <span class="case-label">Problem</span>
+        <p>Job costs were logged by hand, and sensitive data couldn't go to cloud AI tools.</p>
+
+        <span class="case-label" style="margin-top:18px">Built</span>
+        <p>A tool that logs labor, materials, and POs per job into structured Excel, plus a self-hosted local AI server (Jarvis) for internal queries and workflows.</p>
+
+        <div style="margin-top:22px;padding-top:18px;border-top:1px solid var(--line)">
+          <span class="result-label">Result</span>
+          <p class="result-text">Real-time job costing and a private AI assistant running at zero cloud cost.</p>
         </div>
-    </section>
 
-    <!-- Case Studies -->
-    <section class="section-mid py-5">
-        <div class="container">
-            <h2 class="mb-2">Case Studies</h2>
-            <p class="text-muted-light mb-4">Real problems. Real builds. Real outcomes.</p>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="card-footer-cap" style="margin-top:auto">Built for: internal business operations</div>
+      </div>
 
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <div class="portfolio-icon mb-3"><i class="bi bi-hospital"></i></div>
-                            <div class="mb-2"><span class="tag" style="font-size:0.72rem;">First Customer · Going Live</span></div>
-                            <h5 class="card-title mb-3">South Florida Dental Practice</h5>
-                            <p class="card-text mb-1"><strong>Problem</strong></p>
-                            <p class="card-text text-muted-light mb-3">Calls missed during patient treatment and after close meant lost new-patient revenue and no after-hours coverage.</p>
-                            <p class="card-text mb-1"><strong>Built</strong></p>
-                            <p class="card-text text-muted-light mb-3">Deployed the AI Phone Receptionist with automated appointment confirmations, integrated with their Open Dental system.</p>
-                            <p class="card-text mb-1"><strong class="text-accent">Result</strong></p>
-                            <p class="card-text fw-semibold">Round-the-clock call coverage so no new patient lands in voicemail. First live deployment — results to follow.</p>
-                        </div>
-                        <div class="card-footer">
-                            <span class="text-muted-light small"><i class="bi bi-building me-1"></i>Built for: South Florida dental practice</span>
-                        </div>
-                    </div>
-                </div>
+    </div>
+  </div>
+</section>
 
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <div class="portfolio-icon mb-3"><i class="bi bi-file-earmark-ruled"></i></div>
-                            <h5 class="card-title mb-3">Blueprint Estimator</h5>
-                            <p class="card-text mb-1"><strong>Problem</strong></p>
-                            <p class="card-text text-muted-light mb-3">Bidding meant manually reading blueprints and building takeoffs by hand — roughly 6 hours per bid.</p>
-                            <p class="card-text mb-1"><strong>Built</strong></p>
-                            <p class="card-text text-muted-light mb-3">An AI tool that reads uploaded blueprints with Claude AI and outputs a structured Excel bid sheet with material and labor line items.</p>
-                            <p class="card-text mb-1"><strong class="text-accent">Result</strong></p>
-                            <p class="card-text fw-semibold">Bid prep dropped from ~6 hours to ~20 minutes per job.</p>
-                        </div>
-                        <div class="card-footer">
-                            <span class="text-muted-light small"><i class="bi bi-building me-1"></i>Built for: South Florida general contractor</span>
-                        </div>
-                    </div>
-                </div>
+<!-- TESTIMONIAL: uncomment + fill once first customer gives a quote -->
+<!--
+<section class="sec">
+  <div class="wrap narrow" style="margin:0 auto;text-align:center">
+    <blockquote style="background:linear-gradient(160deg,var(--elev),transparent);border:1px solid var(--line);border-radius:18px;padding:48px 40px">
+      <p style="font-size:1.2rem;font-style:italic;margin-bottom:20px">"[Client quote here — what changed, what it meant for their practice, one honest sentence about the result.]"</p>
+      <cite style="color:var(--muted);font-size:.9rem">— [Client Name], [Practice Name]</cite>
+    </blockquote>
+  </div>
+</section>
+-->
 
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <div class="portfolio-icon mb-3"><i class="bi bi-journal-check"></i></div>
-                            <h5 class="card-title mb-3">Job Cost Tracker + Local AI Server</h5>
-                            <p class="card-text mb-1"><strong>Problem</strong></p>
-                            <p class="card-text text-muted-light mb-3">Job costs were logged by hand, and sensitive data couldn't go to cloud AI tools.</p>
-                            <p class="card-text mb-1"><strong>Built</strong></p>
-                            <p class="card-text text-muted-light mb-3">A tool that logs labor, materials, and POs per job into structured Excel, plus a self-hosted local AI server (Jarvis) for internal queries and workflows.</p>
-                            <p class="card-text mb-1"><strong class="text-accent">Result</strong></p>
-                            <p class="card-text fw-semibold">Real-time job costing and a private AI assistant running at zero cloud cost.</p>
-                        </div>
-                        <div class="card-footer">
-                            <span class="text-muted-light small"><i class="bi bi-building me-1"></i>Built for: internal business operations</span>
-                        </div>
-                    </div>
-                </div>
+<!-- ── WORK WITH ME ── -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">// Work With Me</span>
+      <h2>Clear offers — no mystery pricing.</h2>
+    </div>
+    <div class="grid grid-2">
 
-            </div>
+      <!-- AI Receptionist offer -->
+      <div class="card reveal" style="display:flex;flex-direction:column">
+        <span class="ic">AI Phone Receptionist</span>
+        <h3>AI Receptionist for Dental Practices</h3>
+        <p style="margin-top:8px;flex:1">Get your practice answering calls 24/7. Setup, Open Dental integration, and go-live in 7 days. From $499/mo, $0 setup.</p>
+        <div style="margin-top:28px">
+          <a href="https://calendly.com/jcode2k" target="_blank" class="btn btn-primary">Book a free call →</a>
         </div>
-    </section>
+      </div>
 
-    <!-- TESTIMONIAL: uncomment + fill once first customer gives a quote -->
-    <!--
-    <section class="section-dark py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="callout-box p-4 p-md-5">
-                        <p class="fs-5 fst-italic mb-3">"[Client quote here — what changed, what it meant for their practice, one honest sentence about the result.]"</p>
-                        <p class="mb-0 text-muted-light">— [Client Name], [Practice Name]</p>
-                    </div>
-                </div>
-            </div>
+      <!-- Strategy Session offer -->
+      <div class="card reveal" style="display:flex;flex-direction:column">
+        <span class="ic">Strategy Session</span>
+        <h3>AI Automation Strategy Session</h3>
+        <div class="offer-price">$250</div>
+        <p style="flex:1">A focused working session where I learn your business, map where you're losing time and money, and hand you a prioritized roadmap of exactly what to automate first. You leave knowing your highest-ROI automation — whether you hire me or not.</p>
+        <p class="offer-note">Fee credited toward your project if we move forward.</p>
+        <div style="margin-top:28px">
+          <a href="https://buy.stripe.com/5kQ28r9cX6p04Q22PD3VC04" target="_blank" class="btn btn-primary">Book your strategy session →</a>
         </div>
-    </section>
-    -->
+      </div>
 
-    <!-- Productized Offers -->
-    <section class="section-dark py-5">
-        <div class="container">
-            <h2 class="mb-2">Work With Me</h2>
-            <p class="text-muted-light mb-4">Clear offers — no mystery pricing.</p>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
+    </div>
+  </div>
+</section>
 
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body d-flex flex-column">
-                            <div class="portfolio-icon mb-3"><i class="bi bi-telephone-plus"></i></div>
-                            <h5 class="card-title mb-3">AI Receptionist for Dental Practices</h5>
-                            <p class="card-text text-muted-light flex-grow-1">Get your practice answering calls 24/7. Setup, Open Dental integration, and go-live in 7 days. From $499/mo, $0 setup.</p>
-                            <div class="mt-4">
-                                <a href="https://calendly.com/jcode2k" target="_blank" class="btn btn-primary">Book a Free Call</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!-- ── LABS LINK ── -->
+<div class="labs-row">
+  <div class="wrap">
+    <p>Also built: <a href="/labs.html">technical experiments &amp; data-science projects →</a></p>
+  </div>
+</div>
 
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body d-flex flex-column">
-                            <div class="portfolio-icon mb-3"><i class="bi bi-lightbulb"></i></div>
-                            <h5 class="card-title mb-3">AI Automation Strategy Session</h5>
-                            <p class="card-text mb-1"><strong class="text-accent">$250 &middot; 1 hour, one-on-one</strong></p>
-                            <p class="card-text text-muted-light flex-grow-1 mt-2">A focused working session where I learn your business, map where you're losing time and money, and hand you a prioritized roadmap of exactly what to automate first. You leave knowing your highest-ROI automation — whether you hire me or not.</p>
-                            <p class="card-text mt-2"><small class="text-muted-light">Fee credited toward your project if we move forward.</small></p>
-                            <div class="mt-4">
-                                <a href="https://buy.stripe.com/5kQ28r9cX6p04Q22PD3VC04" target="_blank" class="btn btn-primary">Book Your Strategy Session</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!-- ── CTA BAND ── -->
+<section class="cta-band">
+  <div class="wrap">
+    <span class="label">// Let's Build It</span>
+    <h2>Want something like this built for your business?</h2>
+    <p>Book a free call and let's talk through what's possible.</p>
+    <a href="https://calendly.com/jcode2k" target="_blank" class="btn btn-primary" style="font-size:1.05rem;padding:18px 38px">Book your free discovery call →</a>
+  </div>
+</section>
 
-            </div>
-        </div>
-    </section>
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <span class="brand">AI Bot Coder</span>
+      <span class="foot-links">
+        <a href="/services.html">Services</a> · <a href="/portfolio.html">Portfolio</a> · <a href="/tools.html">Tools</a> · <a href="/blog-posts.html">Blog</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a>
+      </span>
+      <span><a href="tel:+19545688788">(954) 568-8788</a> · <a href="mailto:jcode2k@gmail.com">jcode2k@gmail.com</a> · <a href="https://www.linkedin.com/in/jcode2k/" target="_blank">LinkedIn</a> · <a href="https://github.com/HeTron" target="_blank">GitHub</a></span>
+    </div>
+    <div class="foot-copy">© 2026 AI BOT CODER · Fort Lauderdale, FL</div>
+  </div>
+</footer>
 
-    <!-- Labs link -->
-    <section class="section-mid py-4 text-center">
-        <div class="container">
-            <p class="mb-0 text-muted-light">Also built: <a href="/labs.html">technical experiments &amp; data-science projects →</a></p>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-banner py-5 text-center">
-        <div class="container">
-            <h2 class="mb-3">Want something like this built for your business?</h2>
-            <p class="text-muted-light mb-4">Book a free call and let's talk through what's possible.</p>
-            <a href="https://calendly.com/jcode2k" target="_blank" class="btn btn-primary btn-lg px-5">Book Your Free Discovery Call</a>
-        </div>
-    </section>
-
-    <footer class="footer py-4 text-center">
-        <div class="container">
-            <p class="mb-1 text-muted-light">AI BOT CODER &copy; 2026 &nbsp;|&nbsp; Jason Eid &nbsp;|&nbsp; Fort Lauderdale, FL</p>
-            <p class="mb-0"><a href="mailto:jcode2k@gmail.com">jcode2k@gmail.com</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/jcode2k/" target="_blank">LinkedIn</a> &nbsp;|&nbsp; <a href="https://github.com/HeTron" target="_blank">GitHub</a> &nbsp;|&nbsp; <a href="/labs.html">Labs</a></p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
-    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "880dd8a72db2452c816c1172be8b6db7"}'></script><!-- End Cloudflare Web Analytics -->
+<script>
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+const els=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  els.forEach(el=>io.observe(el));
+}else{els.forEach(el=>el.classList.add('in'));}
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "880dd8a72db2452c816c1172be8b6db7"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
