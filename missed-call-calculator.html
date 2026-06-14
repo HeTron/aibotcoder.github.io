@@ -1,378 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Missed-Call Revenue Calculator – What Are Unanswered Calls Costing You? | AI BOT CODER</title>
-    <meta name="description" content="Free calculator: estimate how much revenue your business loses every month to missed and unanswered calls — and how much a 24/7 AI receptionist would recover. No signup to see your number.">
-    <meta property="og:title" content="Missed-Call Revenue Calculator – What Are Unanswered Calls Costing You?">
-    <meta property="og:description" content="See in 30 seconds how much money missed calls cost your business each month — and what an AI receptionist recovers.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://aibotcoder.com/missed-call-calculator.html">
-    <meta property="og:image" content="https://aibotcoder.com/static/images/og/missed-call-calculator.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Missed-Call Revenue Calculator – What Are Unanswered Calls Costing You?">
-    <meta name="twitter:description" content="See in 30 seconds how much money missed calls cost your business each month — and what an AI receptionist recovers.">
-    <meta name="twitter:image" content="https://aibotcoder.com/static/images/og/missed-call-calculator.png">
-    <meta property="og:site_name" content="AI BOT CODER">
-    <link rel="canonical" href="https://aibotcoder.com/missed-call-calculator.html">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/static/style.css">
-    <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#0e0e0e">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Missed-Call Revenue Calculator",
-      "url": "https://aibotcoder.com/missed-call-calculator.html",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Any (web browser)",
-      "browserRequirements": "Requires JavaScript",
-      "description": "A free calculator that estimates how much revenue your business loses every month to missed and unanswered calls — and how much a 24/7 AI receptionist would recover. No signup required to see your number.",
-      "provider": { "@type": "Organization", "name": "AI BOT CODER", "url": "https://aibotcoder.com" },
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-    }
-    </script>
-    <style>
-        .calc-shell { max-width: 720px; margin: 0 auto; }
-        .calc-card { background: #161616; border: 1px solid #2e2e2e; border-radius: 16px; color: #e9e9e9; }
-        .calc-field { margin-bottom: 1.6rem; }
-        .calc-field label { font-weight: 700; display: block; margin-bottom: .35rem; color: #ffffff; font-size: 1.05rem; }
-        .calc-field .calc-hint { font-size: .85rem; color: #a6a6a6; }
-        .calc-input-wrap { position: relative; }
-        .calc-input-wrap .calc-affix {
-            position: absolute; top: 50%; transform: translateY(-50%);
-            color: #8a8a8a; font-weight: 600; pointer-events: none;
-        }
-        .calc-input-wrap .calc-affix-left { left: 14px; }
-        .calc-input-wrap input.has-prefix { padding-left: 30px; }
-        .calc-card .form-control, .calc-card .form-range { background: #0e0e0e; }
-        .calc-card input.form-control {
-            background: #0e0e0e; border: 1px solid #333; color: #f2f2f2;
-            height: 48px; font-size: 1.1rem;
-        }
-        .calc-card input.form-control:focus {
-            background: #0e0e0e; color: #fff; border-color: var(--bs-primary, #4a8cff);
-            box-shadow: none;
-        }
-        .range-row { display: flex; align-items: center; gap: 1rem; }
-        .range-row input[type=range] { flex: 1; }
-        .range-val { min-width: 52px; text-align: right; font-weight: 700; font-size: 1.1rem; }
-        .headline-loss {
-            font-size: clamp(2.4rem, 7vw, 3.6rem); font-weight: 800; line-height: 1;
-            color: #ff6b6b; margin: .25rem 0;
-        }
-        .headline-label { color: #b4b4b4; text-transform: uppercase; letter-spacing: .08em; font-size: .82rem; font-weight: 600; }
-        .result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
-        @media (max-width: 540px) { .result-grid { grid-template-columns: 1fr; } }
-        .result-stat { background: #0e0e0e; border: 1px solid #262626; border-radius: 12px; padding: 1.1rem 1.25rem; }
-        .result-stat .num { font-size: 1.7rem; font-weight: 800; }
-        .result-stat .num.bad { color: #ff6b6b; }
-        .result-stat .num.good { color: #51cf66; }
-        .result-stat .cap { color: #8a8a8a; font-size: .85rem; margin-top: .15rem; }
-        .gate-box { background: #0e0e0e; border: 1px dashed #444; border-radius: 12px; padding: 1.5rem; }
-        .gate-box h5 { color: #ffffff; }
-        .range-row input[type=range] { accent-color: #4a8cff; }
-        .hidden { display: none !important; }
-        .calc-disclaimer { font-size: .78rem; color: #6e6e6e; }
-        .honeypot { position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Missed-Call Revenue Calculator – What Are Unanswered Calls Costing You? | AI BOT CODER</title>
+<meta name="description" content="Free calculator: estimate how much revenue your business loses every month to missed and unanswered calls — and how much a 24/7 AI receptionist would recover. No signup to see your number.">
+<link rel="canonical" href="https://aibotcoder.com/missed-call-calculator.html">
+<meta property="og:title" content="Missed-Call Revenue Calculator – What Are Unanswered Calls Costing You?">
+<meta property="og:description" content="See in 30 seconds how much money missed calls cost your business each month — and what an AI receptionist recovers.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aibotcoder.com/missed-call-calculator.html">
+<meta property="og:image" content="https://aibotcoder.com/static/images/og/missed-call-calculator.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Missed-Call Revenue Calculator – What Are Unanswered Calls Costing You?">
+<meta name="twitter:description" content="See in 30 seconds how much money missed calls cost your business each month — and what an AI receptionist recovers.">
+<meta name="twitter:image" content="https://aibotcoder.com/static/images/og/missed-call-calculator.png">
+<meta property="og:site_name" content="AI BOT CODER">
+<link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#08090c">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Missed-Call Revenue Calculator",
+  "url": "https://aibotcoder.com/missed-call-calculator.html",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Any (web browser)",
+  "browserRequirements": "Requires JavaScript",
+  "description": "A free calculator that estimates how much revenue your business loses every month to missed and unanswered calls — and how much a 24/7 AI receptionist would recover. No signup required to see your number.",
+  "provider": { "@type": "Organization", "name": "AI BOT CODER", "url": "https://aibotcoder.com" },
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/redesign.css">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+<style>
+.calc-shell{max-width:760px;margin:0 auto}
+.calc-card{background:linear-gradient(160deg,var(--elev),transparent);border:1px solid var(--line);border-radius:20px;padding:40px}
+.calc-field{margin-bottom:30px}
+.calc-field label{font-family:var(--display);font-weight:700;display:block;margin-bottom:6px;color:var(--ink);font-size:1.12rem}
+.calc-hint{font-size:.88rem;color:var(--muted);margin-bottom:12px}
+.calc-input-wrap{position:relative}
+.calc-input-wrap .calc-affix{position:absolute;top:50%;transform:translateY(-50%);color:var(--faint);font-weight:600;pointer-events:none}
+.calc-input-wrap .calc-affix-left{left:16px}
+input.txt{width:100%;background:var(--bg);border:1px solid var(--line2);border-radius:12px;color:var(--ink);height:52px;font-size:1.1rem;font-family:var(--body);padding:0 16px;transition:border-color .2s}
+input.txt:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(110,168,254,.14)}
+input.txt.has-prefix{padding-left:32px}
+.range-row{display:flex;align-items:center;gap:18px}
+.range-row input[type=range]{flex:1;accent-color:var(--blue);height:6px}
+.range-val{min-width:60px;text-align:right;font-family:var(--mono);font-weight:700;font-size:1.1rem;color:var(--blue)}
+.headline-wrap{text-align:center;margin-top:32px;padding-top:28px;border-top:1px solid var(--line)}
+.headline-label{color:var(--muted);text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:600;font-family:var(--mono)}
+.headline-loss{font-family:var(--display);font-size:clamp(2.6rem,8vw,4rem);font-weight:800;line-height:1;color:var(--alarm);margin:8px 0}
+.headline-sub{color:var(--muted)}
+.headline-sub b{color:var(--ink)}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+@media(max-width:540px){.result-grid{grid-template-columns:1fr}}
+.result-stat{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.result-stat .num{font-family:var(--display);font-size:1.8rem;font-weight:800}
+.result-stat .num.bad{color:var(--alarm)}
+.result-stat .num.good{color:var(--phos)}
+.result-stat .cap{color:var(--muted);font-size:.86rem;margin-top:4px}
+.net-card{background:radial-gradient(120% 140% at 50% 0%,rgba(94,242,176,.1),transparent 70%);border:1px solid rgba(94,242,176,.28);border-radius:16px;padding:26px;text-align:center;margin-top:24px}
+.net-card h5{font-family:var(--display);font-size:1.3rem;margin-bottom:8px}
+.net-card h5 .accent{color:var(--phos)}
+.net-card p{color:var(--muted);font-size:.96rem}
+.calc-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.calc-disclaimer{font-size:.8rem;color:var(--faint);margin-top:16px;text-align:center;max-width:60ch;margin-left:auto;margin-right:auto}
+.gate-box{background:var(--bg);border:1px dashed var(--line2);border-radius:14px;padding:28px;margin-top:28px}
+.gate-box h5{font-family:var(--display);color:var(--ink);font-size:1.2rem;margin-bottom:8px}
+.gate-box p{color:var(--muted);font-size:.95rem;margin-bottom:16px}
+.gate-row{display:flex;gap:12px;flex-wrap:wrap}
+.gate-row input[type=email]{flex:1;min-width:200px}
+.gate-msg{font-size:.88rem;margin-top:10px}
+.gate-msg.err{color:var(--alarm)}
+.gate-msg.ok{color:var(--phos)}
+.honeypot{position:absolute;left:-9999px;opacity:0;height:0;width:0}
+.hidden{display:none !important}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:780px){.why-grid{grid-template-columns:1fr}}
+.why-stat{text-align:center}
+.why-stat .ic{font-family:var(--display);font-weight:800;font-size:2.2rem;color:var(--blue);line-height:1;margin-bottom:10px}
+.why-stat h4{font-family:var(--display);font-size:1.15rem;margin-bottom:8px}
+.why-stat p{color:var(--muted);font-size:.94rem}
+</style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg shadow-sm">
-        <div class="container">
-            <a class="navbar-brand brand-logo" href="/" aria-label="AI BOT CODER home"><img src="/static/brand/wordmark-color.svg" alt="AI BOT CODER" height="36" style="display:block;"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/portfolio.html">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="/tools.html">Tools</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/blog-posts.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-primary btn-sm px-3" href="https://calendly.com/jcode2k" target="_blank">Book a Free Call</a>
-                    </li>
-                </ul>
+<nav class="nav" id="nav">
+  <a class="brand" href="/"><span class="dot"></span><b>AI&nbsp;Bot</b><span>Coder</span></a>
+  <div class="nav-links">
+    <a href="/#automate">What I Automate</a>
+    <a href="/services.html">Services</a>
+    <a href="/portfolio.html">Portfolio</a>
+    <a href="/tools.html">Tools</a>
+    <a href="/missed-call-calculator.html" class="active">Calculator</a>
+  </div>
+  <a class="nav-cta" href="tel:+19545688788"><span class="rdot"></span><span class="cta-lbl">Call the AI · </span>(954)&nbsp;568-8788</a>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="hero-eyebrow"><span class="ln"></span><span class="label">Free Tool</span></div>
+    <h1>What are missed calls costing your business?</h1>
+    <p class="lead">Every unanswered call is a customer calling your competitor next. Plug in four numbers and see your monthly revenue leak in 30 seconds — no signup to see your number.</p>
+  </div>
+</header>
+
+<!-- Calculator -->
+<section class="sec" style="padding-top:30px">
+  <div class="wrap">
+    <div class="calc-shell reveal">
+      <div class="calc-card">
+
+        <form id="calcForm" autocomplete="off" novalidate>
+          <div class="calc-field">
+            <label for="weeklyCalls">How many calls does your business get per week?</label>
+            <div class="calc-hint">Inbound calls from new and existing customers.</div>
+            <input type="number" inputmode="numeric" min="0" step="1" class="txt" id="weeklyCalls" value="100">
+          </div>
+
+          <div class="calc-field">
+            <label for="pctMissed">What share of those calls go unanswered?</label>
+            <div class="calc-hint">Voicemail, after-hours, on another line, busy front desk. Industry average is 20–30%.</div>
+            <div class="range-row">
+              <input type="range" id="pctMissed" min="0" max="80" step="1" value="25">
+              <span class="range-val"><span id="pctMissedVal">25</span>%</span>
             </div>
-        </div>
-    </nav>
+          </div>
 
-    <!-- Hero -->
-    <section class="page-hero text-center py-5">
-        <div class="container py-3">
-            <p class="hero-eyebrow">Free Tool</p>
-            <h1 class="display-5 fw-bold">What Are Missed Calls<br>Costing Your Business?</h1>
-            <p class="hero-subtitle mt-3">Every unanswered call is a customer calling your competitor next. Plug in four numbers and see your monthly revenue leak in 30 seconds — no signup to see your number.</p>
-        </div>
-    </section>
-
-    <!-- Calculator -->
-    <section class="section-dark py-5">
-        <div class="container">
-            <div class="calc-shell">
-                <div class="calc-card p-4 p-md-5">
-
-                    <form id="calcForm" autocomplete="off" novalidate>
-                        <div class="calc-field">
-                            <label for="weeklyCalls">How many calls does your business get per week?</label>
-                            <div class="calc-hint mb-2">Inbound calls from new and existing customers.</div>
-                            <input type="number" inputmode="numeric" min="0" step="1" class="form-control" id="weeklyCalls" value="100">
-                        </div>
-
-                        <div class="calc-field">
-                            <label for="pctMissed">What share of those calls go unanswered?</label>
-                            <div class="calc-hint mb-2">Voicemail, after-hours, on another line, busy front desk. Industry average is 20–30%.</div>
-                            <div class="range-row">
-                                <input type="range" class="form-range" id="pctMissed" min="0" max="80" step="1" value="25">
-                                <span class="range-val"><span id="pctMissedVal">25</span>%</span>
-                            </div>
-                        </div>
-
-                        <div class="calc-field">
-                            <label for="bookRate">Of answered calls, what share become a paying customer?</label>
-                            <div class="calc-hint mb-2">Your close rate on a live call. Most service businesses land 30–50%.</div>
-                            <div class="range-row">
-                                <input type="range" class="form-range" id="bookRate" min="1" max="100" step="1" value="40">
-                                <span class="range-val"><span id="bookRateVal">40</span>%</span>
-                            </div>
-                        </div>
-
-                        <div class="calc-field">
-                            <label for="avgValue">What is one new customer worth to you?</label>
-                            <div class="calc-hint mb-2">Average revenue from a customer — first job or lifetime value, your call.</div>
-                            <div class="calc-input-wrap">
-                                <span class="calc-affix calc-affix-left">$</span>
-                                <input type="number" inputmode="numeric" min="0" step="1" class="form-control has-prefix" id="avgValue" value="500">
-                            </div>
-                        </div>
-                    </form>
-
-                    <!-- Live headline -->
-                    <div class="text-center mt-4 pt-3 border-top" style="border-color:#262626 !important;">
-                        <div class="headline-label">Estimated revenue lost to missed calls</div>
-                        <div class="headline-loss" id="monthlyLoss">$0</div>
-                        <div class="text-muted-light">per month &nbsp;·&nbsp; <span id="annualLossInline">$0</span>/year</div>
-                    </div>
-
-                    <!-- Full results (always visible — no gate) -->
-                    <div id="resultsBox">
-                        <div class="result-grid">
-                            <div class="result-stat">
-                                <div class="num bad" id="rMonthly">$0</div>
-                                <div class="cap">Lost every month</div>
-                            </div>
-                            <div class="result-stat">
-                                <div class="num bad" id="rAnnual">$0</div>
-                                <div class="cap">Lost every year</div>
-                            </div>
-                            <div class="result-stat">
-                                <div class="num" id="rMissedCalls">0</div>
-                                <div class="cap">Calls missed per month</div>
-                            </div>
-                            <div class="result-stat">
-                                <div class="num good" id="rRecovered">$0</div>
-                                <div class="cap">Recovered/mo with an AI receptionist*</div>
-                            </div>
-                        </div>
-
-                        <div class="addon-card p-4 text-center mt-4">
-                            <h5 class="mb-2"><i class="bi bi-graph-up-arrow me-2 text-accent"></i>Net gain after the $499/mo plan: <span class="text-accent" id="rNet">$0</span>/mo</h5>
-                            <p class="text-muted-light mb-0">A 24/7 AI receptionist answers the calls your team can't — for a fraction of what they're worth.</p>
-                        </div>
-
-                        <div class="text-center mt-4">
-                            <div class="d-flex gap-3 justify-content-center flex-wrap">
-                                <a href="tel:+19545688788" class="btn btn-primary btn-lg px-4"><i class="bi bi-telephone-fill me-2"></i>Hear the Live Demo: (954) 568-8788</a>
-                                <a href="https://calendly.com/jcode2k" target="_blank" class="btn btn-outline-light btn-lg px-4">Book a 15-min Walkthrough</a>
-                            </div>
-                            <p class="calc-disclaimer mt-3">*Recovery assumes the AI answers calls your team currently misses and converts them at your stated rate. Conservative estimate — real results vary by business.</p>
-                        </div>
-
-                        <!-- Optional email follow-up (after the value, never before it) -->
-                        <div class="gate-box mt-4" id="gateBox">
-                            <h5 class="mb-2"><i class="bi bi-envelope-paper text-accent me-2"></i>Want this breakdown in your inbox?</h5>
-                            <p class="text-muted-light mb-3">I'll email you these numbers so you have them when you talk it over with your team. Optional — you've already got your answer above.</p>
-                            <div class="row g-2">
-                                <div class="col-sm">
-                                    <input type="email" class="form-control" id="email" placeholder="you@business.com">
-                                </div>
-                                <div class="col-sm-auto">
-                                    <button class="btn btn-outline-primary w-100 px-4" id="sendBtn" type="button">Email me my numbers</button>
-                                </div>
-                            </div>
-                            <!-- honeypot: bots fill this, humans never see it -->
-                            <input type="text" class="honeypot" id="company_website" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true">
-                            <div class="text-danger small mt-2 hidden" id="emailErr">That email doesn't look right — mind checking it?</div>
-                            <div class="text-success small mt-2 hidden" id="emailOk"><i class="bi bi-check-circle me-1"></i>On its way. Check your inbox shortly.</div>
-                            <div class="calc-disclaimer mt-2">No spam. One email with your results. Unsubscribe anytime.</div>
-                        </div>
-                    </div>
-
-                </div>
+          <div class="calc-field">
+            <label for="bookRate">Of answered calls, what share become a paying customer?</label>
+            <div class="calc-hint">Your close rate on a live call. Most service businesses land 30–50%.</div>
+            <div class="range-row">
+              <input type="range" id="bookRate" min="1" max="100" step="1" value="40">
+              <span class="range-val"><span id="bookRateVal">40</span>%</span>
             </div>
-        </div>
-    </section>
+          </div>
 
-    <!-- Context / credibility -->
-    <section class="section-mid py-5">
-        <div class="container">
-            <h2 class="text-center mb-2">Why Missed Calls Quietly Drain Revenue</h2>
-            <p class="text-center text-muted-light mb-5">The math is brutal because the loss is invisible — you never see the customer who hung up.</p>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="feature-card text-center p-4 h-100">
-                        <div class="feature-icon mb-3"><i class="bi bi-telephone-x"></i></div>
-                        <h5>67%</h5>
-                        <p class="text-muted-light small mb-0">of callers won't leave a voicemail — they call the next business on the list.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-card text-center p-4 h-100">
-                        <div class="feature-icon mb-3"><i class="bi bi-clock-history"></i></div>
-                        <h5>After-Hours</h5>
-                        <p class="text-muted-light small mb-0">Nights, weekends, lunch, and holidays are when a lot of customers actually call.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-card text-center p-4 h-100">
-                        <div class="feature-icon mb-3"><i class="bi bi-robot"></i></div>
-                        <h5>Every Call, Answered</h5>
-                        <p class="text-muted-light small mb-0">An AI receptionist picks up instantly, 24/7, books the appointment, and transfers to you on demand.</p>
-                    </div>
-                </div>
+          <div class="calc-field" style="margin-bottom:0">
+            <label for="avgValue">What is one new customer worth to you?</label>
+            <div class="calc-hint">Average revenue from a customer — first job or lifetime value, your call.</div>
+            <div class="calc-input-wrap">
+              <span class="calc-affix calc-affix-left">$</span>
+              <input type="number" inputmode="numeric" min="0" step="1" class="txt has-prefix" id="avgValue" value="500">
             </div>
-            <div class="text-center mt-5">
-                <a href="/ai-phone-receptionist.html" class="btn btn-outline-primary px-4">See how the AI Phone Receptionist works <i class="bi bi-arrow-right ms-1"></i></a>
+          </div>
+        </form>
+
+        <!-- Live headline -->
+        <div class="headline-wrap">
+          <div class="headline-label">Estimated revenue lost to missed calls</div>
+          <div class="headline-loss" id="monthlyLoss">$0</div>
+          <div class="headline-sub">per month &nbsp;·&nbsp; <b id="annualLossInline">$0</b>/year</div>
+        </div>
+
+        <!-- Full results (always visible — no gate) -->
+        <div id="resultsBox">
+          <div class="result-grid">
+            <div class="result-stat">
+              <div class="num bad" id="rMonthly">$0</div>
+              <div class="cap">Lost every month</div>
             </div>
+            <div class="result-stat">
+              <div class="num bad" id="rAnnual">$0</div>
+              <div class="cap">Lost every year</div>
+            </div>
+            <div class="result-stat">
+              <div class="num" id="rMissedCalls">0</div>
+              <div class="cap">Calls missed per month</div>
+            </div>
+            <div class="result-stat">
+              <div class="num good" id="rRecovered">$0</div>
+              <div class="cap">Recovered/mo with an AI receptionist*</div>
+            </div>
+          </div>
+
+          <div class="net-card">
+            <h5>Net gain after the $499/mo plan: <span class="accent" id="rNet">$0</span>/mo</h5>
+            <p>A 24/7 AI receptionist answers the calls your team can't — for a fraction of what they're worth.</p>
+          </div>
+
+          <div class="calc-cta">
+            <a href="tel:+19545688788" class="btn btn-primary">Hear the Live Demo: (954)&nbsp;568-8788</a>
+            <a href="https://calendly.com/jcode2k" target="_blank" class="btn btn-ghost">Book a 15-min Walkthrough</a>
+          </div>
+          <p class="calc-disclaimer">Like what you hear on the demo? Just ask it to transfer you to the front desk — it'll connect you to a real person, live. *Recovery assumes the AI answers calls your team currently misses and converts them at your stated rate. Conservative estimate — real results vary by business.</p>
+
+          <!-- Optional email follow-up (after the value, never before it) -->
+          <div class="gate-box" id="gateBox">
+            <h5>Want this breakdown in your inbox?</h5>
+            <p>I'll email you these numbers so you have them when you talk it over with your team. Optional — you've already got your answer above.</p>
+            <div class="gate-row">
+              <input type="email" class="txt" id="email" placeholder="you@business.com">
+              <button class="btn btn-ghost" id="sendBtn" type="button">Email me my numbers</button>
+            </div>
+            <!-- honeypot: bots fill this, humans never see it -->
+            <input type="text" class="honeypot" id="company_website" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="gate-msg err hidden" id="emailErr">That email doesn't look right — mind checking it?</div>
+            <div class="gate-msg ok hidden" id="emailOk">✓ On its way. Check your inbox shortly.</div>
+            <div class="calc-disclaimer" style="text-align:left;margin-top:10px">No spam. One email with your results. Unsubscribe anytime.</div>
+          </div>
         </div>
-    </section>
 
-    <footer class="footer py-4 text-center">
-        <div class="container">
-            <p class="mb-1 text-muted-light">AI BOT CODER &copy; 2026 &nbsp;|&nbsp; Jason Eid &nbsp;|&nbsp; Fort Lauderdale, FL</p>
-            <p class="mb-0"><a href="mailto:jcode2k@gmail.com">jcode2k@gmail.com</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/jcode2k/" target="_blank">LinkedIn</a> &nbsp;|&nbsp; <a href="https://github.com/HeTron" target="_blank">GitHub</a></p>
-        </div>
-    </footer>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script>
-    (function () {
-        var WORKER_URL = "https://aibc-webhooks.jcode2k.workers.dev/calculator";
-        var PLAN_COST = 499;          // $/mo inbound plan
-        var RECOVERY_RATE = 0.80;     // AI recovers 80% of missed-call value (conservative)
-        var WEEKS_PER_MONTH = 4.33;
+<!-- Context / credibility -->
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="label">// The Hidden Leak</span>
+      <h2>Why missed calls quietly drain revenue</h2>
+      <p class="lead">The math is brutal because the loss is invisible — you never see the customer who hung up.</p>
+    </div>
+    <div class="why-grid reveal">
+      <div class="why-stat">
+        <div class="ic">67%</div>
+        <h4>Won't leave a voicemail</h4>
+        <p>Two-thirds of callers hang up on voicemail and call the next business on the list instead.</p>
+      </div>
+      <div class="why-stat">
+        <div class="ic">24/7</div>
+        <h4>After-hours is prime time</h4>
+        <p>Nights, weekends, lunch, and holidays are when a lot of customers actually call.</p>
+      </div>
+      <div class="why-stat">
+        <div class="ic">∞</div>
+        <h4>Every call, answered</h4>
+        <p>An AI receptionist picks up instantly, 24/7, books the appointment, and transfers to you on demand.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:46px" class="reveal">
+      <a href="/ai-phone-receptionist.html" class="btn btn-ghost">See how the AI Phone Receptionist works →</a>
+    </div>
+  </div>
+</section>
 
-        var $ = function (id) { return document.getElementById(id); };
-        var fmt = function (n) {
-            return "$" + Math.round(n).toLocaleString("en-US");
+<!-- CTA -->
+<section class="cta-band">
+  <div class="wrap">
+    <span class="label">// Stop The Leak</span>
+    <h2>Recover the calls you're losing.</h2>
+    <p>Hear the AI answer a real call, then book a 15-minute walkthrough. No pressure, no pitch.</p>
+    <a href="tel:+19545688788" class="btn btn-primary" style="font-size:1.05rem;padding:18px 38px">Call the demo · (954)&nbsp;568-8788</a>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <span class="brand">AI Bot Coder</span>
+      <span class="foot-links">
+        <a href="/services.html">Services</a> · <a href="/portfolio.html">Portfolio</a> · <a href="/tools.html">Tools</a> · <a href="/blog-posts.html">Blog</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a>
+      </span>
+      <span><a href="tel:+19545688788">(954) 568-8788</a> · <a href="mailto:jcode2k@gmail.com">jcode2k@gmail.com</a> · <a href="https://www.linkedin.com/in/jcode2k/" target="_blank">LinkedIn</a> · <a href="https://github.com/HeTron" target="_blank">GitHub</a></span>
+    </div>
+    <div class="foot-copy">© 2026 AI BOT CODER · Fort Lauderdale, FL</div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+const els=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  els.forEach(el=>io.observe(el));
+}else{els.forEach(el=>el.classList.add('in'));}
+</script>
+
+<script>
+(function () {
+    var WORKER_URL = "https://aibc-webhooks.jcode2k.workers.dev/calculator";
+    var PLAN_COST = 499;          // $/mo inbound plan
+    var RECOVERY_RATE = 0.80;     // AI recovers 80% of missed-call value (conservative)
+    var WEEKS_PER_MONTH = 4.33;
+
+    var $ = function (id) { return document.getElementById(id); };
+    var fmt = function (n) {
+        return "$" + Math.round(n).toLocaleString("en-US");
+    };
+
+    function readInputs() {
+        return {
+            weeklyCalls: Math.max(0, parseFloat($("weeklyCalls").value) || 0),
+            pctMissed: parseFloat($("pctMissed").value) || 0,
+            bookRate: parseFloat($("bookRate").value) || 0,
+            avgValue: Math.max(0, parseFloat($("avgValue").value) || 0)
         };
+    }
 
-        function readInputs() {
-            return {
-                weeklyCalls: Math.max(0, parseFloat($("weeklyCalls").value) || 0),
-                pctMissed: parseFloat($("pctMissed").value) || 0,
-                bookRate: parseFloat($("bookRate").value) || 0,
-                avgValue: Math.max(0, parseFloat($("avgValue").value) || 0)
-            };
+    function compute(i) {
+        var missedPerMonth = i.weeklyCalls * (i.pctMissed / 100) * WEEKS_PER_MONTH;
+        var lostCustomers = missedPerMonth * (i.bookRate / 100);
+        var monthlyLoss = lostCustomers * i.avgValue;
+        var annualLoss = monthlyLoss * 12;
+        var recovered = monthlyLoss * RECOVERY_RATE;
+        var net = recovered - PLAN_COST;
+        return {
+            missedPerMonth: missedPerMonth,
+            monthlyLoss: monthlyLoss,
+            annualLoss: annualLoss,
+            recovered: recovered,
+            net: net
+        };
+    }
+
+    function refresh() {
+        $("pctMissedVal").textContent = $("pctMissed").value;
+        $("bookRateVal").textContent = $("bookRate").value;
+        var r = compute(readInputs());
+        $("monthlyLoss").textContent = fmt(r.monthlyLoss);
+        $("annualLossInline").textContent = fmt(r.annualLoss);
+        fillResults(r);
+    }
+
+    function fillResults(r) {
+        $("rMonthly").textContent = fmt(r.monthlyLoss);
+        $("rAnnual").textContent = fmt(r.annualLoss);
+        $("rMissedCalls").textContent = Math.round(r.missedPerMonth).toLocaleString("en-US");
+        $("rRecovered").textContent = fmt(r.recovered);
+        $("rNet").textContent = fmt(r.net);
+    }
+
+    function validEmail(e) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e); }
+
+    function sendBreakdown() {
+        var email = $("email").value.trim();
+        if (!validEmail(email)) {
+            $("emailErr").classList.remove("hidden");
+            $("emailOk").classList.add("hidden");
+            return;
         }
+        $("emailErr").classList.add("hidden");
+        $("emailOk").classList.remove("hidden");
+        $("sendBtn").disabled = true;
+        $("sendBtn").textContent = "Sent";
 
-        function compute(i) {
-            var missedPerMonth = i.weeklyCalls * (i.pctMissed / 100) * WEEKS_PER_MONTH;
-            var lostCustomers = missedPerMonth * (i.bookRate / 100);
-            var monthlyLoss = lostCustomers * i.avgValue;
-            var annualLoss = monthlyLoss * 12;
-            var recovered = monthlyLoss * RECOVERY_RATE;
-            var net = recovered - PLAN_COST;
-            return {
-                missedPerMonth: missedPerMonth,
-                monthlyLoss: monthlyLoss,
-                annualLoss: annualLoss,
-                recovered: recovered,
-                net: net
-            };
-        }
+        var i = readInputs();
+        var r = compute(i);
 
-        function refresh() {
-            $("pctMissedVal").textContent = $("pctMissed").value;
-            $("bookRateVal").textContent = $("bookRate").value;
-            var r = compute(readInputs());
-            $("monthlyLoss").textContent = fmt(r.monthlyLoss);
-            $("annualLossInline").textContent = fmt(r.annualLoss);
-            fillResults(r);
-        }
+        // Fire-and-forget lead capture. Confirmation shows regardless of network outcome.
+        try {
+            fetch(WORKER_URL, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    email: email,
+                    company_website: $("company_website").value, // honeypot
+                    inputs: {
+                        weekly_calls: i.weeklyCalls,
+                        pct_missed: i.pctMissed,
+                        book_rate: i.bookRate,
+                        avg_customer_value: i.avgValue
+                    },
+                    results: {
+                        monthly_loss: Math.round(r.monthlyLoss),
+                        annual_loss: Math.round(r.annualLoss),
+                        recovered_estimate: Math.round(r.recovered)
+                    }
+                })
+            }).catch(function () {});
+        } catch (e) {}
+    }
 
-        function fillResults(r) {
-            $("rMonthly").textContent = fmt(r.monthlyLoss);
-            $("rAnnual").textContent = fmt(r.annualLoss);
-            $("rMissedCalls").textContent = Math.round(r.missedPerMonth).toLocaleString("en-US");
-            $("rRecovered").textContent = fmt(r.recovered);
-            $("rNet").textContent = fmt(r.net);
-        }
-
-        function validEmail(e) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e); }
-
-        function sendBreakdown() {
-            var email = $("email").value.trim();
-            if (!validEmail(email)) {
-                $("emailErr").classList.remove("hidden");
-                $("emailOk").classList.add("hidden");
-                return;
-            }
-            $("emailErr").classList.add("hidden");
-            $("emailOk").classList.remove("hidden");
-            $("sendBtn").disabled = true;
-            $("sendBtn").textContent = "Sent";
-
-            var i = readInputs();
-            var r = compute(i);
-
-            // Fire-and-forget lead capture. Confirmation shows regardless of network outcome.
-            try {
-                fetch(WORKER_URL, {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({
-                        email: email,
-                        company_website: $("company_website").value, // honeypot
-                        inputs: {
-                            weekly_calls: i.weeklyCalls,
-                            pct_missed: i.pctMissed,
-                            book_rate: i.bookRate,
-                            avg_customer_value: i.avgValue
-                        },
-                        results: {
-                            monthly_loss: Math.round(r.monthlyLoss),
-                            annual_loss: Math.round(r.annualLoss),
-                            recovered_estimate: Math.round(r.recovered)
-                        }
-                    })
-                }).catch(function () {});
-            } catch (e) {}
-        }
-
-        // Wire up
-        ["weeklyCalls", "pctMissed", "bookRate", "avgValue"].forEach(function (id) {
-            $(id).addEventListener("input", refresh);
-        });
-        $("sendBtn").addEventListener("click", sendBreakdown);
-        $("email").addEventListener("keydown", function (e) { if (e.key === "Enter") sendBreakdown(); });
-        refresh();
-    })();
-    </script>
-    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "880dd8a72db2452c816c1172be8b6db7"}'></script><!-- End Cloudflare Web Analytics -->
+    // Wire up
+    ["weeklyCalls", "pctMissed", "bookRate", "avgValue"].forEach(function (id) {
+        $(id).addEventListener("input", refresh);
+    });
+    $("sendBtn").addEventListener("click", sendBreakdown);
+    $("email").addEventListener("keydown", function (e) { if (e.key === "Enter") sendBreakdown(); });
+    refresh();
+})();
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "880dd8a72db2452c816c1172be8b6db7"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
