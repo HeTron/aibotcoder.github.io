@@ -1,170 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Labs – AI BOT CODER</title>
-    <meta name="description" content="Technical and data-science side projects by Jason Eid — predictive modeling, dashboards, and experiments.">
-    <link rel="canonical" href="https://aibotcoder.com/labs.html">
-    <meta property="og:title" content="Labs – AI BOT CODER">
-    <meta property="og:description" content="Technical and data-science side projects by Jason Eid — predictive modeling, dashboards, and experiments.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://aibotcoder.com/labs.html">
-    <meta property="og:image" content="https://aibotcoder.com/static/images/og/default.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="AI BOT CODER">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Labs – AI BOT CODER">
-    <meta name="twitter:description" content="Technical and data-science side projects by Jason Eid — predictive modeling, dashboards, and experiments.">
-    <meta name="twitter:image" content="https://aibotcoder.com/static/images/og/default.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/static/style.css">
-    <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#0e0e0e">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Labs – AI BOT CODER</title>
+<meta name="description" content="Technical and data-science side projects by Jason Eid — predictive modeling, dashboards, and experiments.">
+<link rel="canonical" href="https://aibotcoder.com/labs.html">
+<meta property="og:title" content="Labs – AI BOT CODER">
+<meta property="og:description" content="Technical and data-science side projects by Jason Eid — predictive modeling, dashboards, and experiments.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aibotcoder.com/labs.html">
+<meta property="og:image" content="https://aibotcoder.com/static/images/og/default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="AI BOT CODER">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Labs – AI BOT CODER">
+<meta name="twitter:description" content="Technical and data-science side projects by Jason Eid — predictive modeling, dashboards, and experiments.">
+<meta name="twitter:image" content="https://aibotcoder.com/static/images/og/default.png">
+<link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#08090c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/redesign.css">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+<style>
+.lab-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start}
+.lab-card{display:flex;flex-direction:column;height:100%}
+.lab-card img{width:100%;border-radius:12px;margin-bottom:24px;object-fit:cover;aspect-ratio:16/9;background:var(--elev2)}
+.lab-card h3{font-family:var(--display);font-weight:700;font-size:1.3rem;letter-spacing:-.015em;margin-bottom:10px}
+.lab-card .desc{color:var(--muted);font-size:.97rem;line-height:1.65;margin-bottom:14px;flex:1}
+.lab-card .tech{font-family:var(--mono);font-size:.75rem;color:var(--faint);letter-spacing:.04em;margin-bottom:22px}
+.lab-card .btns{display:flex;gap:12px;flex-wrap:wrap}
+.back-link{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.82rem;color:var(--muted);transition:color .2s;margin-bottom:28px}
+.back-link:hover{color:var(--blue)}
+.back-link::before{content:"←";color:var(--blue)}
+@media(max-width:900px){.lab-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.lab-card .btns{flex-direction:column}.lab-card .btns .btn{justify-content:center}}
+</style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg shadow-sm">
-        <div class="container">
-            <a class="navbar-brand brand-logo" href="/" aria-label="AI BOT CODER home"><img src="/static/brand/wordmark-color.svg" alt="AI BOT CODER" height="36" style="display:block;"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/portfolio.html">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/tools.html">Tools</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/blog-posts.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-primary btn-sm px-3" href="https://calendly.com/jcode2k" target="_blank">Book a Free Call</a>
-                    </li>
-                </ul>
-            </div>
+<nav class="nav" id="nav">
+  <a class="brand" href="/"><span class="dot"></span><b>AI&nbsp;Bot</b><span>Coder</span></a>
+  <div class="nav-links">
+    <a href="/#automate">What I Automate</a>
+    <a href="/services.html">Services</a>
+    <a href="/portfolio.html">Portfolio</a>
+    <a href="/tools.html">Tools</a>
+    <a href="/missed-call-calculator.html">Calculator</a>
+  </div>
+  <a class="nav-cta" href="tel:+19545688788"><span class="rdot"></span><span class="cta-lbl">Call the AI · </span>(954)&nbsp;568-8788</a>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="hero-eyebrow"><span class="ln"></span><span class="label">Labs</span></div>
+    <h1>Technical experiments &amp; side builds.</h1>
+    <p class="lead">Data-science projects, predictive models, and dashboards — the learning work that sharpened the builder.</p>
+    <a href="/portfolio.html" class="back-link" style="margin-top:28px;display:inline-flex">Back to Portfolio</a>
+  </div>
+</header>
+
+<!-- Data Science Projects -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">// Data Science Projects</span>
+      <h2>Predictive modeling and analytics work from my data science training.</h2>
+    </div>
+    <div class="lab-grid">
+
+      <!-- Market Edge -->
+      <div class="card lab-card reveal">
+        <img src="/static/images/market-edge.svg" alt="Market Edge">
+        <h3>Market Edge</h3>
+        <p class="desc">AI-powered stock forecasting. LightGBM on next-day log returns, walk-forward cross-validation, full backtesting (Sharpe, max drawdown, equity curve vs buy-and-hold), and Claude-generated plain-English explanations of each forecast.</p>
+        <p class="tech">Python &bull; Streamlit &bull; LightGBM &bull; Claude API &bull; Plotly</p>
+        <div class="btns">
+          <a href="https://market-edge.streamlit.app" target="_blank" class="btn btn-primary">Live Demo</a>
+          <a href="https://github.com/HeTron/market-edge" target="_blank" class="btn btn-ghost">GitHub</a>
         </div>
-    </nav>
+      </div>
 
-    <!-- Hero -->
-    <section class="page-hero text-center py-5">
-        <div class="container py-3">
-            <h1 class="display-5 fw-bold">Labs</h1>
-            <p class="hero-subtitle mt-3">Technical experiments, data-science projects, and side builds.</p>
-            <div class="mt-4">
-                <a href="/portfolio.html" class="btn btn-outline-primary btn-sm px-3"><i class="bi bi-arrow-left me-1"></i>Back to Portfolio</a>
-            </div>
+      <!-- Patient No-Show Prediction -->
+      <div class="card lab-card reveal">
+        <img src="/static/images/no-show.png" alt="Patient No-Show Prediction">
+        <h3>Patient No-Show Prediction</h3>
+        <p class="desc">Predictive model to identify patients likely to miss medical appointments. Includes EDA, class balancing, and feature importance analysis.</p>
+        <p class="tech">Python &bull; Pandas &bull; Scikit-learn</p>
+        <div class="btns">
+          <a href="https://github.com/HeTron/patient-no-show-prediction" target="_blank" class="btn btn-ghost">GitHub</a>
         </div>
-    </section>
+      </div>
 
-    <!-- Data Science Projects -->
-    <section class="section-mid py-5">
-        <div class="container">
-            <h2 class="mb-2">Data Science Projects</h2>
-            <p class="text-muted-light mb-4">Predictive modeling and analytics work from my data science training.</p>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-
-                <div class="col">
-                    <div class="card h-100 shadow-sm">
-                        <img src="/static/images/market-edge.svg" alt="Market Edge" class="card-img-top project-img">
-                        <div class="card-body">
-                            <h5 class="card-title">Market Edge</h5>
-                            <p class="card-text">AI-powered stock forecasting. LightGBM on next-day log returns, walk-forward cross-validation, full backtesting (Sharpe, max drawdown, equity curve vs buy-and-hold), and Claude-generated plain-English explanations of each forecast.</p>
-                            <p class="card-text"><small class="text-muted-light">Python &bull; Streamlit &bull; LightGBM &bull; Claude API &bull; Plotly</small></p>
-                        </div>
-                        <div class="card-footer text-center">
-                            <a href="https://market-edge.streamlit.app" target="_blank" class="btn btn-primary btn-sm me-1">Live Demo</a>
-                            <a href="https://github.com/HeTron/market-edge" target="_blank" class="btn btn-outline-primary btn-sm">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card h-100 shadow-sm">
-                        <img src="/static/images/no-show.png" alt="Patient No-Show Prediction" class="card-img-top project-img">
-                        <div class="card-body">
-                            <h5 class="card-title">Patient No-Show Prediction</h5>
-                            <p class="card-text">Predictive model to identify patients likely to miss medical appointments. Includes EDA, class balancing, and feature importance analysis.</p>
-                            <p class="card-text"><small class="text-muted-light">Python &bull; Pandas &bull; Scikit-learn</small></p>
-                        </div>
-                        <div class="card-footer text-center">
-                            <a href="https://github.com/HeTron/patient-no-show-prediction" target="_blank" class="btn btn-outline-primary btn-sm">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card h-100 shadow-sm">
-                        <img src="/static/images/churn-edge.png" alt="Churn Edge" class="card-img-top project-img">
-                        <div class="card-body">
-                            <h5 class="card-title">Churn Edge</h5>
-                            <p class="card-text">AI-powered customer churn prediction. LightGBM with stratified k-fold cross-validation, engineered behavioral features, revenue-at-risk scoring, ROI-optimized retention campaign sizing, and Claude-generated retention recommendations per customer.</p>
-                            <p class="card-text"><small class="text-muted-light">Python &bull; Streamlit &bull; LightGBM &bull; Claude API &bull; Plotly</small></p>
-                        </div>
-                        <div class="card-footer text-center">
-                            <a href="https://hetron-customer-churn-analysis.streamlit.app" target="_blank" class="btn btn-primary btn-sm me-1">Live Demo</a>
-                            <a href="https://github.com/HeTron/customer-churn-analysis" target="_blank" class="btn btn-outline-primary btn-sm">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card h-100 shadow-sm">
-                        <img src="/static/images/talent-pulse.png" alt="Talent Pulse — Recruiting Operations Intelligence" class="card-img-top project-img">
-                        <div class="card-body">
-                            <h5 class="card-title">Talent Pulse</h5>
-                            <p class="card-text">Recruiting operations intelligence dashboard. Real-time visibility into hiring funnel, recruiter performance, and pipeline health — applicants, interviews, offers, hires, time-to-fill, and department-level deep dives with filterable date ranges.</p>
-                            <p class="card-text"><small class="text-muted-light">Python &bull; Streamlit &bull; Pandas &bull; Plotly</small></p>
-                        </div>
-                        <div class="card-footer text-center">
-                            <a href="https://talent-pulse.streamlit.app" target="_blank" class="btn btn-primary btn-sm me-1">Live Demo</a>
-                            <a href="https://github.com/HeTron/staffing-kpi-dashboard" target="_blank" class="btn btn-outline-primary btn-sm">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card h-100 shadow-sm">
-                        <img src="/static/images/ai-therapist-chatbot.png" alt="AI Therapist Chatbot" class="card-img-top project-img">
-                        <div class="card-body">
-                            <h5 class="card-title">AI Therapist Chatbot</h5>
-                            <p class="card-text">Empathetic mental health chatbot named Sage, powered by the Anthropic Claude API and LangChain. Uses thoughtful prompt design and conversation memory to support emotional reflection.</p>
-                            <p class="card-text"><small class="text-muted-light">Python &bull; LangChain &bull; Streamlit &bull; Anthropic Claude API</small></p>
-                        </div>
-                        <div class="card-footer text-center">
-                            <a href="https://github.com/HeTron/ai-therapist-chatbot" target="_blank" class="btn btn-outline-primary btn-sm">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+      <!-- Churn Edge -->
+      <div class="card lab-card reveal">
+        <img src="/static/images/churn-edge.png" alt="Churn Edge">
+        <h3>Churn Edge</h3>
+        <p class="desc">AI-powered customer churn prediction. LightGBM with stratified k-fold cross-validation, engineered behavioral features, revenue-at-risk scoring, ROI-optimized retention campaign sizing, and Claude-generated retention recommendations per customer.</p>
+        <p class="tech">Python &bull; Streamlit &bull; LightGBM &bull; Claude API &bull; Plotly</p>
+        <div class="btns">
+          <a href="https://hetron-customer-churn-analysis.streamlit.app" target="_blank" class="btn btn-primary">Live Demo</a>
+          <a href="https://github.com/HeTron/customer-churn-analysis" target="_blank" class="btn btn-ghost">GitHub</a>
         </div>
-    </section>
+      </div>
 
-    <!-- CTA -->
-    <section class="cta-banner py-5 text-center">
-        <div class="container">
-            <h2 class="mb-3">Want something like this built for your business?</h2>
-            <p class="text-muted-light mb-4">Book a free call and let's talk through what's possible.</p>
-            <a href="https://calendly.com/jcode2k" target="_blank" class="btn btn-primary btn-lg px-5">Book Your Free Discovery Call</a>
+      <!-- Talent Pulse -->
+      <div class="card lab-card reveal">
+        <img src="/static/images/talent-pulse.png" alt="Talent Pulse — Recruiting Operations Intelligence">
+        <h3>Talent Pulse</h3>
+        <p class="desc">Recruiting operations intelligence dashboard. Real-time visibility into hiring funnel, recruiter performance, and pipeline health — applicants, interviews, offers, hires, time-to-fill, and department-level deep dives with filterable date ranges.</p>
+        <p class="tech">Python &bull; Streamlit &bull; Pandas &bull; Plotly</p>
+        <div class="btns">
+          <a href="https://talent-pulse.streamlit.app" target="_blank" class="btn btn-primary">Live Demo</a>
+          <a href="https://github.com/HeTron/staffing-kpi-dashboard" target="_blank" class="btn btn-ghost">GitHub</a>
         </div>
-    </section>
+      </div>
 
-    <footer class="footer py-4 text-center">
-        <div class="container">
-            <p class="mb-1 text-muted-light">AI BOT CODER &copy; 2026 &nbsp;|&nbsp; Jason Eid &nbsp;|&nbsp; Fort Lauderdale, FL</p>
-            <p class="mb-0"><a href="mailto:jcode2k@gmail.com">jcode2k@gmail.com</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/jcode2k/" target="_blank">LinkedIn</a> &nbsp;|&nbsp; <a href="https://github.com/HeTron" target="_blank">GitHub</a> &nbsp;|&nbsp; <a href="/portfolio.html">Portfolio</a></p>
+      <!-- AI Therapist Chatbot -->
+      <div class="card lab-card reveal">
+        <img src="/static/images/ai-therapist-chatbot.png" alt="AI Therapist Chatbot">
+        <h3>AI Therapist Chatbot</h3>
+        <p class="desc">Empathetic mental health chatbot named Sage, powered by the Anthropic Claude API and LangChain. Uses thoughtful prompt design and conversation memory to support emotional reflection.</p>
+        <p class="tech">Python &bull; LangChain &bull; Streamlit &bull; Anthropic Claude API</p>
+        <div class="btns">
+          <a href="https://github.com/HeTron/ai-therapist-chatbot" target="_blank" class="btn btn-ghost">GitHub</a>
         </div>
-    </footer>
+      </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
-    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "880dd8a72db2452c816c1172be8b6db7"}'></script><!-- End Cloudflare Web Analytics -->
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="wrap">
+    <span class="label">// Let's Build It</span>
+    <h2>Want something like this built for your business?</h2>
+    <p>Book a free call and let's talk through what's possible.</p>
+    <a href="https://calendly.com/jcode2k" target="_blank" class="btn btn-primary" style="font-size:1.05rem;padding:18px 38px">Book Your Free Discovery Call →</a>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <span class="brand">AI Bot Coder</span>
+      <span class="foot-links">
+        <a href="/services.html">Services</a> · <a href="/portfolio.html">Portfolio</a> · <a href="/tools.html">Tools</a> · <a href="/blog-posts.html">Blog</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a>
+      </span>
+      <span><a href="tel:+19545688788">(954) 568-8788</a> · <a href="mailto:jcode2k@gmail.com">jcode2k@gmail.com</a> · <a href="https://www.linkedin.com/in/jcode2k/" target="_blank">LinkedIn</a> · <a href="https://github.com/HeTron" target="_blank">GitHub</a></span>
+    </div>
+    <div class="foot-copy">© 2026 AI BOT CODER · Fort Lauderdale, FL</div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+const els=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  els.forEach(el=>io.observe(el));
+}else{els.forEach(el=>el.classList.add('in'));}
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "880dd8a72db2452c816c1172be8b6db7"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
