@@ -593,6 +593,12 @@ footer{padding:60px 0 50px;border-top:1px solid var(--line);background:var(--bg2
 <script type="module">
 import * as THREE from 'three';
 const cv = document.getElementById('net');
+// Heavy WebGL only where it's safe: desktop + motion allowed. A continuous
+// full-screen WebGL loop can crash iOS Safari ("a problem repeatedly occurred"),
+// so phones/reduced-motion get the static gradient hero instead.
+const ENABLE_3D = window.matchMedia('(min-width:768px)').matches
+  && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (ENABLE_3D) {
 const renderer = new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});
 renderer.setPixelRatio(Math.min(devicePixelRatio,2));
 const scene = new THREE.Scene();
@@ -652,8 +658,9 @@ function resize(){
 }
 addEventListener('resize',resize);resize();
 
-let frame=0;
+let frame=0, running=true;
 function tick(){
+  if(!running) return;
   frame++;
   for(let i=0;i<N;i++){
     pts[i].add(pts[i].vel);
@@ -678,8 +685,14 @@ function tick(){
   renderer.render(scene,cam);
   requestAnimationFrame(tick);
 }
+// Pause the render loop whenever the hero canvas leaves the viewport (saves GPU/CPU/battery).
+new IntersectionObserver(es=>{
+  if(es[0].isIntersecting){ if(!running){ running=true; tick(); } }
+  else { running=false; }
+},{threshold:0}).observe(cv);
 tick();
 window.__net={ready:true};
+}
 </script>
 
 <!-- UI / GSAP logic -->
@@ -744,17 +757,20 @@ function calc(){
   targetLost=Math.round(c*DAYS*BOOK*AVG);
   targetRec=Math.round(targetLost*RECOVER);
 }
+let calcRaf=null;
 function animNums(){
   shownLost+=(targetLost-shownLost)*.12;
   shownRec+=(targetRec-shownRec)*.12;
   lostNum.textContent='$'+Math.round(shownLost).toLocaleString();
   recoverNum.textContent='$'+Math.round(shownRec).toLocaleString();
-  requestAnimationFrame(animNums);
+  if(Math.abs(targetLost-shownLost)>0.5||Math.abs(targetRec-shownRec)>0.5){calcRaf=requestAnimationFrame(animNums);}
+  else{calcRaf=null;}                // settle → stop the loop
 }
-calls.addEventListener('input',calc);calc();animNums();
+function kickNums(){if(calcRaf==null)calcRaf=requestAnimationFrame(animNums);}
+calls.addEventListener('input',()=>{calc();kickNums();});calc();kickNums();
 ScrollTrigger.create({trigger:'#calc',start:'top 60%',once:true,onEnter:()=>{
   // little kick so the number visibly counts up on first view
-  shownLost=0;shownRec=0;
+  shownLost=0;shownRec=0;kickNums();
 }});
 
 /* STATS count-up */
@@ -775,21 +791,22 @@ gsap.utils.toArray('.cu').forEach(el=>{
   for(let i=0;i<BARS;i++){const b=document.createElement('i');wave.appendChild(b);bars.push(b);}
   let playing=false,raf;
   function fmt(s){s=Math.floor(s||0);return Math.floor(s/60)+':'+String(s%60).padStart(2,'0');}
+  function setIdle(){bars.forEach((b,i)=>{b.style.height=(10+Math.sin(i*.6)*4)+'%';b.style.opacity=.4;});}
   function animate(){
+    if(!playing) return;            // only spin the loop while audio is playing
     const t=performance.now()/240;
     bars.forEach((b,i)=>{
-      const base=playing?(Math.sin(t+i*.5)*.5+.5)*(Math.sin(t*.7+i)*.5+.5):0;
-      const h=playing?(12+base*84+Math.random()*14):(10+Math.sin(i*.6)*4);
-      b.style.height=h+'%';b.style.opacity=playing?.95:.4;
+      const base=(Math.sin(t+i*.5)*.5+.5)*(Math.sin(t*.7+i)*.5+.5);
+      b.style.height=(12+base*84+Math.random()*14)+'%';b.style.opacity=.95;
     });
     raf=requestAnimationFrame(animate);
   }
-  animate();
+  setIdle();
   const play=()=>{audio.play().then(()=>{}).catch(()=>{});};
   btn.addEventListener('click',()=>{audio.paused?play():audio.pause();});
-  audio.addEventListener('play',()=>{playing=true;icon.innerHTML='<rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/>';});
-  audio.addEventListener('pause',()=>{playing=false;icon.innerHTML='<path d="M8 5v14l11-7z"/>';});
-  audio.addEventListener('ended',()=>{playing=false;icon.innerHTML='<path d="M8 5v14l11-7z"/>';});
+  audio.addEventListener('play',()=>{playing=true;animate();icon.innerHTML='<rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/>';});
+  audio.addEventListener('pause',()=>{playing=false;setIdle();icon.innerHTML='<path d="M8 5v14l11-7z"/>';});
+  audio.addEventListener('ended',()=>{playing=false;setIdle();icon.innerHTML='<path d="M8 5v14l11-7z"/>';});
   audio.addEventListener('loadedmetadata',()=>{if(isFinite(audio.duration))dur.textContent=fmt(audio.duration);});
   audio.addEventListener('timeupdate',()=>{cur.textContent=fmt(audio.currentTime);});
   // hero CTA also starts it
