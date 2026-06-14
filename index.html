@@ -256,6 +256,8 @@ input[type=range]::-webkit-slider-thumb:active{transform:scale(1.18);cursor:grab
 .wave i{flex:1;background:linear-gradient(var(--blue),var(--blue-deep));border-radius:2px;height:14%;transition:height .08s linear;opacity:.55}
 .player-time{font-family:var(--mono);font-size:.72rem;color:var(--faint);margin-top:16px;display:flex;justify-content:space-between}
 .call-live{margin-top:50px}
+.transfer-tip{margin:22px auto 0;max-width:42ch;color:var(--muted);font-size:.98rem}
+.transfer-tip b{color:var(--phos);font-weight:600}
 .call-live .or{font-family:var(--mono);font-size:.78rem;color:var(--faint);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
 .bignumber{display:inline-flex;align-items:center;gap:16px;font-family:var(--display);font-weight:800;
   font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.02em;color:var(--ink);
@@ -377,7 +379,7 @@ footer{padding:60px 0 50px;border-top:1px solid var(--line);background:var(--bg2
 
 <!-- NAV -->
 <nav class="nav" id="nav">
-  <a class="brand" href="#top"><span class="dot"></span><b>AI&nbsp;Bot&nbsp;</b><span>Coder</span></a>
+  <a class="brand" href="#top"><span class="dot"></span><b>AI&nbsp;Bot</b><span>Coder</span></a>
   <div class="nav-links">
     <a href="#automate">What I Automate</a>
     <a href="#calc">Calculator</a>
@@ -507,6 +509,7 @@ footer{padding:60px 0 50px;border-top:1px solid var(--line);background:var(--bg2
     <div class="call-live">
       <div class="or">— or talk to it yourself, right now —</div>
       <a class="bignumber" href="tel:+19545688788"><span class="ring"></span>(954) 568-8788</a>
+      <p class="transfer-tip">Like what you hear? Just ask it to <b>transfer you to the front desk</b> — it'll connect you to a real person, live.</p>
     </div>
   </div>
 </section>
