@@ -163,6 +163,14 @@ details.faq summary::after{content:"+";color:var(--blue);font-family:var(--mono)
 details.faq[open] summary::after{content:"–"}
 details.faq p{color:var(--muted);margin-top:14px;max-width:72ch}
 
+/* ── Problem video spots ── */
+.spot-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.spot{background:var(--elev);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:border-color .3s}
+.spot:hover{border-color:var(--line2)}
+.spot video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#0a0a0a}
+.spot .spot-cap{padding:16px 20px;color:var(--muted);font-size:.95rem}
+.spot .spot-cap strong{color:var(--ink);font-family:var(--display);font-weight:700;display:block;margin-bottom:3px}
+
 /* ── Demo CTA callout band ── */
 .demo-band{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:60px 0;text-align:center}
 .demo-transfer{font-size:.98rem;color:var(--muted);margin-top:14px}
@@ -172,6 +180,7 @@ details.faq p{color:var(--muted);margin-top:14px;max-width:72ch}
 .hipaa-row{display:grid;grid-template-columns:1fr 1.5fr;gap:48px;align-items:center}
 
 @media(max-width:900px){
+  .spot-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}
   .stat-grid{grid-template-columns:1fr 1fr}
   .feat-grid{grid-template-columns:1fr 1fr}
   .price-grid{grid-template-columns:1fr;max-width:460px;margin:0 auto}
@@ -242,6 +251,27 @@ details.faq p{color:var(--muted);margin-top:14px;max-width:72ch}
       <div class="stat-card reveal">
         <div class="stat-n">Lost Revenue</div>
         <p>Each missed appointment is hundreds of dollars walking to a competitor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SEE THE PROBLEM (animated spots) ── -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">// See It Happen</span>
+      <h2>This is what a missed call looks like.</h2>
+      <p class="lead">Two ways practices lose patients every day — and how the AI ends both.</p>
+    </div>
+    <div class="spot-grid">
+      <div class="spot reveal">
+        <video src="/static/video/overwhelmed-receptionist_16x9.mp4" poster="/static/video/overwhelmed-receptionist_poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Animation: an overwhelmed front desk with three phones ringing at once, then the AI answers all of them"></video>
+        <div class="spot-cap"><strong>One front desk. Too many calls.</strong>Three lines ring at once, the missed-call count climbs — then the AI answers every call, and no one waits.</div>
+      </div>
+      <div class="spot reveal">
+        <video src="/static/video/after-hours_16x9.mp4" poster="/static/video/after-hours_poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Animation: a new patient calls after hours, gets voicemail, and calls a competitor instead"></video>
+        <div class="spot-cap"><strong>Closed for the day? Your phone isn't.</strong>A new patient calls after hours, hits voicemail, and books the next practice that picks up. The AI answers 24/7.</div>
       </div>
     </div>
   </div>
