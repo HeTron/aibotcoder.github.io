@@ -3,6 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18284786991"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18284786991');
+</script>
 <title>Missed-Call Revenue Calculator – What Are Unanswered Calls Costing You? | AI BOT CODER</title>
 <meta name="description" content="Free calculator: estimate how much revenue your business loses every month to missed and unanswered calls — and how much a 24/7 AI receptionist would recover. No signup to see your number.">
 <link rel="canonical" href="https://aibotcoder.com/missed-call-calculator.html">
@@ -347,6 +355,15 @@ if('IntersectionObserver' in window){
         $("emailOk").classList.remove("hidden");
         $("sendBtn").disabled = true;
         $("sendBtn").textContent = "Sent";
+
+        // Google Ads conversion — fire on a genuine submit (skip honeypot/bot fills)
+        if (!$("company_website").value && typeof gtag === "function") {
+            gtag('event', 'conversion', {
+                'send_to': 'AW-18284786991/EeLuCKvZ78ccEK_q7o5E',
+                'value': 1.0,
+                'currency': 'USD'
+            });
+        }
 
         var i = readInputs();
         var r = compute(i);
