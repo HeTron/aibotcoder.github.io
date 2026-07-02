@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SMS Alert Opt-In – AI BOT CODER</title>
-<meta name="description" content="Internal SMS alert opt-in for AI Bot Coder LLC staff. Enter your mobile number and consent to receive operational text alerts.">
+<title>Alert Preferences – AI BOT CODER</title>
+<meta name="description" content="Internal alert preferences for AI Bot Coder LLC staff. Save your contact details and optionally enable SMS text alerts.">
 <link rel="canonical" href="https://aibotcoder.com/sms-optin.html">
 <meta name="robots" content="noindex">
-<meta property="og:title" content="SMS Alert Opt-In – AI BOT CODER">
-<meta property="og:description" content="Internal SMS alert opt-in for AI Bot Coder LLC staff.">
+<meta property="og:title" content="Alert Preferences – AI BOT CODER">
+<meta property="og:description" content="Internal alert preferences for AI Bot Coder LLC staff.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://aibotcoder.com/sms-optin.html">
 <meta property="og:image" content="https://aibotcoder.com/static/images/og/default.png">
@@ -59,9 +59,9 @@
 
 <header class="page-hero">
   <div class="wrap">
-    <div class="hero-eyebrow"><span class="ln"></span><span class="label">SMS Alerts</span></div>
-    <h1>Enable SMS Alerts</h1>
-    <p class="lead">Internal operational alert sign-up for AI Bot Coder LLC staff. Enter your mobile number and confirm consent to receive text-message alerts.</p>
+    <div class="hero-eyebrow"><span class="ln"></span><span class="label">Alert Preferences</span></div>
+    <h1>Alert Preferences</h1>
+    <p class="lead">Internal notification settings for AI Bot Coder LLC staff. Save your contact details — and optionally enable SMS text alerts. Text alerts are never required.</p>
   </div>
 </header>
 
@@ -70,9 +70,10 @@
     <div class="optin-card reveal">
 
       <div class="terms-box">
-        <strong>AI Bot Coder — Operational Alerts</strong>
+        <strong>AI Bot Coder — Operational Alerts (SMS is optional)</strong>
         <ul>
-          <li>You will receive transactional text alerts when a sales lead replies to outreach or submits an inquiry on aibotcoder.com.</li>
+          <li>Staff alerts are delivered by email by default. SMS text alerts are an <strong>optional</strong> add-on — you can save your preferences without enabling them.</li>
+          <li>If you enable SMS: you'll receive transactional text alerts when a sales lead replies to outreach or submits an inquiry on aibotcoder.com.</li>
           <li><strong>Message frequency varies</strong> based on lead and account activity.</li>
           <li><strong>Message and data rates may apply.</strong></li>
           <li>Reply <strong>STOP</strong> to unsubscribe at any time. Reply <strong>HELP</strong> for help.</li>
@@ -89,19 +90,17 @@
           <label class="fl" for="phone">Mobile number</label>
           <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(954) 555-1234" required>
         </div>
-        <div class="err-msg" id="errMsg">Please enter a valid mobile number and check the consent box.</div>
+        <div class="err-msg" id="errMsg">Please enter a valid mobile number.</div>
         <label class="consent">
-          <input type="checkbox" id="consent" name="consent" required>
-          <span>I agree to receive operational SMS text alerts from AI Bot Coder LLC at the number provided. Consent is not a condition of any purchase. Message frequency varies; message and data rates may apply. Reply STOP to cancel, HELP for help.</span>
+          <input type="checkbox" id="consent" name="consent">
+          <span><strong>Optional:</strong> I agree to receive operational SMS text alerts from AI Bot Coder LLC at the number provided. Consent is not a condition of any purchase or of using this service — you can save your preferences without checking this box. Message frequency varies; message and data rates may apply. Reply STOP to cancel, HELP for help.</span>
         </label>
-        <button type="submit" class="btn btn-primary">Enable SMS alerts</button>
+        <button type="submit" class="btn btn-primary">Save preferences</button>
       </form>
 
-      <div class="ok-msg" id="okMsg">
-        ✓ You're subscribed. You'll receive a confirmation text shortly. Reply <strong>STOP</strong> at any time to unsubscribe, or <strong>HELP</strong> for help.
-      </div>
+      <div class="ok-msg" id="okMsg"></div>
 
-      <p class="fine">This is an internal opt-in for AI Bot Coder LLC staff and authorized recipients only. By submitting, you confirm the mobile number is your own and you consent to receive the alerts described above.</p>
+      <p class="fine">This is an internal preferences page for AI Bot Coder LLC staff and authorized recipients only. SMS alerts are enabled only if you check the consent box above — leaving it unchecked simply keeps text alerts off. You can withdraw consent at any time by replying STOP.</p>
 
     </div>
   </div>
@@ -133,9 +132,12 @@ form.addEventListener('submit',e=>{
   e.preventDefault();
   const phone=document.getElementById('phone').value.replace(/\D/g,'');
   const consent=document.getElementById('consent').checked;
-  if(phone.length<10||!consent){err.classList.add('show');return;}
+  if(phone.length<10){err.classList.add('show');return;}
   err.classList.remove('show');
   form.style.display='none';
+  ok.innerHTML=consent
+    ?'✓ Preferences saved — SMS alerts are <strong>on</strong>. You\'ll receive a confirmation text shortly. Reply <strong>STOP</strong> at any time to unsubscribe, or <strong>HELP</strong> for help.'
+    :'✓ Preferences saved — SMS alerts are <strong>off</strong>. You can return to this page any time to enable them.';
   ok.classList.add('show');
 });
 </script>
