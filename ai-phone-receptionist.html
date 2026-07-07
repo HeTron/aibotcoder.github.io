@@ -3,9 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18284786991"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18284786991');
+</script>
 <title>AI Phone Receptionist – Never Miss a Call | AI BOT CODER</title>
 <meta name="description" content="24/7 AI phone receptionist for dental and medical offices. Answers every call, books appointments, transfers to staff. HIPAA-compliant. $499/mo inbound, $599/mo with outbound confirmation calls — vs $1,200+ for human services. Live demo: (954) 568-8788.">
 <link rel="canonical" href="https://aibotcoder.com/ai-phone-receptionist.html">
+<link rel="alternate" hreflang="en" href="https://aibotcoder.com/ai-phone-receptionist.html">
+<link rel="alternate" hreflang="es" href="https://aibotcoder.com/es/ai-phone-receptionist.html">
+<link rel="alternate" hreflang="x-default" href="https://aibotcoder.com/ai-phone-receptionist.html">
 <meta property="og:title" content="AI Phone Receptionist – Never Miss a Call">
 <meta property="og:description" content="24/7 AI receptionist that answers every call, books appointments, and transfers to your front desk. Live demo: (954) 568-8788.">
 <meta property="og:type" content="website">
@@ -176,6 +187,27 @@ details.faq p{color:var(--muted);margin-top:14px;max-width:72ch}
 .demo-transfer{font-size:.98rem;color:var(--muted);margin-top:14px}
 .demo-transfer span{color:var(--phos);font-family:var(--mono);font-weight:500}
 
+/* ── Real-call audio player (ported from homepage) ── */
+.player{max-width:660px;margin:0 auto 34px;background:linear-gradient(160deg,var(--elev),var(--bg2));
+  border:1px solid var(--line2);border-radius:20px;padding:30px 34px;box-shadow:0 40px 90px rgba(0,0,0,.5);text-align:left}
+.player-top{display:flex;align-items:center;gap:20px}
+.playbtn{flex:none;width:64px;height:64px;border-radius:50%;border:none;cursor:pointer;
+  background:var(--blue);color:#04060a;display:grid;place-items:center;box-shadow:0 0 0 0 rgba(110,168,254,.5);transition:.25s}
+.playbtn:hover{background:var(--blue-bright);box-shadow:0 12px 40px rgba(110,168,254,.45)}
+.playbtn svg{width:24px;height:24px}
+.player-meta .t{font-family:var(--mono);font-size:.74rem;color:var(--blue);letter-spacing:.1em;text-transform:uppercase}
+.player-meta .d{color:var(--ink);font-weight:600;margin-top:3px}
+.wave{flex:1;height:54px;display:flex;align-items:center;gap:3px}
+.wave i{flex:1;background:linear-gradient(var(--blue),var(--blue-deep));border-radius:2px;height:14%;transition:height .08s linear;opacity:.55}
+.player-time{font-family:var(--mono);font-size:.72rem;color:var(--faint);margin-top:16px;display:flex;justify-content:space-between}
+.player-cap{font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--muted);margin:0 auto 18px;max-width:56ch}
+.demo-or{font-family:var(--mono);font-size:.78rem;color:var(--faint);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
+@media(max-width:560px){
+  .player{padding:24px 20px}
+  .player-top{flex-direction:column;align-items:stretch;gap:16px}
+  .wave{width:100%}
+}
+
 /* ── HIPAA two-col layout ── */
 .hipaa-row{display:grid;grid-template-columns:1fr 1.5fr;gap:48px;align-items:center}
 
@@ -206,6 +238,7 @@ details.faq p{color:var(--muted);margin-top:14px;max-width:72ch}
     <a href="/portfolio.html">Portfolio</a>
     <a href="/tools.html">Tools</a>
     <a href="/missed-call-calculator.html">Calculator</a>
+    <a href="/es/ai-phone-receptionist.html" lang="es" hreflang="es">Español</a>
   </div>
   <a class="nav-cta" href="tel:+19545688788"><span class="rdot"></span><span class="cta-lbl">Call the AI · </span>(954)&nbsp;568-8788</a>
 </nav>
@@ -221,9 +254,10 @@ details.faq p{color:var(--muted);margin-top:14px;max-width:72ch}
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.054 15.054 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C9.61 21 3 14.39 3 6a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.01l-2.21 2.21z"/></svg>
         Call the Live Demo: (954) 568-8788
       </a>
-      <a href="https://calendly.com/jcode2k" target="_blank" class="btn btn-ghost">Book a 15-min Demo</a>
+      <a href="https://calendly.com/jcode2k/15-min-ai-phone-receptionist-demo" target="_blank" class="btn btn-ghost">Book a 15-min Demo</a>
     </div>
-    <p style="margin-top:20px;color:var(--muted);font-family:var(--mono);font-size:.82rem;letter-spacing:.04em">HIPAA-COMPLIANT &nbsp;·&nbsp; LIVE IN 7 DAYS &nbsp;·&nbsp; $0 SETUP</p>
+    <p style="margin-top:20px;color:var(--muted);font-family:var(--mono);font-size:.82rem;letter-spacing:.04em">HIPAA-COMPLIANT &nbsp;·&nbsp; LIVE IN 7 DAYS &nbsp;·&nbsp; $0 SETUP &nbsp;·&nbsp; ENGLISH + SPANISH</p>
+    <p style="margin-top:16px"><a href="/es/ai-phone-receptionist.html" lang="es" hreflang="es" style="color:var(--blue);font-size:.95rem;border-bottom:1px solid var(--line2)">Ver esta página en español →</a></p>
   </div>
 </header>
 
@@ -283,6 +317,24 @@ details.faq p{color:var(--muted);margin-top:14px;max-width:72ch}
     <span class="label">// Try It Right Now</span>
     <h2 style="font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-.03em;margin:14px 0 12px">Call the live demo. Hear what your patients will hear.</h2>
     <p style="color:var(--muted);max-width:54ch;margin:0 auto 24px">Try to book an appointment. Ask about insurance. Say "agent" to talk to a person. No signup, no commitment.</p>
+
+    <p class="player-cap">This is an actual call to the demo line — answered, handled, booked. 73 seconds.</p>
+    <div class="player">
+      <div class="player-top">
+        <button class="playbtn" id="playbtn" aria-label="Play demo call">
+          <svg id="playicon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <div class="wave" id="wave"></div>
+        <div class="player-meta">
+          <div class="t">Live demo call</div>
+          <div class="d">AI Receptionist</div>
+        </div>
+      </div>
+      <div class="player-time"><span id="curTime">0:00</span><span id="durTime">1:13</span></div>
+      <audio id="audio" preload="none" src="/static/audio/ai-receptionist-demo-call.mp3"></audio>
+    </div>
+
+    <div class="demo-or">— or talk to it yourself, right now —</div>
     <a href="tel:+19545688788" class="btn btn-primary" style="font-size:1.05rem;padding:18px 38px">
       <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M6.62 10.79a15.054 15.054 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C9.61 21 3 14.39 3 6a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.01l-2.21 2.21z"/></svg>
       (954) 568-8788
@@ -308,6 +360,11 @@ details.faq p{color:var(--muted);margin-top:14px;max-width:72ch}
         <span class="ic">// Books Appointments</span>
         <h3>Live calendar, live booking.</h3>
         <p>Checks real availability, confirms the slot, and adds it directly to your schedule.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic">// Bilingual — English &amp; Spanish</span>
+        <h3>Atiende en inglés y español.</h3>
+        <p>Answers, books, and confirms in both languages — inbound and outbound. Built for South Florida practices.</p>
       </div>
       <div class="card reveal">
         <span class="ic">// Answers Your FAQs</span>
@@ -349,7 +406,7 @@ details.faq p{color:var(--muted);margin-top:14px;max-width:72ch}
         <li>HIPAA-compliant: no patient names in voicemail, minimum-necessary info only</li>
         <li>TCPA-compliant: opt-in collected at booking</li>
       </ul>
-      <p class="check-note reveal">Outbound confirmation calls require integration with your scheduling system (Dentrix, Open Dental, Eaglesoft, and more). Configured during onboarding, typically live within 30 days.</p>
+      <p class="check-note reveal">Outbound confirmation calls require integration with your scheduling system (Dentrix, Open Dental, Eaglesoft, and more). Configured during onboarding, typically live within 30 days — your inbound answering still goes live in 7 days; the ~30 days covers the full practice-management-system integration.</p>
     </div>
   </div>
 </section>
@@ -417,7 +474,7 @@ details.faq p{color:var(--muted);margin-top:14px;max-width:72ch}
           <li class="pro">Free setup &amp; onboarding</li>
           <li class="pro">HIPAA + BAA + AI disclosure</li>
         </ul>
-        <a href="https://calendly.com/jcode2k" target="_blank" class="btn btn-ghost">Book a 15-min Demo</a>
+        <a href="https://calendly.com/jcode2k/15-min-ai-phone-receptionist-demo" target="_blank" class="btn btn-ghost">Book a 15-min Demo</a>
       </div>
 
       <div class="price feat reveal">
@@ -432,7 +489,7 @@ details.faq p{color:var(--muted);margin-top:14px;max-width:72ch}
           <li class="pro">Calendar updates back to your PMS</li>
           <li class="pro">No-show reduction built in</li>
         </ul>
-        <a href="https://calendly.com/jcode2k" target="_blank" class="btn btn-primary">Book a 15-min Demo</a>
+        <a href="https://calendly.com/jcode2k/15-min-ai-phone-receptionist-demo" target="_blank" class="btn btn-primary">Book a 15-min Demo</a>
       </div>
 
       <div class="price reveal">
@@ -572,7 +629,7 @@ details.faq p{color:var(--muted);margin-top:14px;max-width:72ch}
         <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M6.62 10.79a15.054 15.054 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C9.61 21 3 14.39 3 6a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.01l-2.21 2.21z"/></svg>
         (954) 568-8788
       </a>
-      <a href="https://calendly.com/jcode2k" target="_blank" class="btn btn-ghost" style="font-size:1.05rem;padding:18px 38px">Book a 15-min Demo</a>
+      <a href="https://calendly.com/jcode2k/15-min-ai-phone-receptionist-demo" target="_blank" class="btn btn-ghost" style="font-size:1.05rem;padding:18px 38px">Book a 15-min Demo</a>
     </div>
   </div>
 </section>
@@ -584,7 +641,7 @@ details.faq p{color:var(--muted);margin-top:14px;max-width:72ch}
       <span class="foot-links">
         <a href="/services.html">Services</a> · <a href="/portfolio.html">Portfolio</a> · <a href="/tools.html">Tools</a> · <a href="/blog-posts.html">Blog</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a>
       </span>
-      <span><a href="tel:+19545688788">(954) 568-8788</a> · <a href="mailto:jcode2k@gmail.com">jcode2k@gmail.com</a> · <a href="https://www.linkedin.com/in/jcode2k/" target="_blank">LinkedIn</a> · <a href="https://github.com/HeTron" target="_blank">GitHub</a></span>
+      <span><a href="tel:+19545688788">(954) 568-8788</a> · <a href="mailto:jason@aibchq.com">jason@aibchq.com</a> · <a href="https://www.linkedin.com/in/jcode2k/" target="_blank">LinkedIn</a> · <a href="https://github.com/HeTron" target="_blank">GitHub</a></span>
     </div>
     <div class="foot-copy">© 2026 AI BOT CODER · Fort Lauderdale, FL</div>
   </div>
@@ -597,6 +654,62 @@ if('IntersectionObserver' in window){
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});
   els.forEach(el=>io.observe(el));
 }else{els.forEach(el=>el.classList.add('in'));}
+</script>
+
+<!-- Real-call audio player (ported from homepage) -->
+<script>
+(function(){
+  const audio=document.getElementById('audio'),btn=document.getElementById('playbtn'),
+        icon=document.getElementById('playicon'),wave=document.getElementById('wave'),
+        cur=document.getElementById('curTime'),dur=document.getElementById('durTime');
+  if(!audio||!btn)return;
+  const BARS=48,bars=[];
+  for(let i=0;i<BARS;i++){const b=document.createElement('i');wave.appendChild(b);bars.push(b);}
+  let playing=false,raf;
+  function fmt(s){s=Math.floor(s||0);return Math.floor(s/60)+':'+String(s%60).padStart(2,'0');}
+  function setIdle(){bars.forEach((b,i)=>{b.style.height=(10+Math.sin(i*.6)*4)+'%';b.style.opacity=.4;});}
+  function animate(){
+    if(!playing) return;
+    const t=performance.now()/240;
+    bars.forEach((b,i)=>{
+      const base=(Math.sin(t+i*.5)*.5+.5)*(Math.sin(t*.7+i)*.5+.5);
+      b.style.height=(12+base*84+Math.random()*14)+'%';b.style.opacity=.95;
+    });
+    raf=requestAnimationFrame(animate);
+  }
+  setIdle();
+  btn.addEventListener('click',()=>{audio.paused?audio.play().catch(()=>{}):audio.pause();});
+  audio.addEventListener('play',()=>{playing=true;animate();icon.innerHTML='<rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/>';});
+  audio.addEventListener('pause',()=>{playing=false;setIdle();icon.innerHTML='<path d="M8 5v14l11-7z"/>';});
+  audio.addEventListener('ended',()=>{playing=false;setIdle();icon.innerHTML='<path d="M8 5v14l11-7z"/>';});
+  audio.addEventListener('loadedmetadata',()=>{if(isFinite(audio.duration))dur.textContent=fmt(audio.duration);});
+  audio.addEventListener('timeupdate',()=>{cur.textContent=fmt(audio.currentTime);});
+})();
+</script>
+
+<!-- Google Ads conversions: tel: clicks + Calendly clicks.
+     Uses event_callback + timeout so navigation never blocks; if gtag is
+     blocked (ad blocker) navigation proceeds immediately. -->
+<script>
+(function(){
+  var LABEL='AW-18284786991/EeLuCKvZ78ccEK_q7o5E';
+  function fire(done){
+    if(typeof gtag!=='function'){if(done)done();return;}
+    var fired=false;
+    var go=function(){if(!fired){fired=true;if(done)done();}};
+    gtag('event','conversion',{'send_to':LABEL,'value':1.0,'currency':'USD','event_callback':go});
+    setTimeout(go,400); // fallback: never let tracking hold navigation hostage
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target&&e.target.closest?e.target.closest('a[href^="tel:"],a[href*="calendly.com"]'):null;
+    if(!a)return;
+    // New-tab / modified clicks: the page stays put — just record, don't intercept.
+    if(a.target==='_blank'||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button===1){fire(null);return;}
+    e.preventDefault();
+    var href=a.href;
+    fire(function(){window.location.href=href;});
+  });
+})();
 </script>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "880dd8a72db2452c816c1172be8b6db7"}'></script><!-- End Cloudflare Web Analytics -->
 </body>

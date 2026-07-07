@@ -11,6 +11,7 @@
 
 - [Home](https://aibotcoder.com/): Overview of AI BOT CODER and what it automates.
 - [AI Phone Receptionist](https://aibotcoder.com/ai-phone-receptionist.html): Product page — features, pricing ($499/mo inbound, $599/mo with outbound), HIPAA/BAA, live demo, FAQ.
+- [Recepcionista Telefónica con IA (Español)](https://aibotcoder.com/es/ai-phone-receptionist.html): Spanish-language version of the AI Phone Receptionist product page — bilingual (English + Spanish) answering, pricing, live demo.
 - [Missed-Call Revenue Calculator](https://aibotcoder.com/missed-call-calculator.html): Free tool — estimates monthly revenue lost to missed calls and what an AI receptionist recovers.
 - [Services](https://aibotcoder.com/services.html): AI automation packages and pricing.
 - [Free Tools](https://aibotcoder.com/tools.html): Free calculators and tools.
@@ -31,7 +32,7 @@
 ## Contact
 
 - Website: https://aibotcoder.com
-- Email: jcode2k@gmail.com
+- Email: jason@aibchq.com
 - Demo line: (954) 568-8788
 - Book a free discovery call: https://calendly.com/jcode2k
 - Service area: Fort Lauderdale, FL and remote across the US.
