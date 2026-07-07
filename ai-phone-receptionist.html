@@ -454,7 +454,7 @@ details.faq p{color:var(--muted);margin-top:14px;max-width:72ch}
 </section>
 
 <!-- ── PRICING ── -->
-<section class="sec">
+<section class="sec" id="pricing">
   <div class="wrap">
     <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
       <span class="label">// Pricing</span>
@@ -692,22 +692,24 @@ if('IntersectionObserver' in window){
      blocked (ad blocker) navigation proceeds immediately. -->
 <script>
 (function(){
-  var LABEL='AW-18284786991/EeLuCKvZ78ccEK_q7o5E';
-  function fire(done){
+  var TEL_LABEL='AW-18284786991/jSKtCLiNvswcEK_q7o5E'; // "Demo line click" conversion action
+  var CAL_LABEL='AW-18284786991/6UjFCLuNvswcEK_q7o5E'; // "Calendly demo click" conversion action
+  function fire(label,done){
     if(typeof gtag!=='function'){if(done)done();return;}
     var fired=false;
     var go=function(){if(!fired){fired=true;if(done)done();}};
-    gtag('event','conversion',{'send_to':LABEL,'value':1.0,'currency':'USD','event_callback':go});
+    gtag('event','conversion',{'send_to':label,'value':1.0,'currency':'USD','event_callback':go});
     setTimeout(go,400); // fallback: never let tracking hold navigation hostage
   }
   document.addEventListener('click',function(e){
     var a=e.target&&e.target.closest?e.target.closest('a[href^="tel:"],a[href*="calendly.com"]'):null;
     if(!a)return;
+    var label=a.href.indexOf('tel:')===0?TEL_LABEL:CAL_LABEL;
     // New-tab / modified clicks: the page stays put — just record, don't intercept.
-    if(a.target==='_blank'||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button===1){fire(null);return;}
+    if(a.target==='_blank'||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button===1){fire(label,null);return;}
     e.preventDefault();
     var href=a.href;
-    fire(function(){window.location.href=href;});
+    fire(label,function(){window.location.href=href;});
   });
 })();
 </script>
