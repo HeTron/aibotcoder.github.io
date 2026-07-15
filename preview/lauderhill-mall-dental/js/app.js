@@ -1,4 +1,4 @@
-/* Lauderhill Mall Dental — scroll reveals + header state.
+/* Lauderhill Mall Dental - scroll reveals + header state.
    Native scroll + GSAP ScrollTrigger (no Lenis, per build gotchas).
    Always-visible fallback if GSAP fails or reduced-motion is on. */
 
@@ -20,7 +20,7 @@
 
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // force everything visible — the safety net
+  // force everything visible, the safety net
   function showAll() {
     document.body.classList.add("no-gsap");
     document.querySelectorAll(".reveal").forEach(function (el) {

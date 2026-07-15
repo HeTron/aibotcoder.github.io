@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18284786991"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18284786991');
+</script>
+<title>Pricing | AI Phone Receptionist by AI BOT CODER</title>
+<meta name="description" content="Flat pricing for the AI phone receptionist: $499/mo inbound, $599/mo with outbound confirmation calls, $0 setup. No per-minute meter, no usage tiers. See what missed calls cost your business with the free calculator.">
+<link rel="canonical" href="https://aibotcoder.com/pricing.html">
+<meta property="og:title" content="Pricing, AI Phone Receptionist">
+<meta property="og:description" content="One flat price, every call answered. $499/mo inbound, $599/mo with outbound confirmations, $0 setup. No meter, no usage tiers.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aibotcoder.com/pricing.html">
+<meta property="og:image" content="https://aibotcoder.com/static/images/og/default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="AI BOT CODER">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pricing, AI Phone Receptionist">
+<meta name="twitter:description" content="One flat price, every call answered. $499/mo inbound, $599/mo with outbound confirmations, $0 setup.">
+<meta name="twitter:image" content="https://aibotcoder.com/static/images/og/default.png">
+<link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#08090c">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "AI Phone Receptionist",
+  "brand": { "@type": "Brand", "name": "AI BOT CODER" },
+  "description": "A 24/7 AI phone receptionist that answers every inbound call, books appointments, answers FAQs, and transfers to a human on demand. Optional outbound appointment-confirmation calls.",
+  "offers": [
+    { "@type": "Offer", "name": "Inbound", "price": "499", "priceCurrency": "USD", "description": "Inbound call answering, booking, FAQs, and transfers. $0 setup." },
+    { "@type": "Offer", "name": "Inbound + Outbound", "price": "599", "priceCurrency": "USD", "description": "Everything in Inbound plus outbound appointment-confirmation calls. $0 setup." }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/redesign.css">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+<style>
+.reveal.in{opacity:1;transform:none}
+
+/* ── Pricing cards (ported from ai-phone-receptionist.html) ── */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
+.price{position:relative;background:linear-gradient(160deg,var(--elev),transparent);border:1px solid var(--line);border-radius:18px;padding:36px 28px;display:flex;flex-direction:column}
+.price.feat{border-color:rgba(110,168,254,.5);box-shadow:0 0 50px rgba(110,168,254,.12)}
+.price .tier{font-family:var(--mono);font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.price .amt{font-family:var(--display);font-weight:800;font-size:3rem;letter-spacing:-.03em;margin:4px 0 14px}
+.price .amt-muted{color:#5a6276}
+.price .badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--blue);color:#04060a;font-family:var(--mono);font-size:.66rem;font-weight:700;padding:5px 14px;border-radius:100px;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.price .desc{color:var(--muted);font-size:.95rem;margin-bottom:22px}
+.price ul{list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:26px;flex:1;padding:0}
+.price li{display:flex;gap:10px;color:var(--muted);font-size:.95rem;align-items:flex-start}
+.price li.pro::before{content:"✓";color:var(--blue);font-weight:700;flex:none}
+.price li.con::before{content:"✗";color:var(--faint);font-weight:700;flex:none}
+.price li.con{color:var(--faint)}
+.price .btn{justify-content:center}
+.savings-card{border:1px solid var(--line2);border-radius:16px;padding:28px;text-align:center;background:rgba(110,168,254,.04);max-width:640px;margin:28px auto 0}
+.savings-card h4{font-family:var(--display);font-size:1.2rem;margin-bottom:6px}
+.savings-card p{color:var(--muted);margin:0}
+
+/* ── Calculator ── */
+.calc{background:linear-gradient(160deg,var(--elev),transparent);border:1px solid var(--line);border-radius:20px;padding:34px;max-width:920px;margin:0 auto}
+.calc-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:36px;align-items:center}
+.field{margin-bottom:22px}
+.lbl-b{font-family:var(--display);font-weight:700;font-size:1.02rem;color:var(--ink);display:block;margin-bottom:4px}
+.hlp{font-size:.82rem;color:var(--muted);margin-bottom:11px;line-height:1.45}
+.numwrap{position:relative}
+.num-in{width:100%;background:var(--elev2);border:1px solid var(--line);border-radius:12px;padding:13px 16px;color:var(--ink);font-family:var(--mono);font-size:1.05rem;outline:none}
+.num-in:focus-visible{border-color:var(--blue);outline:2px solid var(--blue-bright);outline-offset:2px}
+.num-in.has-prefix{padding-left:30px}
+.affix{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--faint);font-weight:600;pointer-events:none}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:5px;border-radius:5px;background:var(--elev2);outline:none;cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:20px;height:20px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px rgba(110,168,254,.18),0 2px 8px rgba(0,0,0,.4);cursor:pointer;transition:box-shadow .2s}
+input[type=range]::-webkit-slider-thumb:hover{box-shadow:0 0 0 6px rgba(110,168,254,.26),0 2px 8px rgba(0,0,0,.4)}
+input[type=range]::-moz-range-thumb{width:20px;height:20px;border:none;border-radius:50%;background:var(--blue);cursor:pointer}
+input[type=range]:focus-visible{outline:2px solid var(--blue-bright);outline-offset:6px}
+.rangeflex{display:flex;align-items:center;gap:14px}
+.rangeflex input[type=range]{flex:1}
+.rangeflex .rv{font-family:var(--mono);color:var(--blue);font-weight:700;min-width:44px;text-align:right}
+.hint{font-family:var(--mono);font-size:.78rem;color:var(--blue);margin-top:9px}
+.ratio{font-family:var(--mono);font-size:.78rem;color:var(--blue);margin-top:11px}
+.big-lab{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:8px}
+.big{font-family:var(--display);font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--alarm);font-size:clamp(2.6rem,6vw,3.6rem);font-variant-numeric:tabular-nums}
+.loss-sub{color:var(--muted);font-size:.98rem;margin-top:10px}
+.loss-sub b{color:var(--ink);font-variant-numeric:tabular-nums}
+.verdict{background:rgba(94,242,176,.06);border:1px solid rgba(94,242,176,.22);border-radius:14px;padding:16px 18px;margin-top:22px;font-size:.98rem;color:var(--ink)}
+.verdict b{color:var(--phos);font-variant-numeric:tabular-nums}
+
+.trust{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:40px}
+.trust .chip{display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:.78rem;letter-spacing:.02em;color:var(--muted);border:1px solid var(--line);border-radius:100px;padding:9px 16px;background:rgba(255,255,255,.015)}
+.trust .chip b{color:var(--ink);font-weight:600}
+.trust .chip .d{width:6px;height:6px;border-radius:50%;background:var(--phos);box-shadow:0 0 8px var(--phos)}
+.compliance{margin-top:26px;text-align:center;color:var(--muted);font-size:.98rem;max-width:64ch;margin-left:auto;margin-right:auto}
+.compliance b{color:var(--ink)}
+
+@media(max-width:900px){
+  .price-grid{grid-template-columns:1fr;max-width:460px;margin:0 auto}
+}
+@media(max-width:820px){
+  .calc{padding:28px 22px}
+  .calc-grid{grid-template-columns:1fr;gap:28px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a class="brand" href="/"><span class="dot"></span><b>AI&nbsp;Bot</b><span>Coder</span></a>
+  <div class="nav-links">
+    <a href="/#automate">What I Automate</a>
+    <a href="/services.html">Services</a>
+    <a href="/ai-phone-receptionist.html">Receptionist</a>
+    <a href="/pricing.html" class="active">Pricing</a>
+    <a href="/missed-call-calculator.html">Calculator</a>
+    <a href="/es/ai-phone-receptionist.html" lang="es" hreflang="es">Español</a>
+  </div>
+  <a class="nav-cta" href="tel:+19545688788"><span class="rdot"></span>(954)&nbsp;568-8788</a>
+</nav>
+
+<!-- ── HERO ── -->
+<header class="page-hero">
+  <div class="wrap">
+    <div class="hero-eyebrow"><span class="ln"></span><span class="label">Pricing</span></div>
+    <h1>One flat price. Every call answered.</h1>
+    <p class="lead">No per-minute meter, no usage tiers, no surprise invoice. The same number every month, whether you get 40 calls or 4,000.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:28px">
+      <a href="tel:+19545688788" class="btn btn-primary"><span class="rdot" style="width:8px;height:8px;border-radius:50%;background:#04060a;display:inline-block"></span>Call the live demo</a>
+      <a href="#calc" class="btn btn-ghost">See what missed calls cost you</a>
+    </div>
+  </div>
+</header>
+
+<!-- ── PLANS ── -->
+<section class="sec" id="plans">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="label">// Plans</span>
+      <h2>A fraction of what a human answering service costs, with better coverage.</h2>
+    </div>
+    <div class="price-grid">
+
+      <div class="price reveal">
+        <div class="tier">Inbound</div>
+        <div class="amt">$499<span style="font-size:1.1rem;font-weight:400;color:var(--muted)">/mo</span></div>
+        <p class="desc">Per month, all-inclusive. $0 setup. Cancel anytime.</p>
+        <ul>
+          <li class="pro">24/7 AI call answering</li>
+          <li class="pro">Real-time appointment booking</li>
+          <li class="pro">Custom FAQ knowledge base</li>
+          <li class="pro">Transfer-to-human on demand</li>
+          <li class="pro">Free setup and onboarding</li>
+          <li class="pro">HIPAA + BAA + AI disclosure</li>
+        </ul>
+        <a href="https://calendly.com/jcode2k/15-min-ai-phone-receptionist-demo" target="_blank" class="btn btn-ghost">Book a 15-min Demo</a>
+      </div>
+
+      <div class="price feat reveal">
+        <div class="badge">Most Popular</div>
+        <div class="tier">Inbound + Outbound</div>
+        <div class="amt">$599<span style="font-size:1.1rem;font-weight:400;color:var(--muted)">/mo</span></div>
+        <p class="desc">Everything in Inbound, plus the AI calls your customers to confirm appointments.</p>
+        <ul>
+          <li class="pro">Everything in Inbound</li>
+          <li class="pro">Outbound appointment confirmations</li>
+          <li class="pro">Reschedule and cancel handled in-call</li>
+          <li class="pro">Calendar updates back to your system</li>
+          <li class="pro">No-show reduction built in</li>
+        </ul>
+        <a href="https://calendly.com/jcode2k/15-min-ai-phone-receptionist-demo" target="_blank" class="btn btn-primary">Book a 15-min Demo</a>
+      </div>
+
+      <div class="price reveal">
+        <div class="tier">Human Answering Service</div>
+        <div class="amt amt-muted">$1,200-$2,000<span style="font-size:.85rem;font-weight:400;color:var(--faint)">/mo</span></div>
+        <p class="desc">Per month, for comparison. Still puts callers on hold.</p>
+        <ul>
+          <li class="con">Limited hours, not 24/7</li>
+          <li class="con">Holds, queues, dropped calls</li>
+          <li class="con">Generic scripts, no FAQ knowledge</li>
+          <li class="con">No outbound confirmation calls</li>
+          <li class="con">Setup fees and minimums</li>
+          <li class="con">Inconsistent staff turnover</li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="savings-card reveal">
+      <h4>You save $600-$1,500 every month</h4>
+      <p>and never miss a call again.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── CALCULATOR ── -->
+<section class="sec sec-alt" id="calc">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="label">// Calculator</span>
+      <h2>What are missed calls costing you?</h2>
+      <p class="lead" style="margin-left:auto;margin-right:auto">Four numbers you already know. Tell us calls per day, we turn it into a month.</p>
+    </div>
+
+    <div class="calc reveal">
+      <div class="calc-grid">
+        <div>
+          <div class="field">
+            <span class="lbl-b">How many calls does your business get per day?</span>
+            <div class="hlp">Inbound calls from new and existing customers.</div>
+            <div class="numwrap"><input class="num-in" type="number" inputmode="numeric" min="0" step="1" value="20" data-in="day" oninput="recalc()"></div>
+            <div class="hint" id="c_mo">&#8776; 434 calls a month</div>
+          </div>
+
+          <div class="field">
+            <span class="lbl-b">What share of those calls go unanswered?</span>
+            <div class="hlp">Voicemail, after-hours, on another line, busy front desk. Industry average is 20-30%.</div>
+            <div class="rangeflex"><input type="range" min="0" max="80" step="5" value="25" data-in="missed" oninput="recalc()"><span class="rv"><span id="c_missed">25</span>%</span></div>
+            <div class="ratio" id="c_missedRatio"></div>
+          </div>
+
+          <div class="field">
+            <span class="lbl-b">Of answered calls, what share become a paying customer?</span>
+            <div class="hlp">Your close rate on a live call. Most service businesses land 30-50%.</div>
+            <div class="rangeflex"><input type="range" min="5" max="100" step="5" value="40" data-in="close" oninput="recalc()"><span class="rv"><span id="c_close">40</span>%</span></div>
+            <div class="ratio" id="c_closeRatio"></div>
+          </div>
+
+          <div class="field" style="margin-bottom:0">
+            <span class="lbl-b">What is one new customer worth to you?</span>
+            <div class="hlp">Average revenue from a customer, first job or lifetime value, your call.</div>
+            <div class="numwrap"><span class="affix">$</span><input class="num-in has-prefix" type="number" inputmode="numeric" min="0" step="1" value="500" data-in="val" oninput="recalc()"></div>
+          </div>
+        </div>
+        <div>
+          <div class="big-lab">Estimated revenue lost to missed calls</div>
+          <div class="big" id="c_lost">$0</div>
+          <div class="loss-sub">per month &nbsp;&middot;&nbsp; <b id="c_annual">$0</b>/year</div>
+          <div class="verdict">A flat <b>$499/mo</b> answers those calls and books them at your rate. Net gain: <b id="c_net">$0</b>/mo.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trust reveal">
+      <span class="chip"><span class="d"></span><b>Flat rate</b>, same price every month</span>
+      <span class="chip"><b>$0 setup</b> &middot; cancel anytime</span>
+      <span class="chip">No per-minute meter</span>
+      <span class="chip">Live in 7 days</span>
+    </div>
+    <p class="compliance reveal"><b>Compliance isn't an upsell.</b> For healthcare offices, HIPAA and a signed BAA come standard with every plan, never a paid add-on.</p>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-band">
+  <div class="wrap">
+    <span class="label">// Get Started</span>
+    <h2>Stop losing customers to voicemail.</h2>
+    <p>Call the demo. Book a 15-min walkthrough. Or do both.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
+      <a href="tel:+19545688788" class="btn btn-primary" style="font-size:1.05rem;padding:18px 38px">
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M6.62 10.79a15.054 15.054 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C9.61 21 3 14.39 3 6a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.01l-2.21 2.21z"/></svg>
+        (954) 568-8788
+      </a>
+      <a href="https://calendly.com/jcode2k/15-min-ai-phone-receptionist-demo" target="_blank" class="btn btn-ghost" style="font-size:1.05rem;padding:18px 38px">Book a 15-min Demo</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <span class="brand">AI Bot Coder</span>
+      <span class="foot-links">
+        <a href="/services.html">Services</a> · <a href="/pricing.html">Pricing</a> · <a href="/portfolio.html">Portfolio</a> · <a href="/tools.html">Tools</a> · <a href="/blog-posts.html">Blog</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a>
+      </span>
+      <span><a href="tel:+19545688788">(954) 568-8788</a> · <a href="mailto:jason@aibchq.com">jason@aibchq.com</a> · <a href="https://www.instagram.com/aibotcoder/" target="_blank">Instagram</a> · <a href="https://www.linkedin.com/in/jcode2k/" target="_blank">LinkedIn</a> · <a href="https://github.com/HeTron" target="_blank">GitHub</a></span>
+    </div>
+    <div class="foot-copy">© 2026 AI BOT CODER · Fort Lauderdale, FL</div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+const els=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  els.forEach(el=>io.observe(el));
+}else{els.forEach(el=>el.classList.add('in'));}
+</script>
+
+<!-- Missed-call calculator: per-day input, same model as the standalone calculator page -->
+<script>
+const WORKDAYS=21.7;   // open days per month
+const FLAT=499;
+const S={day:20,missed:25,close:40,val:500};
+function gcd(a,b){return b?gcd(b,a%b):a;}
+function ratio(p){if(p<=0)return '0 in every 10';const g=gcd(p,100);return (p/g)+' in every '+(100/g);}
+function set(id,val){const e=document.getElementById(id);if(e)e.textContent=val;}
+function recalc(){
+  document.querySelectorAll('[data-in]').forEach(el=>{S[el.dataset.in]=+el.value||0;});
+  const perMo=Math.round(S.day*WORKDAYS);
+  const missedCalls=Math.round(perMo*(S.missed/100));
+  const lostCust=missedCalls*(S.close/100);
+  const lostMo=Math.round(lostCust*S.val);
+  const net=Math.max(0,lostMo-FLAT);
+  set('c_mo','≈ '+perMo.toLocaleString()+' calls a month');
+  set('c_missed',S.missed);
+  set('c_close',S.close);
+  set('c_missedRatio','≈ '+ratio(S.missed)+' calls, about '+missedCalls.toLocaleString()+' a month');
+  set('c_closeRatio','≈ '+ratio(S.close)+' answered calls become customers');
+  set('c_lost','$'+lostMo.toLocaleString());
+  set('c_annual','$'+(lostMo*12).toLocaleString());
+  set('c_net','$'+net.toLocaleString());
+}
+recalc();
+</script>
+
+<!-- Google Ads conversions: tel: clicks + Calendly clicks. -->
+<script>
+(function(){
+  var TEL_LABEL='AW-18284786991/jSKtCLiNvswcEK_q7o5E';
+  var CAL_LABEL='AW-18284786991/6UjFCLuNvswcEK_q7o5E';
+  function fire(label,done){
+    if(typeof gtag!=='function'){if(done)done();return;}
+    var fired=false;
+    var go=function(){if(!fired){fired=true;if(done)done();}};
+    gtag('event','conversion',{'send_to':label,'value':1.0,'currency':'USD','event_callback':go});
+    setTimeout(go,400);
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target&&e.target.closest?e.target.closest('a[href^="tel:"],a[href*="calendly.com"]'):null;
+    if(!a)return;
+    var label=a.href.indexOf('tel:')===0?TEL_LABEL:CAL_LABEL;
+    if(a.target==='_blank'||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button===1){fire(label,null);return;}
+    e.preventDefault();
+    var href=a.href;
+    fire(label,function(){window.location.href=href;});
+  });
+})();
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "880dd8a72db2452c816c1172be8b6db7"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

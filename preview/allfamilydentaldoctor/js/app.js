@@ -1,4 +1,4 @@
-/* All Family Dental — preview interactions (native scroll + GSAP reveals)
+/* All Family Dental - preview interactions (native scroll + GSAP reveals)
    No smooth-scroll library: native scrolling is used for reliability.
    Content is always made visible even if GSAP fails to load. */
 (function () {
