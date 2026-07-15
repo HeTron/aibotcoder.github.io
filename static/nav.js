@@ -23,8 +23,23 @@
   var html =
     '<a class="brand" href="/"><span class="dot"></span><b>AI&nbsp;Bot</b><span>Coder</span></a>' +
     '<div class="nav-links">' + linksHTML + '</div>' +
-    '<a class="nav-cta" href="tel:+19545688788"><span class="rdot"></span><span class="cta-lbl">Call the AI · </span>(954)&nbsp;568-8788</a>';
+    '<a class="nav-cta" href="tel:+19545688788"><span class="rdot"></span><span class="cta-lbl">Call the AI · </span>(954)&nbsp;568-8788</a>' +
+    '<button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false"><span class="bar"></span></button>';
 
   var nav = document.getElementById('nav');
-  if (nav) { nav.className = 'nav'; nav.innerHTML = html; }
+  if (!nav) { return; }
+  nav.className = 'nav';
+  nav.innerHTML = html;
+
+  var toggle = nav.querySelector('.nav-toggle');
+  function setOpen(open) {
+    nav.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  toggle.addEventListener('click', function () { setOpen(!nav.classList.contains('open')); });
+  // close the menu after tapping a link, or when the viewport grows back to desktop
+  Array.prototype.forEach.call(nav.querySelectorAll('.nav-links a'), function (a) {
+    a.addEventListener('click', function () { setOpen(false); });
+  });
+  addEventListener('resize', function () { if (innerWidth > 900) { setOpen(false); } });
 })();
