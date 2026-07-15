@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio - AI BOT CODER</title>
+<meta name="description" content="Automatizaciones y proyectos de IA reales creados por Jason Eid, desde estimadores de planos hasta agentes de IA.">
+<link rel="canonical" href="https://aibotcoder.com/es/portfolio.html">
+<link rel="alternate" hreflang="en" href="https://aibotcoder.com/portfolio.html">
+<link rel="alternate" hreflang="es" href="https://aibotcoder.com/es/portfolio.html">
+<link rel="alternate" hreflang="x-default" href="https://aibotcoder.com/portfolio.html">
+<meta property="og:title" content="Portafolio - AI BOT CODER">
+<meta property="og:description" content="Automatizaciones y proyectos de IA reales creados por Jason Eid, desde estimadores de planos hasta agentes de IA.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aibotcoder.com/es/portfolio.html">
+<meta property="og:image" content="https://aibotcoder.com/static/images/og/default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="AI BOT CODER">
+<meta property="og:locale" content="es_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Portafolio - AI BOT CODER">
+<meta name="twitter:description" content="Automatizaciones y proyectos de IA reales creados por Jason Eid, desde estimadores de planos hasta agentes de IA.">
+<meta name="twitter:image" content="https://aibotcoder.com/static/images/og/default.png">
+<link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#08090c">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Portafolio - AI BOT CODER",
+  "description": "Automatizaciones y proyectos de IA reales creados por Jason Eid, desde estimadores de planos hasta agentes de IA.",
+  "url": "https://aibotcoder.com/es/portfolio.html",
+  "inLanguage": "es",
+  "author": { "@type": "Person", "name": "Jason Eid", "url": "https://aibotcoder.com" },
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "name": "Recepcionista Telefónica con IA",
+      "description": "Recepcionista telefónica con IA 24/7 para consultorios dentales y médicos. Contesta cada llamada, agenda citas y transfiere a su personal cuando se lo piden. Cumple con HIPAA, en vivo en 7 días. Desde $499/mes.",
+      "url": "https://aibotcoder.com/es/ai-phone-receptionist.html"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Estimador de Planos",
+      "description": "Herramienta de IA que lee los planos cargados y genera una hoja de presupuesto estructurada en Excel con partidas de materiales y mano de obra. La preparación de presupuestos bajó de ~6 horas a ~20 minutos por trabajo."
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Rastreador de Costos por Trabajo + Servidor de IA Local",
+      "description": "Herramienta que registra mano de obra, materiales y órdenes de compra por trabajo en Excel estructurado, más un servidor de IA local autoalojado para consultas y flujos de trabajo internos."
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/redesign.css">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+<style>
+/* Flagship card: two-column layout matching services.html feat-card pattern */
+.feat-card{display:grid;grid-template-columns:1.5fr .8fr;gap:30px;align-items:center}
+.feat-card .actions{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+
+/* Case study cards: emphasize the Result line */
+.result-label{font-family:var(--mono);font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:6px;display:block}
+.result-text{color:var(--ink);font-weight:700;font-size:1.05rem}
+.case-label{font-family:var(--mono);font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:6px;display:block}
+.card-footer-cap{margin-top:24px;padding-top:18px;border-top:1px solid var(--line);color:var(--faint);font-size:.82rem;font-family:var(--mono)}
+
+/* Offer cards */
+.offer-price{font-family:var(--display);font-weight:800;font-size:2rem;letter-spacing:-.03em;color:var(--blue);margin:8px 0 12px}
+.offer-note{color:var(--faint);font-size:.85rem;margin-top:10px}
+
+/* Labs link row */
+.labs-row{padding:28px 0;border-top:1px solid var(--line);text-align:center}
+.labs-row a{color:var(--muted);font-size:.95rem;transition:color .2s}
+.labs-row a:hover{color:var(--blue)}
+
+@media(max-width:900px){
+  .feat-card{grid-template-columns:1fr}
+  .feat-card .actions{align-items:stretch}
+  .feat-card .actions .btn{justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav"></nav>
+<script src="/static/nav.js"></script>
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="hero-eyebrow"><span class="ln"></span><span class="label">Proyectos Reales · Resultados Reales</span></div>
+    <h1>Automatizaciones reales. Negocios reales. Resultados medidos.</h1>
+    <p class="lead">No son demos. No son prototipos. Son cosas que construí y que están corriendo en producción, ahorrando horas y reemplazando costos ahora mismo.</p>
+  </div>
+</header>
+
+<!-- ── FLAGSHIP: AI Phone Receptionist ── -->
+<section class="sec">
+  <div class="wrap">
+    <div class="card reveal feat-card" style="padding:38px">
+      <div>
+        <span class="label">Producto en Vivo</span>
+        <h3 style="font-size:1.9rem;margin:12px 0 12px">Recepcionista Telefónica con IA</h3>
+        <p>Los pequeños negocios pierden llamadas todos los días, durante el trabajo, fuera de horario, a la hora del almuerzo. El 67% de quienes llaman no dejan un mensaje de voz. Cada llamada perdida es un cliente que llamó a un competidor.</p>
+        <p style="margin-top:12px">Una recepcionista con IA 24/7 que contesta cada llamada, agenda y clasifica citas, y envía confirmaciones automáticas. Multi-inquilino, con integración directa a Open Dental para consultorios dentales.</p>
+        <p class="res" style="margin-top:14px"><b>$499/mes entrantes · $599/mes con salientes</b> &nbsp;<span style="color:var(--faint)">· $0 de instalación · en vivo en 7 días</span></p>
+      </div>
+      <div class="actions">
+        <a href="/es/ai-phone-receptionist.html" class="btn btn-primary">Vea el producto →</a>
+        <a href="tel:+19545688788" class="btn btn-ghost">Llame a la demo en vivo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CASE STUDIES ── -->
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">// Casos de Éxito</span>
+      <h2>Problemas reales. Construcciones reales. Resultados reales.</h2>
+      <p class="lead">Cada proyecto aquí está en producción, nada de trabajo conceptual.</p>
+    </div>
+    <div class="grid grid-3">
+
+      <!-- Dental Practice -->
+      <div class="card reveal" style="display:flex;flex-direction:column">
+        <span class="ic">Primer Cliente · En Vivo</span>
+        <h3>The Dental Loft, Fort Lauderdale</h3>
+
+        <span class="case-label">Problema</span>
+        <p>Las llamadas perdidas durante la atención a pacientes y después del cierre significaban ingresos perdidos de pacientes nuevos y cero cobertura fuera de horario.</p>
+
+        <span class="case-label" style="margin-top:18px">Construido</span>
+        <p>Implementamos la Recepcionista Telefónica con IA con confirmaciones de citas automáticas, integrada con su sistema Open Dental.</p>
+
+        <div style="margin-top:22px;padding-top:18px;border-top:1px solid var(--line)">
+          <span class="result-label">Resultado</span>
+          <p class="result-text">Cobertura de llamadas las 24 horas en inglés y español, ningún paciente nuevo cae al buzón de voz, y cada cita se agenda directamente en Open Dental.</p>
+        </div>
+
+        <div class="card-footer-cap" style="margin-top:auto">Creado para: The Dental Loft, Fort Lauderdale</div>
+      </div>
+
+      <!-- Blueprint Estimator -->
+      <div class="card reveal" style="display:flex;flex-direction:column">
+        <span class="ic">Herramienta Interna</span>
+        <h3>Estimador de Planos</h3>
+
+        <span class="case-label">Problema</span>
+        <p>Presupuestar implicaba leer los planos manualmente y armar los cómputos a mano, aproximadamente 6 horas por presupuesto.</p>
+
+        <span class="case-label" style="margin-top:18px">Construido</span>
+        <p>Una herramienta de IA que lee los planos cargados con Claude AI y genera una hoja de presupuesto estructurada en Excel con partidas de materiales y mano de obra.</p>
+
+        <div style="margin-top:22px;padding-top:18px;border-top:1px solid var(--line)">
+          <span class="result-label">Resultado</span>
+          <p class="result-text">La preparación de presupuestos bajó de ~6 horas a ~20 minutos por trabajo.</p>
+        </div>
+
+        <div class="card-footer-cap" style="margin-top:auto">Creado para: un contratista general del sur de la Florida</div>
+      </div>
+
+      <!-- Job Cost Tracker -->
+      <div class="card reveal" style="display:flex;flex-direction:column">
+        <span class="ic">Herramienta Interna</span>
+        <h3>Rastreador de Costos por Trabajo + Servidor de IA Local</h3>
+
+        <span class="case-label">Problema</span>
+        <p>Los costos por trabajo se registraban a mano, y los datos sensibles no podían ir a herramientas de IA en la nube.</p>
+
+        <span class="case-label" style="margin-top:18px">Construido</span>
+        <p>Una herramienta que registra mano de obra, materiales y órdenes de compra por trabajo en Excel estructurado, más un servidor de IA local autoalojado (Jarvis) para consultas y flujos de trabajo internos.</p>
+
+        <div style="margin-top:22px;padding-top:18px;border-top:1px solid var(--line)">
+          <span class="result-label">Resultado</span>
+          <p class="result-text">Costeo de trabajos en tiempo real y un asistente de IA privado corriendo con cero costo de nube.</p>
+        </div>
+
+        <div class="card-footer-cap" style="margin-top:auto">Creado para: operaciones internas del negocio</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIAL ── -->
+<section class="sec">
+  <div class="wrap narrow" style="margin:0 auto;text-align:center">
+    <blockquote style="background:linear-gradient(160deg,var(--elev),transparent);border:1px solid var(--line);border-radius:18px;padding:48px 40px">
+      <p style="font-size:1.2rem;font-style:italic;margin-bottom:20px">"Nuestra recepcionista con IA contesta cada llamada (noches, fines de semana, hora pico) y agenda pacientes directamente en Open Dental, en inglés y español. Captó llamadas que antes perdíamos. Lo que más me gusta es que toda la experiencia está hecha a la medida de nuestra oficina y de nuestra forma de trabajar."</p>
+      <cite style="color:var(--muted);font-size:.9rem">- Dr. Cesar Hernandez, The Dental Loft, Fort Lauderdale</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ── WORK WITH ME ── -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">// Trabaje Conmigo</span>
+      <h2>Ofertas claras, sin precios misteriosos.</h2>
+    </div>
+    <div class="grid grid-2">
+
+      <!-- AI Receptionist offer -->
+      <div class="card reveal" style="display:flex;flex-direction:column">
+        <span class="ic">Recepcionista Telefónica con IA</span>
+        <h3>Recepcionista con IA para Consultorios Dentales</h3>
+        <p style="margin-top:8px;flex:1">Haga que su consultorio conteste llamadas 24/7. Configuración, integración con Open Dental y puesta en marcha en 7 días. Desde $499/mes, $0 de instalación.</p>
+        <div style="margin-top:28px">
+          <a href="https://calendly.com/jcode2k" target="_blank" class="btn btn-primary">Agende una llamada gratis →</a>
+        </div>
+      </div>
+
+      <!-- Strategy Session offer -->
+      <div class="card reveal" style="display:flex;flex-direction:column">
+        <span class="ic">Sesión de Estrategia</span>
+        <h3>Sesión de Estrategia de Automatización con IA</h3>
+        <div class="offer-price">$250</div>
+        <p style="flex:1">Una sesión de trabajo enfocada donde conozco su negocio, identifico dónde está perdiendo tiempo y dinero, y le entrego una hoja de ruta priorizada de exactamente qué automatizar primero. Se va sabiendo cuál es su automatización de mayor retorno, me contrate o no.</p>
+        <p class="offer-note">El costo se acredita a su proyecto si seguimos adelante.</p>
+        <div style="margin-top:28px">
+          <a href="https://buy.stripe.com/5kQ28r9cX6p04Q22PD3VC04" target="_blank" class="btn btn-primary">Agende su sesión de estrategia →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── LABS LINK ── -->
+<div class="labs-row">
+  <div class="wrap">
+    <p>También construí: <a href="/labs.html">experimentos técnicos y proyectos de ciencia de datos →</a></p>
+  </div>
+</div>
+
+<!-- ── CTA BAND ── -->
+<section class="cta-band">
+  <div class="wrap">
+    <span class="label">// Construyámoslo</span>
+    <h2>¿Quiere algo así construido para su negocio?</h2>
+    <p>Agende una llamada gratis y hablemos de lo que es posible.</p>
+    <a href="https://calendly.com/jcode2k" target="_blank" class="btn btn-primary" style="font-size:1.05rem;padding:18px 38px">Agende su llamada de descubrimiento gratis →</a>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <span class="brand">AI Bot Coder</span>
+      <span class="foot-links">
+        <a href="/es/services.html">Servicios</a> · <a href="/es/portfolio.html">Portafolio</a> · <a href="/es/tools.html">Herramientas</a> · <a href="/blog-posts.html">Blog</a> · <a href="/es/about.html">Acerca de</a> · <a href="/es/contact.html">Contacto</a>
+      </span>
+      <span><a href="tel:+19545688788">(954) 568-8788</a> · <a href="mailto:jason@aibchq.com">jason@aibchq.com</a> · <a href="https://www.instagram.com/aibotcoder/" target="_blank">Instagram</a> · <a href="https://www.linkedin.com/in/jcode2k/" target="_blank">LinkedIn</a> · <a href="https://github.com/HeTron" target="_blank">GitHub</a></span>
+    </div>
+    <div class="foot-copy">© 2026 AI BOT CODER · Fort Lauderdale, FL</div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+const els=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  els.forEach(el=>io.observe(el));
+}else{els.forEach(el=>el.classList.add('in'));}
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "880dd8a72db2452c816c1172be8b6db7"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
