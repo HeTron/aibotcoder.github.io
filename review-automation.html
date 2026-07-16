@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Review Automation | AI BOT CODER</title>
+<meta name="description" content="After each visit, a friendly text asks your happy customers for a Google review. Built-in opt-out handling, a cooldown so nobody gets pestered, and quiet-hours sending. More reviews means you get found first.">
+<link rel="canonical" href="https://aibotcoder.com/review-automation.html">
+<meta property="og:title" content="Google Review Automation by AI BOT CODER">
+<meta property="og:description" content="A friendly text after each visit asks happy customers for a Google review. Opt-out handling, cooldown, and quiet hours built in.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aibotcoder.com/review-automation.html">
+<meta property="og:image" content="https://aibotcoder.com/static/images/og/default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="AI BOT CODER">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Google Review Automation by AI BOT CODER">
+<meta name="twitter:description" content="A friendly text after each visit asks happy customers for a Google review. Opt-out handling, cooldown, and quiet hours built in.">
+<meta name="twitter:image" content="https://aibotcoder.com/static/images/og/default.png">
+<link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#08090c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/redesign.css">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+<style>
+.reveal.in{opacity:1;transform:none}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.step .n{font-family:var(--display);font-weight:800;font-size:2.4rem;color:var(--blue);line-height:1}
+.step h4{font-family:var(--display);font-size:1.12rem;margin:12px 0 8px}
+.step p{color:var(--muted);font-size:.94rem}
+.check-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+.check-list li{display:flex;gap:13px;align-items:flex-start;color:var(--muted);font-size:1rem}
+.check-list li::before{content:"✓";color:var(--blue);font-family:var(--mono);font-weight:700;flex:none;margin-top:1px}
+.check-list li strong{color:var(--ink)}
+.industry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.industry-card{background:linear-gradient(160deg,var(--elev),transparent);border:1px solid var(--line);border-radius:14px;padding:24px 20px;text-align:center;transition:transform .3s,border-color .3s}
+.industry-card:hover{transform:translateY(-3px);border-color:var(--line2)}
+.industry-card .ic-lg{font-size:1.6rem;margin-bottom:10px}
+.industry-card p{margin:0;color:var(--muted);font-size:.96rem}
+.text-preview{max-width:420px;margin:34px auto 0;background:linear-gradient(160deg,var(--elev),var(--bg2));border:1px solid var(--line2);border-radius:22px;padding:26px 24px;box-shadow:0 30px 70px rgba(0,0,0,.45)}
+.bubble{background:rgba(110,168,254,.12);border:1px solid rgba(110,168,254,.25);border-radius:16px;border-bottom-left-radius:5px;padding:15px 18px;color:var(--ink);font-size:.98rem;line-height:1.5}
+.bubble .lnk{color:var(--blue);text-decoration:underline}
+.text-meta{font-family:var(--mono);font-size:.72rem;color:var(--faint);letter-spacing:.08em;text-transform:uppercase;margin-top:14px;text-align:center}
+.reply{background:var(--elev2);border:1px solid var(--line);border-radius:16px;border-bottom-right-radius:5px;padding:11px 16px;color:var(--muted);font-size:.92rem;margin:14px 0 0 auto;max-width:60%;text-align:right}
+details.faq{border-top:1px solid var(--line);padding:20px 0}
+details.faq:last-of-type{border-bottom:1px solid var(--line)}
+details.faq summary{font-family:var(--display);font-weight:600;font-size:1.12rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:center}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";color:var(--blue);font-family:var(--mono);font-size:1.5rem;line-height:1}
+details.faq[open] summary::after{content:"-"}
+details.faq p{color:var(--muted);margin-top:14px;max-width:72ch}
+@media(max-width:900px){
+  .feat-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .industry-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .feat-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .industry-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav"></nav>
+<script src="/static/nav.js"></script>
+
+<!-- ── HERO ── -->
+<header class="page-hero">
+  <div class="wrap">
+    <div class="hero-eyebrow"><span class="ln"></span><span class="label">Google Review Automation</span></div>
+    <h1>More reviews. Found first on Google.</h1>
+    <p class="lead">After each visit, a friendly text asks your happy customers to leave a Google review. Opt-out handling, a cooldown, and quiet-hours sending are built in, so you grow your reputation without ever pestering anyone.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:32px">
+      <a href="https://calendly.com/jcode2k/15-min-ai-phone-receptionist-demo" target="_blank" class="btn btn-primary">Book a call</a>
+      <a href="#how" class="btn btn-ghost">See how it works</a>
+    </div>
+    <p style="margin-top:20px;color:var(--muted);font-family:var(--mono);font-size:.82rem;letter-spacing:.04em">FRIENDLY, NOT PUSHY &nbsp;·&nbsp; OPT-OUT BUILT IN &nbsp;·&nbsp; QUIET HOURS RESPECTED</p>
+  </div>
+</header>
+
+<!-- ── THE PROBLEM ── -->
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">// The Problem</span>
+      <h2>Your best customers would leave a review. You just never ask.</h2>
+      <p class="lead">Reviews are how people choose a local business now. The businesses at the top are not better, they just ask consistently.</p>
+    </div>
+    <div style="max-width:760px">
+      <ul class="check-list reveal">
+        <li>Happy customers walk out the door and forget to leave a review.</li>
+        <li>Asking in person is awkward, and your team is busy running the day.</li>
+        <li>The competitor with more recent reviews shows up above you in search and maps.</li>
+        <li>When you do ask by hand, it is inconsistent, and easy to accidentally over-ask the same person.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="sec" id="how">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">// How It Works</span>
+      <h2>One friendly text, sent at the right time.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="n">1</div>
+        <h4>A visit happens</h4>
+        <p>You log the visit, or send us a simple list. That is the trigger for a review request.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">2</div>
+        <h4>We check the guards</h4>
+        <p>Not on the opt-out list, not asked recently, and inside quiet hours. Only then does a text go out.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">3</div>
+        <h4>The customer gets a text</h4>
+        <p>A short, warm message with a direct link straight to your Google review page. One tap to leave it.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">4</div>
+        <h4>Your rating climbs</h4>
+        <p>Steady, recent reviews push you higher in search and maps, right where new customers are looking.</p>
+      </div>
+    </div>
+
+    <div class="text-preview reveal">
+      <div class="bubble">Hi Maria, thanks for visiting Sunshine Dental today! If you have a minute, we'd love a quick Google review: <span class="lnk">g.page/review</span>. Reply STOP to opt out.</div>
+      <div class="reply">Just left one. Thank you!</div>
+      <div class="text-meta">Example message</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── RESPECTFUL BY DESIGN ── -->
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">// Respectful By Design</span>
+      <h2>Grows your reputation without annoying anyone.</h2>
+      <p class="lead">The fastest way to hurt your name is to over-message people. Every guardrail here exists to keep that from happening.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="card reveal">
+        <span class="ic">// Opt-Out Handling</span>
+        <h3>One word and it stops.</h3>
+        <p>Anyone can reply STOP and they are added to a permanent do-not-contact list, honored automatically from then on.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic">// Cooldown</span>
+        <h3>Never asks the same person twice too soon.</h3>
+        <p>A built-in cooldown means a customer who was recently asked is skipped, so no one gets pestered.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic">// Quiet Hours</span>
+        <h3>No late-night texts.</h3>
+        <p>Requests only go out during reasonable daytime hours, never in the middle of the night.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic">// One Per Visit</span>
+        <h3>A single, well-timed ask.</h3>
+        <p>Each visit earns at most one request. No repeated nudges, no follow-up spam.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic">// Direct Link</span>
+        <h3>Straight to your review page.</h3>
+        <p>The text links right to your Google review page, so leaving one takes a single tap.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic">// Your Words</span>
+        <h3>Sounds like you.</h3>
+        <p>The message is written in your voice and mentions your business by name, so it never feels automated.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BUILT FOR ── -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="label">// Built For</span>
+      <h2>Any business that lives on its reputation.</h2>
+    </div>
+    <div class="industry-grid">
+      <div class="industry-card reveal"><div class="ic-lg">🦷</div><p>Dental and medical offices</p></div>
+      <div class="industry-card reveal"><div class="ic-lg">💇</div><p>Salons and med spas</p></div>
+      <div class="industry-card reveal"><div class="ic-lg">🏋️</div><p>Gyms and studios</p></div>
+      <div class="industry-card reveal"><div class="ic-lg">🍽️</div><p>Restaurants and cafes</p></div>
+      <div class="industry-card reveal"><div class="ic-lg">🔧</div><p>Home and trade services</p></div>
+      <div class="industry-card reveal"><div class="ic-lg">🏬</div><p>Any local business</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="sec sec-alt">
+  <div class="wrap narrow" style="margin:0 auto">
+    <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="label">// Common Questions</span>
+      <h2>Answers before you ask.</h2>
+    </div>
+    <div class="reveal">
+      <details class="faq">
+        <summary>How does it know who to text?</summary>
+        <p>You tell it a visit happened, either by logging it or sending us a simple list of who visited and their phone number. That visit is what triggers the request.</p>
+      </details>
+      <details class="faq">
+        <summary>What stops it from bothering people?</summary>
+        <p>Three guardrails: anyone can reply STOP to opt out for good, a cooldown prevents asking the same person again too soon, and messages only send during quiet daytime hours. Each visit gets at most one request.</p>
+      </details>
+      <details class="faq">
+        <summary>Where does the review actually go?</summary>
+        <p>The text links directly to your Google review page. One tap takes the customer straight there.</p>
+      </details>
+      <details class="faq">
+        <summary>Can I change the wording?</summary>
+        <p>Yes. The message is written in your voice and names your business. We adjust it whenever you want.</p>
+      </details>
+      <details class="faq">
+        <summary>Do I need special software to start?</summary>
+        <p>No. You can begin by sending us a simple list of visits. Deeper connections to your scheduling system can come later.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ── FINAL CTA ── -->
+<section class="cta-band">
+  <div class="wrap">
+    <span class="label">// Get Started</span>
+    <h2>Get found first on Google.</h2>
+    <p>Book a quick call and we'll set up review requests for your business.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
+      <a href="https://calendly.com/jcode2k/15-min-ai-phone-receptionist-demo" target="_blank" class="btn btn-primary" style="font-size:1.05rem;padding:18px 38px">Book a call</a>
+      <a href="tel:+19545688788" class="btn btn-ghost" style="font-size:1.05rem;padding:18px 38px">Or call us: (954) 568-8788</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <span class="brand">AI Bot Coder</span>
+      <span class="foot-links">
+        <a href="/services.html">Services</a> · <a href="/pricing.html">Pricing</a> · <a href="/portfolio.html">Portfolio</a> · <a href="/tools.html">Tools</a> · <a href="/blog-posts.html">Blog</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a>
+      </span>
+      <span><a href="tel:+19545688788">(954) 568-8788</a> · <a href="mailto:jason@aibchq.com">jason@aibchq.com</a> · <a href="https://www.instagram.com/aibotcoder/" target="_blank">Instagram</a> · <a href="https://www.linkedin.com/in/jcode2k/" target="_blank">LinkedIn</a> · <a href="https://github.com/HeTron" target="_blank">GitHub</a></span>
+    </div>
+    <div class="foot-copy">© 2026 AI BOT CODER · Fort Lauderdale, FL</div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+const els=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  els.forEach(el=>io.observe(el));
+}else{els.forEach(el=>el.classList.add('in'));}
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "880dd8a72db2452c816c1172be8b6db7"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

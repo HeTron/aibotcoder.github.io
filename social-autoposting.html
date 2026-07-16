@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Auto-Posting | AI BOT CODER</title>
+<meta name="description" content="Consistent Facebook and Instagram posting without the weekly scramble. AI drafts a month of on-brand posts, you approve the whole calendar in one look, and nothing publishes until you say go.">
+<link rel="canonical" href="https://aibotcoder.com/social-autoposting.html">
+<meta property="og:title" content="Social Auto-Posting by AI BOT CODER">
+<meta property="og:description" content="A month of on-brand social posts, drafted for you and scheduled for you. You approve the calendar before anything goes live.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aibotcoder.com/social-autoposting.html">
+<meta property="og:image" content="https://aibotcoder.com/static/images/og/default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="AI BOT CODER">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Social Auto-Posting by AI BOT CODER">
+<meta name="twitter:description" content="A month of on-brand social posts, drafted and scheduled for you. You approve the calendar before anything goes live.">
+<meta name="twitter:image" content="https://aibotcoder.com/static/images/og/default.png">
+<link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#08090c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/redesign.css">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+<style>
+.reveal.in{opacity:1;transform:none}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.step .n{font-family:var(--display);font-weight:800;font-size:2.4rem;color:var(--blue);line-height:1}
+.step h4{font-family:var(--display);font-size:1.12rem;margin:12px 0 8px}
+.step p{color:var(--muted);font-size:.94rem}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.stat-card{background:linear-gradient(160deg,var(--elev),transparent);border:1px solid var(--line);border-radius:18px;padding:32px 24px;text-align:center;transition:transform .3s,border-color .3s}
+.stat-card:hover{transform:translateY(-4px);border-color:var(--line2)}
+.stat-card .stat-n{font-family:var(--display);font-weight:800;font-size:1.7rem;color:var(--blue);line-height:1.1;margin-bottom:12px}
+.stat-card p{color:var(--muted);font-size:.93rem;margin:0}
+.check-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+.check-list li{display:flex;gap:13px;align-items:flex-start;color:var(--muted);font-size:1rem}
+.check-list li::before{content:"✓";color:var(--blue);font-family:var(--mono);font-weight:700;flex:none;margin-top:1px}
+.check-list li strong{color:var(--ink)}
+.industry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.industry-card{background:linear-gradient(160deg,var(--elev),transparent);border:1px solid var(--line);border-radius:14px;padding:24px 20px;text-align:center;transition:transform .3s,border-color .3s}
+.industry-card:hover{transform:translateY(-3px);border-color:var(--line2)}
+.industry-card .ic-lg{font-size:1.6rem;margin-bottom:10px}
+.industry-card p{margin:0;color:var(--muted);font-size:.96rem}
+.sample-band{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:60px 0;text-align:center}
+details.faq{border-top:1px solid var(--line);padding:20px 0}
+details.faq:last-of-type{border-bottom:1px solid var(--line)}
+details.faq summary{font-family:var(--display);font-weight:600;font-size:1.12rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:center}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";color:var(--blue);font-family:var(--mono);font-size:1.5rem;line-height:1}
+details.faq[open] summary::after{content:"-"}
+details.faq p{color:var(--muted);margin-top:14px;max-width:72ch}
+@media(max-width:900px){
+  .feat-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .stat-grid{grid-template-columns:1fr}
+  .industry-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .feat-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .industry-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav"></nav>
+<script src="/static/nav.js"></script>
+
+<!-- ── HERO ── -->
+<header class="page-hero">
+  <div class="wrap">
+    <div class="hero-eyebrow"><span class="ln"></span><span class="label">Social Auto-Posting</span></div>
+    <h1>Stay visible without the weekly scramble.</h1>
+    <p class="lead">AI drafts a full month of on-brand posts for your business, schedules them across Facebook and Instagram, and shows you the whole calendar first. Nothing publishes until you approve it.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:32px">
+      <a href="https://calendly.com/jcode2k/15-min-ai-phone-receptionist-demo" target="_blank" class="btn btn-primary">Book a call</a>
+      <a href="#sample" class="btn btn-ghost">See a real sample month</a>
+    </div>
+    <p style="margin-top:20px;color:var(--muted);font-family:var(--mono);font-size:.82rem;letter-spacing:.04em">YOU APPROVE EVERYTHING &nbsp;·&nbsp; ON YOUR BRAND &nbsp;·&nbsp; FACEBOOK + INSTAGRAM</p>
+  </div>
+</header>
+
+<!-- ── THE PROBLEM ── -->
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">// The Problem</span>
+      <h2>Posting falls to the bottom of the list.</h2>
+      <p class="lead">You know a quiet page costs you attention, but there is always something more urgent than writing a caption.</p>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card reveal">
+        <div class="stat-n">The blank page</div>
+        <p>Every week starts with "what do we even post?" and ends with nothing published.</p>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-n">The dead stretch</div>
+        <p>A page that went silent for a month tells customers you might be closed.</p>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-n">The feast or famine</div>
+        <p>Five posts in one afternoon, then nothing for three weeks. Inconsistent is worse than steady.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">// How It Works</span>
+      <h2>You approve a month at a time. We handle the rest.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="n">1</div>
+        <h4>We learn your voice</h4>
+        <p>Your business, your services, the tone you want, and the kinds of posts you like. Set once.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">2</div>
+        <h4>AI drafts the month</h4>
+        <p>A batch of posts, each with a date, caption, hashtags, and a photo suggestion, all on brand.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">3</div>
+        <h4>You review the calendar</h4>
+        <p>See the whole month laid out in one preview. Approve it, or tell us what to change.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">4</div>
+        <h4>It posts on schedule</h4>
+        <p>Approved posts publish to Facebook and Instagram at the right time, spaced out evenly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHAT YOU GET ── -->
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">// What It Does</span>
+      <h2>A steady presence, drafted and scheduled for you.</h2>
+    </div>
+    <div class="feat-grid">
+      <div class="card reveal">
+        <span class="ic">// Approve First</span>
+        <h3>Nothing posts without your yes.</h3>
+        <p>You see the full month as a calendar preview before a single post goes live. Approve all of it, or send edits.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic">// On Your Brand</span>
+        <h3>Sounds like your business.</h3>
+        <p>Posts match your voice and your services, with a mix of tips, behind the scenes, seasonal, and light promotion.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic">// Evenly Spaced</span>
+        <h3>Steady, never a flood.</h3>
+        <p>New batches are scheduled after your last queued post, so your cadence stays consistent and never doubles up.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic">// Caption + Hashtags</span>
+        <h3>The whole post, ready to go.</h3>
+        <p>Each post arrives with a written caption, relevant hashtags, and a photo idea, so you are never starting from nothing.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic">// Facebook + Instagram</span>
+        <h3>Both platforms, one approval.</h3>
+        <p>Approve once and your posts publish where your customers already follow you.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic">// Set And Forget</span>
+        <h3>Off your plate for good.</h3>
+        <p>No more Sunday-night caption sessions. You spend a few minutes approving, we keep the page alive.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SAMPLE CALENDAR ── -->
+<div class="sample-band" id="sample">
+  <div class="wrap">
+    <span class="label">// See A Real Sample Month</span>
+    <h2 style="font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-.03em;margin:14px 0 12px">This is exactly what you would approve.</h2>
+    <p style="color:var(--muted);max-width:58ch;margin:0 auto 26px">A real generated month for a fictional dental office, "Sunshine Dental". Every post laid out on a calendar, captions and hashtags included, nothing published. This is the preview you sign off on.</p>
+    <a href="/demos/social-calendar-sunshine-dental.html" target="_blank" class="btn btn-primary" style="font-size:1.05rem;padding:16px 34px">Open the sample calendar</a>
+  </div>
+</div>
+
+<!-- ── BUILT FOR ── -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="label">// Built For</span>
+      <h2>Any business that should be posting but isn't.</h2>
+    </div>
+    <div class="industry-grid">
+      <div class="industry-card reveal"><div class="ic-lg">🦷</div><p>Dental and medical offices</p></div>
+      <div class="industry-card reveal"><div class="ic-lg">💇</div><p>Salons and med spas</p></div>
+      <div class="industry-card reveal"><div class="ic-lg">🏋️</div><p>Gyms and studios</p></div>
+      <div class="industry-card reveal"><div class="ic-lg">🍽️</div><p>Restaurants and cafes</p></div>
+      <div class="industry-card reveal"><div class="ic-lg">🔧</div><p>Home and trade services</p></div>
+      <div class="industry-card reveal"><div class="ic-lg">🏬</div><p>Any local business</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="sec sec-alt">
+  <div class="wrap narrow" style="margin:0 auto">
+    <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="label">// Common Questions</span>
+      <h2>Answers before you ask.</h2>
+    </div>
+    <div class="reveal">
+      <details class="faq">
+        <summary>Do I have to approve every post?</summary>
+        <p>You approve the month as a batch. You see the whole calendar first and can approve all of it or send back edits. Nothing publishes until you sign off.</p>
+      </details>
+      <details class="faq">
+        <summary>Will it sound like a generic bot?</summary>
+        <p>No. We set it up with your voice, your services, and the tone you want. The sample calendar on this page shows the style. If a post is not right, you change it before it goes live.</p>
+      </details>
+      <details class="faq">
+        <summary>What if I want to change a caption?</summary>
+        <p>Tell us and we update it. You are reviewing the month before anything is scheduled, so edits happen before the public ever sees a post.</p>
+      </details>
+      <details class="faq">
+        <summary>Will it flood my page all at once?</summary>
+        <p>No. Posts are spaced out evenly, and each new month is scheduled after your last queued post, so your cadence stays steady instead of doubling up.</p>
+      </details>
+      <details class="faq">
+        <summary>Which platforms does it post to?</summary>
+        <p>Facebook and Instagram. You connect your accounts once, approve your calendar, and approved posts publish on schedule.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ── FINAL CTA ── -->
+<section class="cta-band">
+  <div class="wrap">
+    <span class="label">// Get Started</span>
+    <h2>Let's get your page posting again.</h2>
+    <p>Book a quick call and we'll show you a sample month built for your business.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
+      <a href="https://calendly.com/jcode2k/15-min-ai-phone-receptionist-demo" target="_blank" class="btn btn-primary" style="font-size:1.05rem;padding:18px 38px">Book a call</a>
+      <a href="tel:+19545688788" class="btn btn-ghost" style="font-size:1.05rem;padding:18px 38px">Or call us: (954) 568-8788</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <span class="brand">AI Bot Coder</span>
+      <span class="foot-links">
+        <a href="/services.html">Services</a> · <a href="/pricing.html">Pricing</a> · <a href="/portfolio.html">Portfolio</a> · <a href="/tools.html">Tools</a> · <a href="/blog-posts.html">Blog</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a>
+      </span>
+      <span><a href="tel:+19545688788">(954) 568-8788</a> · <a href="mailto:jason@aibchq.com">jason@aibchq.com</a> · <a href="https://www.instagram.com/aibotcoder/" target="_blank">Instagram</a> · <a href="https://www.linkedin.com/in/jcode2k/" target="_blank">LinkedIn</a> · <a href="https://github.com/HeTron" target="_blank">GitHub</a></span>
+    </div>
+    <div class="foot-copy">© 2026 AI BOT CODER · Fort Lauderdale, FL</div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+const els=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  els.forEach(el=>io.observe(el));
+}else{els.forEach(el=>el.classList.add('in'));}
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "880dd8a72db2452c816c1172be8b6db7"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
