@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automatización de Reseñas de Google | AI BOT CODER</title>
+<meta name="description" content="Después de cada visita, un mensaje de texto amable le pide a sus clientes contentos una reseña en Google. Manejo de baja incluido, un tiempo de espera para que nadie sea molestado y envío en horas de silencio. Más reseñas significa que lo encuentran primero.">
+<link rel="canonical" href="https://aibotcoder.com/es/review-automation.html">
+<link rel="alternate" hreflang="en" href="https://aibotcoder.com/review-automation.html">
+<link rel="alternate" hreflang="es" href="https://aibotcoder.com/es/review-automation.html">
+<link rel="alternate" hreflang="x-default" href="https://aibotcoder.com/review-automation.html">
+<meta property="og:title" content="Automatización de Reseñas de Google de AI BOT CODER">
+<meta property="og:description" content="Un mensaje de texto amable después de cada visita le pide a sus clientes contentos una reseña en Google. Manejo de baja, tiempo de espera y horas de silencio incluidos.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aibotcoder.com/es/review-automation.html">
+<meta property="og:image" content="https://aibotcoder.com/static/images/og/default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="AI BOT CODER">
+<meta property="og:locale" content="es_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Automatización de Reseñas de Google de AI BOT CODER">
+<meta name="twitter:description" content="Un mensaje de texto amable después de cada visita le pide a sus clientes contentos una reseña en Google. Manejo de baja, tiempo de espera y horas de silencio incluidos.">
+<meta name="twitter:image" content="https://aibotcoder.com/static/images/og/default.png">
+<link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#08090c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/redesign.css">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+<style>
+.reveal.in{opacity:1;transform:none}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.step .n{font-family:var(--display);font-weight:800;font-size:2.4rem;color:var(--blue);line-height:1}
+.step h4{font-family:var(--display);font-size:1.12rem;margin:12px 0 8px}
+.step p{color:var(--muted);font-size:.94rem}
+.check-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+.check-list li{display:flex;gap:13px;align-items:flex-start;color:var(--muted);font-size:1rem}
+.check-list li::before{content:"✓";color:var(--blue);font-family:var(--mono);font-weight:700;flex:none;margin-top:1px}
+.check-list li strong{color:var(--ink)}
+.industry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.industry-card{background:linear-gradient(160deg,var(--elev),transparent);border:1px solid var(--line);border-radius:14px;padding:24px 20px;text-align:center;transition:transform .3s,border-color .3s}
+.industry-card:hover{transform:translateY(-3px);border-color:var(--line2)}
+.industry-card .ic-lg{font-size:1.6rem;margin-bottom:10px}
+.industry-card p{margin:0;color:var(--muted);font-size:.96rem}
+.text-preview{max-width:420px;margin:34px auto 0;background:linear-gradient(160deg,var(--elev),var(--bg2));border:1px solid var(--line2);border-radius:22px;padding:26px 24px;box-shadow:0 30px 70px rgba(0,0,0,.45)}
+.bubble{background:rgba(110,168,254,.12);border:1px solid rgba(110,168,254,.25);border-radius:16px;border-bottom-left-radius:5px;padding:15px 18px;color:var(--ink);font-size:.98rem;line-height:1.5}
+.bubble .lnk{color:var(--blue);text-decoration:underline}
+.text-meta{font-family:var(--mono);font-size:.72rem;color:var(--faint);letter-spacing:.08em;text-transform:uppercase;margin-top:14px;text-align:center}
+.reply{background:var(--elev2);border:1px solid var(--line);border-radius:16px;border-bottom-right-radius:5px;padding:11px 16px;color:var(--muted);font-size:.92rem;margin:14px 0 0 auto;max-width:60%;text-align:right}
+details.faq{border-top:1px solid var(--line);padding:20px 0}
+details.faq:last-of-type{border-bottom:1px solid var(--line)}
+details.faq summary{font-family:var(--display);font-weight:600;font-size:1.12rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:center}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";color:var(--blue);font-family:var(--mono);font-size:1.5rem;line-height:1}
+details.faq[open] summary::after{content:"-"}
+details.faq p{color:var(--muted);margin-top:14px;max-width:72ch}
+@media(max-width:900px){
+  .feat-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .industry-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .feat-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .industry-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav"></nav>
+<script src="/static/nav.js"></script>
+
+<!-- ── HERO ── -->
+<header class="page-hero">
+  <div class="wrap">
+    <div class="hero-eyebrow"><span class="ln"></span><span class="label">Automatización de Reseñas de Google</span></div>
+    <h1>Más reseñas. Lo encuentran primero en Google.</h1>
+    <p class="lead">Después de cada visita, un mensaje de texto amable le pide a sus clientes contentos que dejen una reseña en Google. El manejo de baja, un tiempo de espera y el envío en horas de silencio vienen incluidos, así usted hace crecer su reputación sin molestar nunca a nadie.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:32px">
+      <a href="https://calendly.com/jcode2k/15-min-ai-phone-receptionist-demo" target="_blank" class="btn btn-primary">Agende una llamada</a>
+      <a href="#how" class="btn btn-ghost">Vea cómo funciona</a>
+    </div>
+    <p style="margin-top:20px;color:var(--muted);font-family:var(--mono);font-size:.82rem;letter-spacing:.04em">AMABLE, SIN PRESIONAR &nbsp;·&nbsp; OPCIÓN DE BAJA INCLUIDA &nbsp;·&nbsp; HORAS DE SILENCIO RESPETADAS</p>
+    <p style="margin-top:18px;font-size:1.02rem;color:var(--ink)"><strong style="font-family:var(--display)">$149/mes</strong> <span style="color:var(--muted)">por separado, o $99/mes como complemento de la recepcionista.</span> &nbsp;<a href="/es/marketing-suite.html" style="color:var(--blue);font-weight:600;white-space:nowrap">Parte del Marketing Suite →</a></p>
+  </div>
+</header>
+
+<!-- ── THE PROBLEM ── -->
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">// El Problema</span>
+      <h2>Sus mejores clientes dejarían una reseña. Solo que usted nunca la pide.</h2>
+      <p class="lead">Las reseñas son la forma en que la gente elige un negocio local hoy. Los negocios que están arriba no son mejores, solo piden con constancia.</p>
+    </div>
+    <div style="max-width:760px">
+      <ul class="check-list reveal">
+        <li>Los clientes contentos salen por la puerta y se olvidan de dejar una reseña.</li>
+        <li>Pedirla en persona es incómodo, y su equipo está ocupado sacando el día adelante.</li>
+        <li>El competidor con reseñas más recientes aparece por encima de usted en la búsqueda y en mapas.</li>
+        <li>Cuando usted sí la pide a mano, es inconsistente, y es fácil pedirle sin querer de más a la misma persona.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="sec" id="how">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">// Cómo Funciona</span>
+      <h2>Un mensaje de texto amable, enviado en el momento justo.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="n">1</div>
+        <h4>Ocurre una visita</h4>
+        <p>Usted registra la visita, o nos envía una lista sencilla. Eso es lo que dispara la solicitud de reseña.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">2</div>
+        <h4>Revisamos los filtros</h4>
+        <p>Que no esté en la lista de baja, que no se le haya pedido hace poco, y que sea dentro de las horas de silencio. Solo entonces sale un mensaje.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">3</div>
+        <h4>El cliente recibe un texto</h4>
+        <p>Un mensaje corto y cálido con un enlace directo a su página de reseñas de Google. Un toque para dejarla.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">4</div>
+        <h4>Su calificación sube</h4>
+        <p>Reseñas constantes y recientes lo empujan más arriba en la búsqueda y en mapas, justo donde buscan los clientes nuevos.</p>
+      </div>
+    </div>
+
+    <div class="text-preview reveal">
+      <div class="bubble">Hola María, ¡gracias por visitar Sunshine Dental hoy! Si tiene un minuto, nos encantaría una reseña rápida en Google: <span class="lnk">g.page/review</span>. Responda STOP para darse de baja.</div>
+      <div class="reply">Acabo de dejar una. ¡Gracias!</div>
+      <div class="text-meta">Mensaje de ejemplo</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── RESPECTFUL BY DESIGN ── -->
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">// Respetuoso Por Diseño</span>
+      <h2>Hace crecer su reputación sin molestar a nadie.</h2>
+      <p class="lead">La forma más rápida de dañar su nombre es enviarle demasiados mensajes a la gente. Cada filtro aquí existe para evitar que eso pase.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="card reveal">
+        <span class="ic">// Manejo de Baja</span>
+        <h3>Una palabra y se detiene.</h3>
+        <p>Cualquiera puede responder STOP y queda agregado a una lista permanente de no contactar, respetada de forma automática de ahí en adelante.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic">// Tiempo de Espera</span>
+        <h3>Nunca le pide a la misma persona dos veces demasiado pronto.</h3>
+        <p>Un tiempo de espera integrado hace que a un cliente al que se le pidió hace poco se le omita, para que nadie sea molestado.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic">// Horas de Silencio</span>
+        <h3>Nada de textos a altas horas de la noche.</h3>
+        <p>Las solicitudes solo salen durante horas razonables del día, nunca en medio de la noche.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic">// Una Por Visita</span>
+        <h3>Una sola solicitud, bien cronometrada.</h3>
+        <p>Cada visita genera como máximo una solicitud. Sin recordatorios repetidos, sin spam de seguimiento.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic">// Enlace Directo</span>
+        <h3>Directo a su página de reseñas.</h3>
+        <p>El texto enlaza directo a su página de reseñas de Google, así dejar una toma un solo toque.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic">// Sus Palabras</span>
+        <h3>Suena como usted.</h3>
+        <p>El mensaje está escrito con su voz y menciona su negocio por nombre, así nunca se siente automatizado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BUILT FOR ── -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="label">// Creado Para</span>
+      <h2>Cualquier negocio que vive de su reputación.</h2>
+    </div>
+    <div class="industry-grid">
+      <div class="industry-card reveal"><div class="ic-lg">🦷</div><p>Consultorios dentales y médicos</p></div>
+      <div class="industry-card reveal"><div class="ic-lg">💇</div><p>Salones y med spas</p></div>
+      <div class="industry-card reveal"><div class="ic-lg">🏋️</div><p>Gimnasios y estudios</p></div>
+      <div class="industry-card reveal"><div class="ic-lg">🍽️</div><p>Restaurantes y cafés</p></div>
+      <div class="industry-card reveal"><div class="ic-lg">🔧</div><p>Servicios para el hogar y oficios</p></div>
+      <div class="industry-card reveal"><div class="ic-lg">🏬</div><p>Cualquier negocio local</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="sec sec-alt">
+  <div class="wrap narrow" style="margin:0 auto">
+    <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="label">// Preguntas Frecuentes</span>
+      <h2>Respuestas antes de que pregunte.</h2>
+    </div>
+    <div class="reveal">
+      <details class="faq">
+        <summary>¿Cómo sabe a quién enviarle el texto?</summary>
+        <p>Usted le indica que ocurrió una visita, ya sea registrándola o enviándonos una lista sencilla de quién vino y su número de teléfono. Esa visita es lo que dispara la solicitud.</p>
+      </details>
+      <details class="faq">
+        <summary>¿Qué evita que moleste a la gente?</summary>
+        <p>Tres filtros: cualquiera puede responder STOP para darse de baja para siempre, un tiempo de espera evita pedirle a la misma persona de nuevo demasiado pronto, y los mensajes solo se envían durante las horas tranquilas del día. Cada visita recibe como máximo una solicitud.</p>
+      </details>
+      <details class="faq">
+        <summary>¿A dónde va la reseña en realidad?</summary>
+        <p>El texto enlaza directamente a su página de reseñas de Google. Un toque lleva al cliente directo hasta ahí.</p>
+      </details>
+      <details class="faq">
+        <summary>¿Puedo cambiar la redacción?</summary>
+        <p>Sí. El mensaje está escrito con su voz y nombra su negocio. Lo ajustamos cuando usted quiera.</p>
+      </details>
+      <details class="faq">
+        <summary>¿Necesito algún software especial para empezar?</summary>
+        <p>No. Puede comenzar enviándonos una lista sencilla de visitas. Las conexiones más profundas con su sistema de agendamiento pueden venir después.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ── FINAL CTA ── -->
+<section class="cta-band">
+  <div class="wrap">
+    <span class="label">// Empiece</span>
+    <h2>Que lo encuentren primero en Google.</h2>
+    <p>Agende una llamada rápida y configuramos las solicitudes de reseña para su negocio.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
+      <a href="https://calendly.com/jcode2k/15-min-ai-phone-receptionist-demo" target="_blank" class="btn btn-primary" style="font-size:1.05rem;padding:18px 38px">Agende una llamada</a>
+      <a href="tel:+19545688788" class="btn btn-ghost" style="font-size:1.05rem;padding:18px 38px">O llámenos: (954) 568-8788</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <span class="brand">AI Bot Coder</span>
+      <span class="foot-links">
+        <a href="/es/services.html">Servicios</a> · <a href="/es/pricing.html">Precios</a> · <a href="/es/portfolio.html">Portafolio</a> · <a href="/es/tools.html">Herramientas</a> · <a href="/blog-posts.html">Blog</a> · <a href="/es/about.html">Acerca de</a> · <a href="/es/contact.html">Contacto</a>
+      </span>
+      <span><a href="tel:+19545688788">(954) 568-8788</a> · <a href="mailto:jason@aibchq.com">jason@aibchq.com</a> · <a href="https://www.instagram.com/aibotcoder/" target="_blank">Instagram</a> · <a href="https://www.linkedin.com/in/jcode2k/" target="_blank">LinkedIn</a> · <a href="https://github.com/HeTron" target="_blank">GitHub</a></span>
+    </div>
+    <div class="foot-copy">© 2026 AI BOT CODER · Fort Lauderdale, FL</div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+const els=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  els.forEach(el=>io.observe(el));
+}else{els.forEach(el=>el.classList.add('in'));}
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "880dd8a72db2452c816c1172be8b6db7"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

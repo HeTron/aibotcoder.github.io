@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chatbot con IA para su Sitio Web | AI BOT CODER</title>
+<meta name="description" content="Una burbuja de chat en su sitio web que responde las preguntas de los visitantes con la información real de su negocio, captura el nombre y el teléfono de los visitantes interesados y le avisa al instante. Se instala con una sola línea de código.">
+<link rel="canonical" href="https://aibotcoder.com/es/website-chatbot.html">
+<link rel="alternate" hreflang="en" href="https://aibotcoder.com/website-chatbot.html">
+<link rel="alternate" hreflang="es" href="https://aibotcoder.com/es/website-chatbot.html">
+<link rel="alternate" hreflang="x-default" href="https://aibotcoder.com/website-chatbot.html">
+<meta property="og:title" content="Chatbot con IA para su Sitio Web de AI BOT CODER">
+<meta property="og:description" content="Responde las preguntas de los visitantes con la información real de su negocio, captura a los visitantes interesados y le avisa en el momento en que llega un cliente potencial.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aibotcoder.com/es/website-chatbot.html">
+<meta property="og:image" content="https://aibotcoder.com/static/images/og/default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="AI BOT CODER">
+<meta property="og:locale" content="es_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Chatbot con IA para su Sitio Web de AI BOT CODER">
+<meta name="twitter:description" content="Responde las preguntas de los visitantes con la información real de su negocio, captura a los visitantes interesados y le avisa en el momento en que llega un cliente potencial.">
+<meta name="twitter:image" content="https://aibotcoder.com/static/images/og/default.png">
+<link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#08090c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/redesign.css">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+<style>
+.reveal.in{opacity:1;transform:none}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.step .n{font-family:var(--display);font-weight:800;font-size:2.4rem;color:var(--blue);line-height:1}
+.step h4{font-family:var(--display);font-size:1.12rem;margin:12px 0 8px}
+.step p{color:var(--muted);font-size:.94rem}
+.check-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+.check-list li{display:flex;gap:13px;align-items:flex-start;color:var(--muted);font-size:1rem}
+.check-list li::before{content:"✓";color:var(--blue);font-family:var(--mono);font-weight:700;flex:none;margin-top:1px}
+.check-list li strong{color:var(--ink)}
+.industry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.industry-card{background:linear-gradient(160deg,var(--elev),transparent);border:1px solid var(--line);border-radius:14px;padding:24px 20px;text-align:center;transition:transform .3s,border-color .3s}
+.industry-card:hover{transform:translateY(-3px);border-color:var(--line2)}
+.industry-card .ic-lg{font-size:1.6rem;margin-bottom:10px}
+.industry-card p{margin:0;color:var(--muted);font-size:.96rem}
+.install-card{background:linear-gradient(160deg,var(--elev),transparent);border:1px solid var(--line);border-radius:18px;padding:34px;max-width:760px;margin:0 auto}
+.code-line{font-family:var(--mono);font-size:.9rem;color:var(--blue);background:var(--bg);border:1px solid var(--line2);border-radius:12px;padding:16px 18px;overflow-x:auto;white-space:pre;margin-top:18px}
+.try-band{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:64px 0;text-align:center}
+.try-band .arrow{font-family:var(--mono);color:var(--phos);font-size:.9rem;letter-spacing:.06em;margin-top:22px}
+details.faq{border-top:1px solid var(--line);padding:20px 0}
+details.faq:last-of-type{border-bottom:1px solid var(--line)}
+details.faq summary{font-family:var(--display);font-weight:600;font-size:1.12rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:center}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";color:var(--blue);font-family:var(--mono);font-size:1.5rem;line-height:1}
+details.faq[open] summary::after{content:"-"}
+details.faq p{color:var(--muted);margin-top:14px;max-width:72ch}
+@media(max-width:900px){
+  .feat-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr}
+  .industry-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .feat-grid{grid-template-columns:1fr}
+  .industry-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav"></nav>
+<script src="/static/nav.js"></script>
+
+<!-- ── HERO ── -->
+<header class="page-hero">
+  <div class="wrap">
+    <div class="hero-eyebrow"><span class="ln"></span><span class="label">Chatbot con IA para su Sitio Web</span></div>
+    <h1>Responda a cada visitante, capture cada cliente potencial.</h1>
+    <p class="lead">Una burbuja de chat en su sitio web que responde preguntas con la información real de su negocio y, sin llamar la atención, recopila el nombre y el teléfono de cualquier interesado y le avisa de inmediato. Se instala con una sola línea de código.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:32px">
+      <a href="https://calendly.com/jcode2k/15-min-ai-phone-receptionist-demo" target="_blank" class="btn btn-primary">Agende una llamada</a>
+      <a href="#try" class="btn btn-ghost">Pruebe la demostración en vivo</a>
+    </div>
+    <p style="margin-top:20px;color:var(--muted);font-family:var(--mono);font-size:.82rem;letter-spacing:.04em">ENTRENADO CON SU INFORMACIÓN &nbsp;·&nbsp; CAPTURA CLIENTES &nbsp;·&nbsp; INSTALACIÓN EN UNA LÍNEA</p>
+    <p style="margin-top:18px;font-size:1.02rem;color:var(--ink)"><strong style="font-family:var(--display)">$199/mes</strong> <span style="color:var(--muted)">por separado, o $99/mes como complemento de la recepcionista.</span> &nbsp;<a href="/es/marketing-suite.html" style="color:var(--blue);font-weight:600;white-space:nowrap">Parte del Marketing Suite →</a></p>
+  </div>
+</header>
+
+<!-- ── THE PROBLEM ── -->
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">// El Problema</span>
+      <h2>Su sitio web tiene preguntas. Nunca tiene respuestas.</h2>
+      <p class="lead">Un visitante con una pregunta y sin una respuesta rápida es un visitante que se va. La mayoría nunca llama.</p>
+    </div>
+    <div style="max-width:760px">
+      <ul class="check-list reveal">
+        <li>La gente llega a su sitio fuera de horario, cuando no hay nadie para responder.</li>
+        <li>Quieren que les respondan una sola cosa: si aceptan su seguro, si abren el sábado, cuánto cuesta una visita.</li>
+        <li>Si no la encuentran en unos segundos, se van con un competidor que se lo pone fácil.</li>
+        <li>Incluso los visitantes interesados se van sin dejarle una forma de contactarlos.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHAT IT DOES ── -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">// Qué Hace</span>
+      <h2>Una respuesta útil, y luego un cliente potencial capturado.</h2>
+    </div>
+    <div class="feat-grid">
+      <div class="card reveal">
+        <span class="ic">// Respuestas Reales</span>
+        <h3>Con su información real.</h3>
+        <p>Responde con su horario, sus servicios y sus preguntas frecuentes, los datos que usted nos da, no suposiciones inventadas.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic">// Captura de Clientes</span>
+        <h3>Nombre y teléfono, en el chat.</h3>
+        <p>Cuando un visitante está interesado, recopila de forma natural su nombre y teléfono para que usted pueda darle seguimiento.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic">// Aviso Instantáneo</span>
+        <h3>Se entera en el momento en que pasa.</h3>
+        <p>Cada cliente potencial capturado le dispara un aviso instantáneo, para que un visitante caliente nunca se enfríe.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic">// Siempre Activo</span>
+        <h3>Noches, fines de semana, feriados.</h3>
+        <p>Responde a toda hora, para que una pregunta fuera de horario igual se convierta en una conversación.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic">// Su Marca</span>
+        <h3>Su saludo, su color.</h3>
+        <p>La burbuja combina con su marca y abre con un saludo que usted elige, para que se sienta parte de su sitio.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic">// Enfocado</span>
+        <h3>Se mantiene en su negocio.</h3>
+        <p>Se limita a ayudar con su negocio y no se desvía hacia temas que no vienen al caso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── INSTALL ── -->
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="label">// Instalación</span>
+      <h2>Una línea de código. Esa es toda la configuración.</h2>
+    </div>
+    <div class="install-card reveal">
+      <p style="color:var(--muted);margin:0">Pegue una etiqueta de script en su sitio y la burbuja de chat aparece. Sin plugins que administrar, sin reconstruir la página, sin necesidad de un desarrollador. Le damos la línea exacta y nos encargamos del resto.</p>
+      <div class="code-line">&lt;script src="https://aibc-webhooks.jcode2k.workers.dev/bot/your-business/widget.js" async&gt;&lt;/script&gt;</div>
+      <p style="color:var(--faint);font-size:.85rem;margin:16px 0 0">Funciona en cualquier sitio web: WordPress, Squarespace, Wix, Webflow o HTML puro.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">// Cómo Funciona</span>
+      <h2>En vivo en su sitio en pocos días.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="n">1</div>
+        <h4>Aprendemos su negocio</h4>
+        <p>Horario, servicios, precios básicos y las preguntas que más le hacen. Esto se convierte en lo que el bot sabe.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">2</div>
+        <h4>Usted pega una línea</h4>
+        <p>Le enviamos una sola etiqueta de script. Péguela una vez y la burbuja de chat con su marca queda en vivo.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">3</div>
+        <h4>Los clientes llegan a usted</h4>
+        <p>Los visitantes reciben respuestas, los interesados dejan su nombre y teléfono, y usted recibe un aviso al instante.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BUILT FOR ── -->
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="label">// Ideal Para</span>
+      <h2>Cualquier negocio con un sitio web y preguntas por responder.</h2>
+    </div>
+    <div class="industry-grid">
+      <div class="industry-card reveal"><div class="ic-lg">🦷</div><p>Consultorios dentales y médicos</p></div>
+      <div class="industry-card reveal"><div class="ic-lg">⚖️</div><p>Servicios legales y profesionales</p></div>
+      <div class="industry-card reveal"><div class="ic-lg">💇</div><p>Salones y med spas</p></div>
+      <div class="industry-card reveal"><div class="ic-lg">🏋️</div><p>Gimnasios y estudios</p></div>
+      <div class="industry-card reveal"><div class="ic-lg">🔧</div><p>Servicios para el hogar y oficios</p></div>
+      <div class="industry-card reveal"><div class="ic-lg">🏬</div><p>Cualquier negocio local</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="sec">
+  <div class="wrap narrow" style="margin:0 auto">
+    <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="label">// Preguntas Frecuentes</span>
+      <h2>Respuestas antes de que pregunte.</h2>
+    </div>
+    <div class="reveal">
+      <details class="faq">
+        <summary>¿De dónde salen las respuestas?</summary>
+        <p>De la información que usted nos da: su horario, sus servicios, sus políticas y sus preguntas frecuentes. Responde con los datos reales de su negocio en lugar de adivinar.</p>
+      </details>
+      <details class="faq">
+        <summary>¿Cómo me entero de un nuevo cliente potencial?</summary>
+        <p>En el momento en que un visitante comparte su nombre y teléfono, usted recibe un aviso instantáneo para darle seguimiento mientras sigue interesado.</p>
+      </details>
+      <details class="faq">
+        <summary>¿Es difícil de instalar?</summary>
+        <p>No. Es una sola línea de código que pega en su sitio una vez. Le damos la etiqueta exacta y le mostramos dónde va. Funciona en WordPress, Squarespace, Wix, Webflow o HTML puro.</p>
+      </details>
+      <details class="faq">
+        <summary>¿Puedo cambiar lo que dice?</summary>
+        <p>Sí. El saludo, el color de la marca y la información del negocio que conoce se configuran según sus preferencias, y los actualizamos cuando lo necesite.</p>
+      </details>
+      <details class="faq">
+        <summary>¿Habla español?</summary>
+        <p>Sí. Si un visitante escribe en español, responde en español.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ── TRY IT (live widget demo callout) ── -->
+<div class="try-band" id="try">
+  <div class="wrap">
+    <span class="label">// Pruébelo Ahora Mismo</span>
+    <h2 style="font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-.03em;margin:14px 0 12px">La burbuja de la esquina está en vivo.</h2>
+    <p style="color:var(--muted);max-width:58ch;margin:0 auto">Mire la esquina inferior derecha de esta página. Esa burbuja de chat es una demostración en vivo entrenada para un consultorio dental ficticio llamado "Sunshine Dental". Pregúntele por el horario, los servicios o cómo agendar, y observe cómo maneja a un visitante interesado.</p>
+    <p class="arrow">Pruébelo ahora: toque la burbuja en la esquina inferior derecha &nbsp;↘</p>
+  </div>
+</div>
+
+<!-- ── FINAL CTA ── -->
+<section class="cta-band">
+  <div class="wrap">
+    <span class="label">// Empiece</span>
+    <h2>Convierta a los visitantes de su sitio en clientes potenciales.</h2>
+    <p>Agende una llamada rápida y le configuramos uno para su negocio.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
+      <a href="https://calendly.com/jcode2k/15-min-ai-phone-receptionist-demo" target="_blank" class="btn btn-primary" style="font-size:1.05rem;padding:18px 38px">Agende una llamada</a>
+      <a href="tel:+19545688788" class="btn btn-ghost" style="font-size:1.05rem;padding:18px 38px">O llámenos: (954) 568-8788</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <span class="brand">AI Bot Coder</span>
+      <span class="foot-links">
+        <a href="/es/services.html">Servicios</a> · <a href="/es/pricing.html">Precios</a> · <a href="/es/portfolio.html">Portafolio</a> · <a href="/es/tools.html">Herramientas</a> · <a href="/blog-posts.html">Blog</a> · <a href="/es/about.html">Acerca de</a> · <a href="/es/contact.html">Contacto</a>
+      </span>
+      <span><a href="tel:+19545688788">(954) 568-8788</a> · <a href="mailto:jason@aibchq.com">jason@aibchq.com</a> · <a href="https://www.instagram.com/aibotcoder/" target="_blank">Instagram</a> · <a href="https://www.linkedin.com/in/jcode2k/" target="_blank">LinkedIn</a> · <a href="https://github.com/HeTron" target="_blank">GitHub</a></span>
+    </div>
+    <div class="foot-copy">© 2026 AI BOT CODER · Fort Lauderdale, FL</div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+const els=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  els.forEach(el=>io.observe(el));
+}else{els.forEach(el=>el.classList.add('in'));}
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "880dd8a72db2452c816c1172be8b6db7"}'></script><!-- End Cloudflare Web Analytics -->
+<!-- Live demo chatbot widget: fictional "Sunshine Dental" tenant. Goes live when the worker route deploys. -->
+<script src="https://aibc-webhooks.jcode2k.workers.dev/bot/sunshine-dental/widget.js" async></script>
+</body>
+</html>

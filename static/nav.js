@@ -13,14 +13,16 @@
   var MIRRORED = [
     '/', '/ai-phone-receptionist.html', '/services.html', '/pricing.html',
     '/portfolio.html', '/about.html', '/contact.html', '/tools.html',
-    '/missed-call-calculator.html'
+    '/missed-call-calculator.html', '/marketing-suite.html',
+    '/website-chatbot.html', '/review-automation.html',
+    '/social-autoposting.html', '/lead-reactivation.html'
   ];
 
   // Nav items: label per language + the English/Spanish hrefs. All six have Spanish twins.
   var ITEMS = [
     { en: 'What I Automate', es: 'Qué Automatizo', enHref: '/#automate',                   esHref: '/es/#automate',                   path: '/' },
     { en: 'Services',        es: 'Servicios',      enHref: '/services.html',               esHref: '/es/services.html',               path: '/services.html' },
-    { en: 'Marketing Suite', es: 'Marketing Suite', enHref: '/marketing-suite.html',        esHref: '/marketing-suite.html',           path: '/marketing-suite.html' },
+    { en: 'Marketing Suite', es: 'Marketing Suite', enHref: '/marketing-suite.html',        esHref: '/es/marketing-suite.html',        path: '/marketing-suite.html' },
     { en: 'Pricing',         es: 'Precios',        enHref: '/pricing.html',                esHref: '/es/pricing.html',                path: '/pricing.html' },
     { en: 'Portfolio',       es: 'Portafolio',     enHref: '/portfolio.html',              esHref: '/es/portfolio.html',              path: '/portfolio.html' },
     { en: 'Tools',           es: 'Herramientas',   enHref: '/tools.html',                  esHref: '/es/tools.html',                  path: '/tools.html' },
