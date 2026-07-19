@@ -20,6 +20,7 @@
   var ITEMS = [
     { en: 'What I Automate', es: 'Qué Automatizo', enHref: '/#automate',                   esHref: '/es/#automate',                   path: '/' },
     { en: 'Services',        es: 'Servicios',      enHref: '/services.html',               esHref: '/es/services.html',               path: '/services.html' },
+    { en: 'Marketing Suite', es: 'Marketing Suite', enHref: '/marketing-suite.html',        esHref: '/marketing-suite.html',           path: '/marketing-suite.html' },
     { en: 'Pricing',         es: 'Precios',        enHref: '/pricing.html',                esHref: '/es/pricing.html',                path: '/pricing.html' },
     { en: 'Portfolio',       es: 'Portafolio',     enHref: '/portfolio.html',              esHref: '/es/portfolio.html',              path: '/portfolio.html' },
     { en: 'Tools',           es: 'Herramientas',   enHref: '/tools.html',                  esHref: '/es/tools.html',                  path: '/tools.html' },
