@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scheduling Systems Guide | AI BOT CODER</title>
+</head>
+<body>
+<style>
+  :root {
+    --ground: #F7F6F3;
+    --surface: #FFFFFF;
+    --surface-2: #FBFAF8;
+    --ink: #1B2A2E;
+    --ink-soft: #55635F;
+    --ink-faint: #8A938F;
+    --line: #E4E2DC;
+    --line-strong: #D3D0C8;
+    --accent: #0E6E6E;
+    --accent-ink: #0A4F4F;
+
+    --go: #2E7D4F;
+    --go-bg: #E7F1EA;
+    --go-line: #BFDCC9;
+
+    --warn: #9A6512;
+    --warn-bg: #F6EEDC;
+    --warn-line: #E4D2A8;
+
+    --stop: #A93A38;
+    --stop-bg: #F6E6E4;
+    --stop-line: #E4C2BF;
+
+    --mute: #5D6B72;
+    --mute-bg: #ECEEEF;
+    --mute-line: #D2D8DA;
+
+    --radius: 14px;
+    --shadow: 0 1px 2px rgba(27,42,46,.04), 0 8px 24px rgba(27,42,46,.05);
+    --maxw: 940px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #10171A;
+      --surface: #192225;
+      --surface-2: #151D20;
+      --ink: #E9ECEA;
+      --ink-soft: #9DA9A6;
+      --ink-faint: #6D7A77;
+      --line: #273336;
+      --line-strong: #33423F;
+      --accent: #55B8B3;
+      --accent-ink: #7FCEC9;
+
+      --go: #6FCB93;
+      --go-bg: #16302299;
+      --go-line: #2E5A40;
+
+      --warn: #DDB25E;
+      --warn-bg: #33280F99;
+      --warn-line: #5C4A23;
+
+      --stop: #E28683;
+      --stop-bg: #3A201F99;
+      --stop-line: #613634;
+
+      --mute: #93A2A6;
+      --mute-bg: #1F292C99;
+      --mute-line: #344145;
+
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+
+  :root[data-theme="light"] {
+    --ground: #F7F6F3; --surface: #FFFFFF; --surface-2: #FBFAF8;
+    --ink: #1B2A2E; --ink-soft: #55635F; --ink-faint: #8A938F;
+    --line: #E4E2DC; --line-strong: #D3D0C8;
+    --accent: #0E6E6E; --accent-ink: #0A4F4F;
+    --go: #2E7D4F; --go-bg: #E7F1EA; --go-line: #BFDCC9;
+    --warn: #9A6512; --warn-bg: #F6EEDC; --warn-line: #E4D2A8;
+    --stop: #A93A38; --stop-bg: #F6E6E4; --stop-line: #E4C2BF;
+    --mute: #5D6B72; --mute-bg: #ECEEEF; --mute-line: #D2D8DA;
+    --shadow: 0 1px 2px rgba(27,42,46,.04), 0 8px 24px rgba(27,42,46,.05);
+  }
+  :root[data-theme="dark"] {
+    --ground: #10171A; --surface: #192225; --surface-2: #151D20;
+    --ink: #E9ECEA; --ink-soft: #9DA9A6; --ink-faint: #6D7A77;
+    --line: #273336; --line-strong: #33423F;
+    --accent: #55B8B3; --accent-ink: #7FCEC9;
+    --go: #6FCB93; --go-bg: #16302299; --go-line: #2E5A40;
+    --warn: #DDB25E; --warn-bg: #33280F99; --warn-line: #5C4A23;
+    --stop: #E28683; --stop-bg: #3A201F99; --stop-line: #613634;
+    --mute: #93A2A6; --mute-bg: #1F292C99; --mute-line: #344145;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: clamp(20px, 4vw, 48px) clamp(16px, 4vw, 32px) 64px;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    font-weight: 650;
+    color: var(--accent);
+    margin: 0 0 10px;
+  }
+
+  h1 {
+    font-size: clamp(28px, 5vw, 40px);
+    line-height: 1.08;
+    letter-spacing: -.02em;
+    font-weight: 750;
+    text-wrap: balance;
+    margin: 0 0 12px;
+  }
+
+  .lede {
+    color: var(--ink-soft);
+    max-width: 62ch;
+    font-size: 16.5px;
+    margin: 0;
+  }
+
+  /* The standing rule */
+  .rule {
+    margin: 28px 0 0;
+    background: var(--go-bg);
+    border: 1px solid var(--go-line);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .rule .lbl {
+    display: block;
+    font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase;
+    font-weight: 700; color: var(--go); margin-bottom: 6px;
+  }
+  .rule p { margin: 0; font-size: 15px; color: var(--ink); }
+  .rule p + p { margin-top: 8px; color: var(--ink-soft); font-size: 14px; }
+  .rule b { font-weight: 700; }
+
+  /* Qualifying question band */
+  .ask {
+    margin: 16px 0 8px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 20px 22px;
+    box-shadow: var(--shadow);
+    display: flex;
+    gap: 18px;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+  .ask .num {
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    font-weight: 650;
+    color: var(--ink-faint);
+    white-space: nowrap;
+  }
+  .ask .qs { flex: 1 1 320px; }
+  .ask .q {
+    font-size: clamp(18px, 2.6vw, 22px);
+    font-weight: 650;
+    letter-spacing: -.01em;
+    margin: 0;
+  }
+  .ask .q em { color: var(--accent-ink); font-style: normal; }
+  .ask .q2 { margin: 8px 0 0; font-size: 14.5px; color: var(--ink-soft); }
+
+  /* Legend row */
+  .legend {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 28px 0 8px;
+  }
+  @media (max-width: 860px) { .legend { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .legend { grid-template-columns: 1fr; } }
+
+  .lg {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px 16px 15px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+  }
+  .lg::before {
+    content: "";
+    position: absolute; left: 0; top: 0; bottom: 0;
+    width: 4px;
+  }
+  .lg.go::before { background: var(--go); }
+  .lg.warn::before { background: var(--warn); }
+  .lg.stop::before { background: var(--stop); }
+  .lg.neutral::before { background: var(--mute); }
+
+  .lg .tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-weight: 700; font-size: 14px; letter-spacing: .01em;
+    margin: 0 0 6px;
+  }
+  .lg.go .tag { color: var(--go); }
+  .lg.warn .tag { color: var(--warn); }
+  .lg.stop .tag { color: var(--stop); }
+  .lg.neutral .tag { color: var(--mute); }
+  .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+  .lg.go .dot { background: var(--go); }
+  .lg.warn .dot { background: var(--warn); }
+  .lg.stop .dot { background: var(--stop); }
+  .lg.neutral .dot { background: var(--mute); }
+  .lg p { margin: 0; font-size: 13.5px; color: var(--ink-soft); }
+  .lg .move { margin-top: 8px; font-size: 13.5px; color: var(--ink); font-weight: 550; }
+  .lg .move span { color: var(--ink-faint); font-weight: 600; text-transform: uppercase; font-size: 10.5px; letter-spacing: .1em; display: block; margin-bottom: 2px; }
+
+  /* Tier sections */
+  .tier { margin-top: 40px; }
+  .tier-head {
+    display: flex; align-items: center; gap: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line-strong);
+    margin-bottom: 4px;
+  }
+  .tier-head .bar { width: 4px; height: 22px; border-radius: 3px; }
+  .tier.go .bar { background: var(--go); }
+  .tier.warn .bar { background: var(--warn); }
+  .tier.stop .bar { background: var(--stop); }
+  .tier.neutral .bar { background: var(--mute); }
+  .tier-head h2 {
+    font-size: 17px; font-weight: 700; letter-spacing: -.01em; margin: 0; flex: 1;
+    text-wrap: balance;
+  }
+  .tier-head .count {
+    font-size: 12px; font-weight: 650; color: var(--ink-faint);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .say {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    margin: 12px 0 16px;
+    padding: 12px 14px;
+    background: var(--surface-2);
+    border: 1px dashed var(--line-strong);
+    border-radius: 10px;
+  }
+  .say b { color: var(--ink); font-weight: 650; }
+  .say .lbl { color: var(--ink-faint); font-weight: 650; text-transform: uppercase; font-size: 10.5px; letter-spacing: .1em; margin-right: 8px; }
+
+  .rows { display: flex; flex-direction: column; gap: 10px; }
+
+  .row {
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    gap: 4px 18px;
+    align-items: start;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--line-strong);
+    border-radius: 12px;
+    padding: 14px 18px;
+    box-shadow: var(--shadow);
+  }
+  .tier.go .row { border-left-color: var(--go); }
+  .tier.warn .row { border-left-color: var(--warn); }
+  .tier.stop .row { border-left-color: var(--stop); }
+  .tier.neutral .row { border-left-color: var(--mute); }
+  /* per-row override, used in the mixed ortho section */
+  .tier .row.is-go { border-left-color: var(--go); }
+  .tier .row.is-warn { border-left-color: var(--warn); }
+  .tier .row.is-stop { border-left-color: var(--stop); }
+
+  @media (max-width: 560px) {
+    .row { grid-template-columns: 1fr; gap: 8px; }
+  }
+
+  .row .name {
+    font-weight: 700; font-size: 15.5px; letter-spacing: -.01em;
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .chip {
+    align-self: flex-start;
+    font-size: 11px; font-weight: 600; letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 3px 9px;
+    white-space: nowrap;
+  }
+  .chip.live { color: var(--go); background: var(--go-bg); border-color: var(--go-line); font-weight: 700; }
+  .chip.is-go { color: var(--go); background: var(--go-bg); border-color: var(--go-line); }
+  .chip.is-warn { color: var(--warn); background: var(--warn-bg); border-color: var(--warn-line); }
+  .chip.is-stop { color: var(--stop); background: var(--stop-bg); border-color: var(--stop-line); }
+  .row .why { font-size: 14px; color: var(--ink-soft); margin: 0; }
+  .row .why strong { color: var(--ink); font-weight: 650; }
+  .row .why .hear { color: var(--ink-faint); font-style: italic; }
+
+  /* Steps */
+  .steps {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  @media (max-width: 860px) { .steps { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .steps { grid-template-columns: 1fr; } }
+  .step {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 15px 16px;
+    box-shadow: var(--shadow);
+  }
+  .step .n {
+    font-size: 11px; font-weight: 700; letter-spacing: .12em;
+    color: var(--accent); text-transform: uppercase;
+    display: block; margin-bottom: 6px;
+    font-variant-numeric: tabular-nums;
+  }
+  .step h4 { margin: 0 0 4px; font-size: 14.5px; font-weight: 700; letter-spacing: -.01em; }
+  .step p { margin: 0; font-size: 13.5px; color: var(--ink-soft); }
+
+  /* Middleware + cost */
+  .panel {
+    margin-top: 40px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: clamp(20px, 3vw, 28px);
+    box-shadow: var(--shadow);
+  }
+  .panel h3 {
+    font-size: 18px; font-weight: 700; letter-spacing: -.01em; margin: 0 0 6px;
+  }
+  .panel .sub { color: var(--ink-soft); font-size: 14.5px; margin: 0 0 18px; max-width: 66ch; }
+
+  .flag {
+    margin-top: 18px;
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    padding: 12px 14px;
+    background: var(--warn-bg);
+    border: 1px solid var(--warn-line);
+    border-radius: 10px;
+  }
+  .flag b { color: var(--warn); }
+  .flag + .flag { margin-top: 10px; }
+
+  .srcs {
+    margin-top: 40px;
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+  }
+  .srcs h4 {
+    font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--ink-faint); font-weight: 700; margin: 0 0 10px;
+  }
+  .srcs ol { margin: 0; padding-left: 20px; color: var(--ink-soft); font-size: 12.5px; }
+  .srcs li { margin-bottom: 4px; }
+
+  footer {
+    margin-top: 32px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    color: var(--ink-faint);
+    font-size: 12.5px;
+    display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  }
+
+  a { color: var(--accent-ink); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+</style>
+
+<div class="wrap">
+
+  <p class="eyebrow">AI Phone Receptionist &middot; Setter Reference</p>
+  <h1>What software runs their schedule?</h1>
+  <p class="lede">A dental office's practice management software (their "PMS") decides whether our receptionist can book appointments straight into their calendar, needs one extra step, or needs a connector. Ask one question early, write down exactly what they say, and read the room off this guide.</p>
+
+  <div class="rule">
+    <span class="lbl">Read this before anything else</span>
+    <p><b>The answer never kills the call.</b> You are booking a demo, not building an integration. Every office is worth a demo no matter what software they run.</p>
+    <p>The software name is <b>intel</b>, not a qualifier. Write it in the Notes field, word for word, exactly how they said it. Jason decides what it means. You keep going.</p>
+  </div>
+
+  <div class="ask">
+    <span class="num">Ask first</span>
+    <div class="qs">
+      <p class="q">"What system do you use to run your <em>schedule</em>?"</p>
+      <p class="q2">If they sound unsure, add: "the software the front desk opens to see the day." If they still don't know, that is a fine answer. Write "didn't know" and book the demo anyway.</p>
+    </div>
+  </div>
+
+  <div class="legend" aria-label="Key">
+    <div class="lg go">
+      <p class="tag"><span class="dot"></span> Open door</p>
+      <p>Modern cloud software we can connect to directly. Best case for us.</p>
+      <p class="move"><span>On the call</span> Full confidence. Book the demo.</p>
+    </div>
+    <div class="lg warn">
+      <p class="tag"><span class="dot"></span> Workable</p>
+      <p>Reachable, but the software company gates access. One extra step on our side.</p>
+      <p class="move"><span>On the call</span> Book the demo, note the system.</p>
+    </div>
+    <div class="lg stop">
+      <p class="tag"><span class="dot"></span> Needs a bridge</p>
+      <p>Older software installed on a computer in the office. No open door for outside booking.</p>
+      <p class="move"><span>On the call</span> Don't promise direct booking.</p>
+    </div>
+    <div class="lg neutral">
+      <p class="tag"><span class="dot"></span> Not a schedule system</p>
+      <p>Texting, reviews, or phone tools that sit on top of the real schedule.</p>
+      <p class="move"><span>On the call</span> Ask again, you don't have the answer yet.</p>
+    </div>
+  </div>
+
+  <!-- GREEN -->
+  <section class="tier go">
+    <div class="tier-head">
+      <span class="bar"></span>
+      <h2>Open door, we connect directly</h2>
+      <span class="count">4 systems</span>
+    </div>
+    <p class="say"><span class="lbl">Say</span>"Good, that's one we work with directly, so the receptionist books right into your schedule. Let me show you what that looks like."</p>
+    <div class="rows">
+      <div class="row">
+        <div class="name">Open Dental <span class="chip live">Live today</span></div>
+        <p class="why">Our <strong>already-built, running-in-production</strong> integration. Books, reschedules, and confirms. Any Open Dental office is a top target, say so with full confidence. <span class="hear">You may hear it as "OpenDental" or "OD."</span></p>
+      </div>
+      <div class="row">
+        <div class="name">tab32 <span class="chip">Open door, not built yet</span></div>
+        <p class="why">Cloud software built around open connections. The easiest new one for us to add. Prime prospect. <span class="hear">Sounds like "tab thirty-two."</span></p>
+      </div>
+      <div class="row">
+        <div class="name">Curve Dental <span class="chip">Open door, not built yet</span></div>
+        <p class="why">Modern cloud platform, light gating. Straightforward once we're set up with them. <span class="hear">They may just say "Curve" or "Curve Hero."</span></p>
+      </div>
+      <div class="row">
+        <div class="name">CareStack <span class="chip">Open door, not built yet</span></div>
+        <p class="why">Cloud, and they publish a public developer portal with appointment access. Common in bigger groups and multi-location practices. <span class="hear">Sometimes said as "Care Stack."</span></p>
+      </div>
+    </div>
+    <p class="say"><span class="lbl">Careful</span>Only <b>Open Dental</b> is built and live right now. For the other three, say "we work with that" and book the demo. Do <b>not</b> promise a go-live date or say it's already connected.</p>
+  </section>
+
+  <!-- AMBER -->
+  <section class="tier warn">
+    <div class="tier-head">
+      <span class="bar"></span>
+      <h2>Workable, one extra step on our side</h2>
+      <span class="count">8 systems</span>
+    </div>
+    <p class="say"><span class="lbl">Say</span>"Yes, we support that. There may be one setup step on the integration side, nothing you'd have to manage. Let's get you the demo and I'll flag your system for the team."</p>
+    <div class="rows">
+      <div class="row">
+        <div class="name">Dentrix Ascend <span class="chip">Cloud</span></div>
+        <p class="why">The <strong>cloud</strong> Dentrix, a different product from the old desktop one. Reachable through the vendor's approved-partner program. <strong>Always confirm which one:</strong> "Is that Dentrix Ascend, the browser one, or the version installed on your computers?" That one question changes the whole answer.</p>
+      </div>
+      <div class="row">
+        <div class="name">Fuse <span class="chip">Cloud &middot; Patterson</span></div>
+        <p class="why">Patterson's cloud platform, more open than their older software but still partner-gated. Workable.</p>
+      </div>
+      <div class="row">
+        <div class="name">Denticon <span class="chip">Cloud &middot; groups / DSO</span></div>
+        <p class="why">Common in multi-location groups. Cloud-friendly, but access runs through enterprise agreements, so it lands best when the group itself is the buyer. <span class="hear">Made by Planet DDS.</span></p>
+      </div>
+      <div class="row">
+        <div class="name">Dentrix Enterprise <span class="chip">Groups &middot; clinics</span></div>
+        <p class="why">The large-group and community-clinic version of Dentrix. Built for connecting to other medical systems, but it's an enterprise conversation, not a quick hookup. Flag it as a group deal.</p>
+      </div>
+      <div class="row">
+        <div class="name">Archy <span class="chip">Cloud &middot; newer</span></div>
+        <p class="why">Newer cloud-only platform, growing fast with younger practices. Modern architecture is in our favor. <strong>We have not confirmed their outside-access policy yet</strong>, so note it and let Jason check.</p>
+      </div>
+      <div class="row">
+        <div class="name">Oryx <span class="chip">Cloud &middot; newer</span></div>
+        <p class="why">Cloud-only, aimed at independent practices. Same story as Archy: modern and promising, access policy unconfirmed. Note it.</p>
+      </div>
+      <div class="row">
+        <div class="name">Practice-Web <span class="chip">Installed / hosted</span></div>
+        <p class="why">Reachable at the database level, but thin documentation and it breaks between versions. Doable for a motivated office, not a system we chase.</p>
+      </div>
+      <div class="row">
+        <div class="name">Adit <span class="chip">Add-on, sometimes the main system</span></div>
+        <p class="why">Usually an add-on layer, not the schedule itself. <strong>Ask what's underneath it.</strong> If Adit truly is their whole system, workable. If it sits on top of Dentrix or Eaglesoft, the older system underneath sets the limit.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RED -->
+  <section class="tier stop">
+    <div class="tier-head">
+      <span class="bar"></span>
+      <h2>Needs a bridge, the wall</h2>
+      <span class="count">5 systems</span>
+    </div>
+    <p class="say"><span class="lbl">Say</span>"That one's a little more locked down for outside booking. Two paths there: we can handle every call, greet, answer questions, take messages and route, and we can add live booking through a connector. Let me get you the demo and we'll map the best fit."</p>
+    <div class="rows">
+      <div class="row">
+        <div class="name">Dentrix <span class="chip">Installed &middot; the common one</span></div>
+        <p class="why"><strong>The single most common answer you'll hear.</strong> The classic desktop Dentrix, installed on a computer in the office. Outside booking is limited to the vendor's approved partners. Not a lost deal, just don't promise direct booking. <strong>Confirm it isn't Ascend</strong> before you file it here.</p>
+      </div>
+      <div class="row">
+        <div class="name">Eaglesoft <span class="chip">Installed &middot; Patterson</span></div>
+        <p class="why">The second most common. Closed and partner-only, very hard to write bookings into without a bridge. Bridge or answer-only.</p>
+      </div>
+      <div class="row">
+        <div class="name">Easy Dental <span class="chip">Installed &middot; legacy</span></div>
+        <p class="why">The older, cheaper sibling of Dentrix, same family. Small and solo practices still run it. Treat like Dentrix.</p>
+      </div>
+      <div class="row">
+        <div class="name">SoftDent / PracticeWorks <span class="chip">Installed &middot; Carestream</span></div>
+        <p class="why">Older installed software being phased out by its maker. No open door. Answer-only unless the deal is big enough to justify a connector.</p>
+      </div>
+      <div class="row">
+        <div class="name">DentiMax <span class="chip">Installed &middot; small</span></div>
+        <p class="why">Small installed system, mostly known for x-ray imaging. Rare, and closed for outside booking. Log it and move on.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORTHO -->
+  <section class="tier neutral">
+    <div class="tier-head">
+      <span class="bar"></span>
+      <h2>If you reach an orthodontist or a kids' practice</h2>
+      <span class="count">4 systems</span>
+    </div>
+    <p class="say"><span class="lbl">Note</span>Ortho offices run their own separate software. Same rule: book the demo, log the name. The color on each row is our read.</p>
+    <div class="rows">
+      <div class="row is-warn">
+        <div class="name">Ortho2 Edge Cloud <span class="chip is-warn">Workable</span></div>
+        <p class="why">Cloud ortho platform. Reported to support outside scheduling connections, which makes it the friendliest of the ortho group. <span class="hear">Often said as "Edge" or "Ortho Two."</span></p>
+      </div>
+      <div class="row is-warn">
+        <div class="name">Cloud 9 <span class="chip is-warn">Workable</span></div>
+        <p class="why">Browser-based, built for ortho, kids' dentistry, and groups. Cloud is in our favor, connections are limited. Note it.</p>
+      </div>
+      <div class="row is-stop">
+        <div class="name">Dolphin <span class="chip is-stop">Needs a bridge</span></div>
+        <p class="why">Long-running ortho software, strongest on imaging. Very few outside tools connect to it. Answer-only.</p>
+      </div>
+      <div class="row is-stop">
+        <div class="name">CS OrthoTrac <span class="chip is-stop">Needs a bridge</span></div>
+        <p class="why">Older installed ortho software, being phased out. No real open door. Not worth chasing for direct booking.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOT A PMS -->
+  <section class="tier neutral">
+    <div class="tier-head">
+      <span class="bar"></span>
+      <h2>Not a schedule system, ask again</h2>
+      <span class="count">the most common mix-up</span>
+    </div>
+    <p class="say"><span class="lbl">Say</span>"Got it, that's the messaging and reviews side. What about the actual schedule, the software the front desk opens to see the day?"</p>
+    <div class="rows">
+      <div class="row">
+        <div class="name">Weave <span class="chip">Phone + texting</span></div>
+        <p class="why"><strong>You will hear this one a lot.</strong> It's a phone and texting system that plugs into their real schedule. It is not the schedule. Ask again. Bonus: if they name a phone system, that's useful intel too, note it.</p>
+      </div>
+      <div class="row">
+        <div class="name">RevenueWell &middot; Solutionreach &middot; Lighthouse 360 <span class="chip">Reminders</span></div>
+        <p class="why">Patient reminder and messaging tools that sit on top of the schedule. Not the schedule. Ask again.</p>
+      </div>
+      <div class="row">
+        <div class="name">Yapi &middot; Modento &middot; Dental Intelligence <span class="chip">Add-ons</span></div>
+        <p class="why">Paperwork, check-in, and reporting add-ons. They read from the real system. Ask what the real system is.</p>
+      </div>
+      <div class="row">
+        <div class="name">Podium &middot; Birdeye &middot; Swell <span class="chip">Reviews</span></div>
+        <p class="why">Review and reputation tools. Nothing to do with the schedule. Ask again.</p>
+      </div>
+      <div class="row">
+        <div class="name">NexHealth &middot; Kolla &middot; Sikka <span class="chip">Connectors</span></div>
+        <p class="why">These are <strong>connectors</strong>, the bridge itself. If an office already pays for one, that is genuinely good news for us. Write it down and flag it to Jason, it can make a walled system reachable.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT TO DO -->
+  <div class="steps">
+    <div class="step">
+      <span class="n">On the call</span>
+      <h4>Ask early</h4>
+      <p>Slip it in while they're still talking, not at the end. It sounds like curiosity, not a form.</p>
+    </div>
+    <div class="step">
+      <span class="n">On the call</span>
+      <h4>Never react badly</h4>
+      <p>No "oh, that's a problem." Every answer gets the same warm response. You are not qualifying them out.</p>
+    </div>
+    <div class="step">
+      <span class="n">After the call</span>
+      <h4>Log it word for word</h4>
+      <p>Put the name in Notes exactly as they said it, even if you're unsure of the spelling. Never guess or clean it up.</p>
+    </div>
+    <div class="step">
+      <span class="n">After the call</span>
+      <h4>Book the demo anyway</h4>
+      <p>The software never decides whether they get a demo. Set the status and the follow-up date like always.</p>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>A locked-down office is still a good call</h3>
+    <p class="sub">If their software is on the "needs a bridge" list, it does not mean we can't help them. We can still answer every call, answer questions, take messages, and transfer to the front desk, and there are ways to add live booking on top. That is Jason's call to make, not a conversation for the phone. You just write the system name in Notes and book the demo.</p>
+  </div>
+
+  <footer>
+    <span>AIBC internal reference &middot; not for outside distribution</span>
+    <span>Updated 2026-07-28 &middot; confirm the system live on the call</span>
+  </footer>
+
+</div>
+</body>
+</html>

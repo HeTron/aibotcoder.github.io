@@ -4,6 +4,7 @@
 User-agent: *
 Allow: /
 Disallow: /welcome/
+Disallow: /team/
 
 # Explicitly welcome AI / LLM crawlers so AI BOT CODER can be cited in AI answers.
 User-agent: GPTBot
